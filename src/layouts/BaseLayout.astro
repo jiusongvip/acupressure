@@ -6,9 +6,13 @@ export interface Props {
   description: string;
   breadcrumbs?: { label: string; href: string }[];
   noindex?: boolean;
+  schema?: Record<string, unknown> | Record<string, unknown>[];
+  articleSchema?: boolean;
+  websiteSchema?: boolean;
 }
 
-const { title, description, breadcrumbs, noindex } = Astro.props;
+const { title, description, breadcrumbs, noindex, schema, articleSchema, websiteSchema } = Astro.props;
+const canonicalUrl = `https://www.acupressureguide.com${Astro.url.pathname}`;
 ---
 
 <!DOCTYPE html>
@@ -23,11 +27,10 @@ const { title, description, breadcrumbs, noindex } = Astro.props;
     <meta property="og:description" content={description} />
     <meta property="og:url" content={`https://www.acupressureguide.com${Astro.url.pathname}`} />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://www.acupressureguide.com/og-default.png" />
+    <meta property="og:image" content="https://www.acupressureguide.com/og-default.svg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={`${title} | Acupressure Guide`} />
     <meta name="twitter:description" content={description} />
-    <link rel="alternate" type="application/rss+xml" title="Acupressure Guide" href="/rss.xml" />
     {noindex && <meta name="robots" content="noindex" />}
     <script type="application/ld+json">
       {
@@ -38,6 +41,72 @@ const { title, description, breadcrumbs, noindex } = Astro.props;
         "logo": "https://www.acupressureguide.com/logo.png"
       }
     </script>
+    {breadcrumbs && breadcrumbs.length > 0 && (
+      <script type="application/ld+json">
+        {{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": breadcrumbs.map((bc, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": bc.label,
+            "item": `https://www.acupressureguide.com${bc.href}`
+          }))
+        }}
+      </script>
+    )}
+    {websiteSchema && (
+      <script type="application/ld+json">
+        {{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Acupressure Guide",
+          "url": "https://www.acupressureguide.com",
+          "description": "Evidence-based guide to acupressure points, techniques, and health benefits.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.acupressureguide.com/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }}
+      </script>
+    )}
+    {articleSchema && (
+      <script type="application/ld+json">
+        {{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": title,
+          "description": description,
+          "url": canonicalUrl,
+          "datePublished": "2025-01-15",
+          "dateModified": "2026-07-01",
+          "author": {
+            "@type": "Organization",
+            "name": "Acupressure Guide Editorial Team",
+            "url": "https://www.acupressureguide.com/about/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Acupressure Guide",
+            "url": "https://www.acupressureguide.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.acupressureguide.com/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": canonicalUrl
+          }
+        }}
+      </script>
+    )}
+    {schema && (
+      <script type="application/ld+json">
+        {Array.isArray(schema) ? schema : [schema]}
+      </script>
+    )}
   </head>
   <body>
     <nav class="sticky top-0 z-50 border-b border-stone-200 bg-white/95 backdrop-blur-sm dark:border-stone-800 dark:bg-stone-950/95">
@@ -60,19 +129,19 @@ const { title, description, breadcrumbs, noindex } = Astro.props;
         </a>
         <div class="hidden items-center gap-8 md:flex">
           <a href="/" class="text-sm font-medium text-stone-600 transition-colors hover:text-emerald-500 dark:text-stone-400 dark:hover:text-emerald-400">Home</a>
-          <a href="/history/" class="text-sm font-medium text-stone-600 transition-colors hover:text-emerald-500 dark:text-stone-400 dark:hover:text-emerald-400">History</a>
-          <a href="/atlas/" class="text-sm font-medium text-stone-600 transition-colors hover:text-emerald-500 dark:text-stone-400 dark:hover:text-emerald-400">Points Atlas</a>
-          <a href="/learn/" class="text-sm font-medium text-stone-600 transition-colors hover:text-emerald-500 dark:text-stone-400 dark:hover:text-emerald-400">Learning Center</a>
-          <a href="/about/" class="text-sm font-medium text-stone-600 transition-colors hover:text-emerald-500 dark:text-stone-400 dark:hover:text-emerald-400">About</a>
+          <a href="/history" class="text-sm font-medium text-stone-600 transition-colors hover:text-emerald-500 dark:text-stone-400 dark:hover:text-emerald-400">History</a>
+          <a href="/atlas" class="text-sm font-medium text-stone-600 transition-colors hover:text-emerald-500 dark:text-stone-400 dark:hover:text-emerald-400">Points Atlas</a>
+          <a href="/learn" class="text-sm font-medium text-stone-600 transition-colors hover:text-emerald-500 dark:text-stone-400 dark:hover:text-emerald-400">Learning Center</a>
+          <a href="/about" class="text-sm font-medium text-stone-600 transition-colors hover:text-emerald-500 dark:text-stone-400 dark:hover:text-emerald-400">About</a>
         </div>
         <button class="flex items-center gap-2 text-sm text-stone-600 md:hidden dark:text-stone-400" aria-label="Toggle navigation" id="nav-toggle">Menu</button>
       </div>
       <div id="mobile-nav" class="hidden border-t border-stone-200 px-4 pb-4 dark:border-stone-800">
         <a href="/" class="block py-2 text-sm text-stone-600 dark:text-stone-400">Home</a>
-        <a href="/history/" class="block py-2 text-sm text-stone-600 dark:text-stone-400">History</a>
-        <a href="/atlas/" class="block py-2 text-sm text-stone-600 dark:text-stone-400">Points Atlas</a>
-        <a href="/learn/" class="block py-2 text-sm text-stone-600 dark:text-stone-400">Learning Center</a>
-        <a href="/about/" class="block py-2 text-sm text-stone-600 dark:text-stone-400">About</a>
+        <a href="/history" class="block py-2 text-sm text-stone-600 dark:text-stone-400">History</a>
+        <a href="/atlas" class="block py-2 text-sm text-stone-600 dark:text-stone-400">Points Atlas</a>
+        <a href="/learn" class="block py-2 text-sm text-stone-600 dark:text-stone-400">Learning Center</a>
+        <a href="/about" class="block py-2 text-sm text-stone-600 dark:text-stone-400">About</a>
       </div>
     </nav>
     <script>
@@ -86,6 +155,22 @@ const { title, description, breadcrumbs, noindex } = Astro.props;
     </script>
 
     <main class="flex-1">
+      {breadcrumbs && breadcrumbs.length > 0 && (
+        <nav aria-label="Breadcrumb" class="mx-auto max-w-[1200px] px-4 pt-4 lg:px-6">
+          <ol class="flex flex-wrap items-center gap-1.5 text-xs text-stone-400 dark:text-stone-500">
+            {breadcrumbs.map((bc, i) => (
+              <li class="flex items-center gap-1.5">
+                {i > 0 && <span aria-hidden="true">/</span>}
+                {i === breadcrumbs.length - 1 ? (
+                  <span class="text-stone-600 dark:text-stone-300 font-medium">{bc.label}</span>
+                ) : (
+                  <a href={bc.href} class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">{bc.label}</a>
+                )}
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )}
       <slot />
     </main>
 
@@ -100,17 +185,17 @@ const { title, description, breadcrumbs, noindex } = Astro.props;
             <h4 class="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-500 dark:text-stone-400">Explore</h4>
             <ul class="space-y-2">
               <li><a href="/" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Home</a></li>
-              <li><a href="/atlas/" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Points Atlas</a></li>
-              <li><a href="/history/" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">History</a></li>
-              <li><a href="/learn/" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Learning Center</a></li>
-              <li><a href="/about/" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">About</a></li>
+              <li><a href="/atlas" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Points Atlas</a></li>
+              <li><a href="/history" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">History</a></li>
+              <li><a href="/learn" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Learning Center</a></li>
+              <li><a href="/about" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">About</a></li>
             </ul>
           </div>
           <div>
             <h4 class="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-500 dark:text-stone-400">Support</h4>
             <ul class="space-y-2">
-              <li><a href="/contact/" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Contact</a></li>
-              <li><a href="/privacy-policy/" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Privacy</a></li>
+              <li><a href="/contact" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Contact</a></li>
+              <li><a href="/privacy-policy" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Privacy</a></li>
               <li><a href="/about/#disclaimer" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Disclaimer</a></li>
             </ul>
           </div>
