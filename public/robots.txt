@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.acupressureguide.com/sitemap-index.xml

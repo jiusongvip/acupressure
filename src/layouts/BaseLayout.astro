@@ -1,0 +1,125 @@
+---
+import "../styles/global.css";
+
+export interface Props {
+  title: string;
+  description: string;
+  breadcrumbs?: { label: string; href: string }[];
+  noindex?: boolean;
+}
+
+const { title, description, breadcrumbs, noindex } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} | Acupressure Guide</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={`https://www.acupressureguide.com${Astro.url.pathname}`} />
+    <meta property="og:title" content={`${title} | Acupressure Guide`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={`https://www.acupressureguide.com${Astro.url.pathname}`} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.acupressureguide.com/og-default.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} | Acupressure Guide`} />
+    <meta name="twitter:description" content={description} />
+    <link rel="alternate" type="application/rss+xml" title="Acupressure Guide" href="/rss.xml" />
+    {noindex && <meta name="robots" content="noindex" />}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Acupressure Guide",
+        "url": "https://www.acupressureguide.com",
+        "logo": "https://www.acupressureguide.com/logo.png"
+      }
+    </script>
+  </head>
+  <body>
+    <nav class="sticky top-0 z-50 border-b border-stone-200 bg-white/95 backdrop-blur-sm dark:border-stone-800 dark:bg-stone-950/95">
+      <div class="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4 lg:px-6">
+        <a href="/" class="inline-flex items-center gap-2 no-underline hover:opacity-80 transition-opacity" aria-label="Acupressure Guide home">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18" cy="18" r="16" stroke="#2d6a4f" stroke-width="2" fill="rgba(45,106,79,0.08)"></circle>
+            <circle cx="18" cy="18" r="4" fill="#2d6a4f"></circle>
+            <circle cx="18" cy="18" r="10" stroke="#2d6a4f" stroke-width="1.5" stroke-dasharray="3,3" fill="none"></circle>
+            <circle cx="8" cy="12" r="2.5" fill="#2d6a4f" opacity="0.6"></circle>
+            <circle cx="28" cy="12" r="2.5" fill="#2d6a4f" opacity="0.6"></circle>
+            <circle cx="8" cy="24" r="2.5" fill="#2d6a4f" opacity="0.6"></circle>
+            <circle cx="28" cy="24" r="2.5" fill="#2d6a4f" opacity="0.6"></circle>
+            <circle cx="12" cy="7" r="1.8" fill="#2d6a4f" opacity="0.4"></circle>
+            <circle cx="24" cy="7" r="1.8" fill="#2d6a4f" opacity="0.4"></circle>
+            <circle cx="12" cy="29" r="1.8" fill="#2d6a4f" opacity="0.4"></circle>
+            <circle cx="24" cy="29" r="1.8" fill="#2d6a4f" opacity="0.4"></circle>
+          </svg>
+          <span class="font-semibold text-stone-800 dark:text-stone-200 text-lg tracking-tight">Acupressure Guide</span>
+        </a>
+        <div class="hidden items-center gap-8 md:flex">
+          <a href="/" class="text-sm font-medium text-stone-600 transition-colors hover:text-emerald-500 dark:text-stone-400 dark:hover:text-emerald-400">Home</a>
+          <a href="/history/" class="text-sm font-medium text-stone-600 transition-colors hover:text-emerald-500 dark:text-stone-400 dark:hover:text-emerald-400">History</a>
+          <a href="/atlas/" class="text-sm font-medium text-stone-600 transition-colors hover:text-emerald-500 dark:text-stone-400 dark:hover:text-emerald-400">Points Atlas</a>
+          <a href="/learn/" class="text-sm font-medium text-stone-600 transition-colors hover:text-emerald-500 dark:text-stone-400 dark:hover:text-emerald-400">Learning Center</a>
+          <a href="/about/" class="text-sm font-medium text-stone-600 transition-colors hover:text-emerald-500 dark:text-stone-400 dark:hover:text-emerald-400">About</a>
+        </div>
+        <button class="flex items-center gap-2 text-sm text-stone-600 md:hidden dark:text-stone-400" aria-label="Toggle navigation" id="nav-toggle">Menu</button>
+      </div>
+      <div id="mobile-nav" class="hidden border-t border-stone-200 px-4 pb-4 dark:border-stone-800">
+        <a href="/" class="block py-2 text-sm text-stone-600 dark:text-stone-400">Home</a>
+        <a href="/history/" class="block py-2 text-sm text-stone-600 dark:text-stone-400">History</a>
+        <a href="/atlas/" class="block py-2 text-sm text-stone-600 dark:text-stone-400">Points Atlas</a>
+        <a href="/learn/" class="block py-2 text-sm text-stone-600 dark:text-stone-400">Learning Center</a>
+        <a href="/about/" class="block py-2 text-sm text-stone-600 dark:text-stone-400">About</a>
+      </div>
+    </nav>
+    <script>
+      var toggle = document.getElementById('nav-toggle');
+      var mobileNav = document.getElementById('mobile-nav');
+      if (toggle && mobileNav) {
+        toggle.addEventListener('click', function () {
+          mobileNav.classList.toggle('hidden');
+        });
+      }
+    </script>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="border-t border-stone-200 bg-stone-100 dark:border-stone-800 dark:bg-stone-900">
+      <div class="mx-auto max-w-[1200px] px-4 py-12 lg:px-6">
+        <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+          <div class="col-span-2 md:col-span-1">
+            <a href="/" class="text-lg font-semibold tracking-tight text-stone-900 dark:text-stone-100">Acupressure<span class="text-emerald-600 dark:text-emerald-400">Guide</span></a>
+            <p class="mt-2 text-sm text-stone-500 dark:text-stone-400 max-w-[30ch]">Traditional healing explained through modern knowledge and scientific evidence.</p>
+          </div>
+          <div>
+            <h4 class="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-500 dark:text-stone-400">Explore</h4>
+            <ul class="space-y-2">
+              <li><a href="/" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Home</a></li>
+              <li><a href="/atlas/" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Points Atlas</a></li>
+              <li><a href="/history/" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">History</a></li>
+              <li><a href="/learn/" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Learning Center</a></li>
+              <li><a href="/about/" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">About</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-500 dark:text-stone-400">Support</h4>
+            <ul class="space-y-2">
+              <li><a href="/contact/" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Contact</a></li>
+              <li><a href="/privacy-policy/" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Privacy</a></li>
+              <li><a href="/about/#disclaimer" class="text-sm text-stone-600 transition-colors hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Disclaimer</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-10 border-t border-stone-200 pt-6 dark:border-stone-800">
+          <p class="text-xs text-stone-500 dark:text-stone-500">&copy; 2026 Acupressure Guide. Content is for informational purposes only and does not constitute medical advice.</p>
+          <p class="mt-2 text-xs text-stone-400 dark:text-stone-500">Historical acupuncture charts sourced from <a href="https://wellcomecollection.org/" class="underline hover:text-emerald-600 dark:hover:text-emerald-400" target="_blank" rel="noopener">Wellcome Collection</a>, CC-BY 4.0.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
