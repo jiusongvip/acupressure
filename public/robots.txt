@@ -1,3 +1,22 @@
 User-agent: *
 Allow: /
 Sitemap: https://www.acupressureguide.com/sitemap-index.xml
+
+# AI crawler rules
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
