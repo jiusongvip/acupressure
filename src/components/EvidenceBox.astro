@@ -1,0 +1,108 @@
+---
+interface Citation {
+  authors: string;
+  title: string;
+  journal: string;
+  pmid: string;
+  doi?: string;
+}
+
+interface Props {
+  refs: string[];
+  note?: string;
+}
+
+const REGISTRY: Record<string, Citation> = {
+  "lee-frazier-2011": {
+    authors: "Lee EJ, Frazier SK",
+    title: "The efficacy of acupressure for symptom management: a systematic review",
+    journal: "Journal of Pain and Symptom Management. 2011;42(4):589-603",
+    pmid: "21531533",
+    doi: "10.1016/j.jpainsymman.2011.01.007",
+  },
+  "chen-wang-2014": {
+    authors: "Chen YW, Wang HH",
+    title: "The effectiveness of acupressure on relieving pain: a systematic review",
+    journal: "Pain Management Nursing. 2014;15(2):539-550",
+    pmid: "23415783",
+    doi: "10.1016/j.pmn.2012.12.005",
+  },
+  "hsieh-2010": {
+    authors: "Hsieh LL, Liou HH, Lee LH, Chen TH, Yen AM",
+    title: "Effect of acupressure and trigger points in treating headache: a randomized controlled trial",
+    journal: "American Journal of Chinese Medicine. 2010;38(1):1-14",
+    pmid: "20128040",
+    doi: "10.1142/S0192415X10007634",
+  },
+  "song-2015": {
+    authors: "Song HJ, Seo HJ, Lee H, Son H, Choi SM, Lee S",
+    title: "Effect of self-acupressure for symptom management: a systematic review",
+    journal: "Complementary Therapies in Medicine. 2015;23(1):68-78",
+    pmid: "25637155",
+    doi: "10.1016/j.ctim.2014.11.002",
+  },
+  "chen-2022-anxiety": {
+    authors: "Chen HM, Wang HH, Chiu MH, Hu HM",
+    title: "Effects of acupressure on anxiety: a systematic review and meta-analysis",
+    journal: "Journal of Alternative and Complementary Medicine. 2022;28(5):514-524",
+    pmid: "35235358",
+  },
+  "liao-2020-sleep": {
+    authors: "Liao CC, Liao KR, Lin CL, Li JM",
+    title: "Effects of acupressure on sleep quality and psychological distress in nursing home residents: a randomized controlled trial",
+    journal: "Journal of the American Medical Directors Association. 2020;21(12):1958-1965",
+    pmid: "32409141",
+  },
+  "cochrane-p6-2009": {
+    authors: "Lee A, Fan LTY",
+    title: "Stimulation of the wrist acupuncture point P6 for preventing postoperative nausea and vomiting",
+    journal: "Cochrane Database of Systematic Reviews. 2009;(2):CD003281",
+    pmid: "19370583",
+    doi: "10.1002/14651858.CD003281.pub3",
+  },
+};
+
+const { refs, note } = Astro.props as Props;
+const items = refs.map((key) => REGISTRY[key]).filter((c) => c !== undefined);
+---
+
+{
+  items.length > 0 && (
+    <div class="mt-4 rounded-xl border border-stone-200 bg-stone-50 p-4 text-sm dark:border-stone-800 dark:bg-stone-900/40">
+      <p class="mb-2 font-semibold text-stone-900 dark:text-stone-100">Verifiable sources</p>
+      <ol class="list-decimal space-y-2 pl-6 text-stone-600 dark:text-stone-400">
+        {items.map((c) => (
+          <li>
+            {c.authors}. {c.title}. <em>{c.journal}</em>.{" "}
+            <a
+              href={`https://pubmed.ncbi.nlm.nih.gov/${c.pmid}/`}
+              target="_blank"
+              rel="noopener"
+              class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400"
+            >
+              PMID {c.pmid}
+            </a>
+            {c.doi && (
+              <>
+                {" · "}
+                <a
+                  href={`https://doi.org/${c.doi}`}
+                  target="_blank"
+                  rel="noopener"
+                  class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400"
+                >
+                  DOI
+                </a>
+              </>
+            )}
+          </li>
+        ))}
+      </ol>
+      {note && (
+        <p class="mt-3 text-xs text-stone-500 dark:text-stone-400">
+          {note}
+        </p>
+      )}
+    </div>
+  )
+}

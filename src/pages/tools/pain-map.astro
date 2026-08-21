@@ -1,0 +1,218 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const regions = [
+  { key: "head", name: "Head", bodyUrl: "/body/head-acupressure-points", blurb: "Tension headaches, migraines, pressure, dizziness, mental fatigue", causes: ["Tension or stress headaches", "Migraine (with or without aura)", "Sinus congestion and pressure", "Eye strain and screen fatigue", "Feeling heavy-headed after long days"], redFlags: ["Sudden, severe \"worst-ever\" headache", "Headache with fever and a stiff neck", "Headache after a recent head injury", "Sudden weakness, numbness, or trouble speaking"], points: [{ code: "GV20", name: "Baihui", use: "Headaches, dizziness, mental fatigue", url: "/points/gv20-baihui-acupressure-point" }, { code: "GB20", name: "Fengchi", use: "Headaches, neck tension, sinus relief", url: "/points/gb20-fengchi-acupressure-point" }, { code: "Yintang", name: "Third Eye Point", use: "Stress, headaches, mental clarity", url: "/points/yintang-acupressure-point" }, { code: "Taiyang", name: "Solar Plexus Temples", use: "Headaches, eye strain", url: "/points/taiyang-acupressure-point" }], conditions: [{ label: "Headache relief guide", url: "/conditions/acupressure-for-headache" }, { label: "Migraine relief guide", url: "/conditions/acupressure-for-migraine" }] },
+  { key: "face", name: "Face", bodyUrl: "/body/face-acupressure-points", blurb: "Sinus pressure, jaw tension, facial puffiness", causes: ["Sinus congestion and pressure", "Facial tension from stress or jaw clenching", "Nasal congestion and stuffiness", "Puffiness or dull complexion"], redFlags: ["Facial pain with high fever and swelling", "One-sided facial droop or weakness", "Eye pain with vision changes"], points: [{ code: "LI20", name: "Yingxiang", use: "Nasal congestion, sinus pressure", url: "/points/li20-yingxiang-acupressure-point" }, { code: "Yintang", name: "Third Eye Point", use: "Sinuses, stress, headaches", url: "/points/yintang-acupressure-point" }, { code: "Taiyang", name: "Solar Plexus Temples", use: "Facial tension, headaches", url: "/points/taiyang-acupressure-point" }], conditions: [{ label: "Headache relief guide", url: "/conditions/acupressure-for-headache" }] },
+  { key: "ear", name: "Ear", bodyUrl: "/body/ear-acupressure-points", blurb: "Motion sickness, travel queasiness, stress", causes: ["Motion sickness and travel nausea", "Stress and travel anxiety", "Ear pressure on flights or elevation changes"], redFlags: ["Sudden hearing loss", "Ear pain with fever and discharge", "Ringing in the ears (tinnitus) that is new or one-sided"], points: [], conditions: [{ label: "Nausea relief guide", url: "/conditions/acupressure-for-nausea" }], note: "Ear acupressure uses tiny press pellets or gentle rubbing of the whole ear. See the full ear region guide for technique." },
+  { key: "neck", name: "Neck", bodyUrl: "/body/neck-acupressure-points", blurb: "Stiffness, tension headaches, restricted mobility", causes: ["Neck stiffness and tension", "Tension headaches that start at the base of the skull", "Posture strain from screens and desks", "Restricted range of motion"], redFlags: ["Neck pain with fever and severe headache", "Neck pain after a fall or whiplash", "Numbness or weakness spreading into the arms or hands"], points: [{ code: "GB20", name: "Fengchi", use: "Neck tension, headaches", url: "/points/gb20-fengchi-acupressure-point" }, { code: "GB21", name: "Jianjing", use: "Shoulder and neck tension", url: "/points/gb21-jianjing-acupressure-point" }, { code: "BL10", name: "Tianzhu", use: "Neck stiffness, headaches", url: "/points/bl10-tianzhu-acupressure-point" }], conditions: [{ label: "Neck pain relief guide", url: "/conditions/acupressure-for-neck-pain" }, { label: "Headache relief guide", url: "/conditions/acupressure-for-headache" }] },
+  { key: "shoulder", name: "Shoulder", bodyUrl: "/body/shoulder-acupressure-points", blurb: "Tension, stiffness, frozen shoulder, referred neck pain", causes: ["Shoulder tension from desk work and stress", "Stiffness and reduced range of motion", "Referred pain from the neck", "Overuse strain"], redFlags: ["Shoulder pain with chest pain, sweating, or shortness of breath", "Inability to raise the arm after an injury", "Severe pain or swelling after a fall"], points: [{ code: "GB21", name: "Jianjing", use: "Shoulder tension, stress", url: "/points/gb21-jianjing-acupressure-point" }, { code: "LI15", name: "Jianyu", use: "Shoulder pain, stiffness", url: "/points/li15-jianyu-acupressure-point" }, { code: "SI9", name: "Jianzhen", use: "Shoulder and upper back pain", url: "/points/si9-jianzhen-acupressure-point" }], conditions: [{ label: "Neck pain relief guide", url: "/conditions/acupressure-for-neck-pain" }, { label: "Back pain relief guide", url: "/conditions/acupressure-for-back-pain" }] },
+  { key: "chest", name: "Chest", bodyUrl: "/body/chest-acupressure-points", blurb: "Tightness, anxiety, shallow breathing, congestion", causes: ["Anxiety and stress tightness", "Shallow or congested breathing", "Cough and chest congestion", "Feeling emotionally weighed down"], redFlags: ["Chest pain with sweating, shortness of breath, or pain in the jaw or arm — seek emergency care", "Chest pain after an injury", "Coughing up blood"], points: [{ code: "CV17", name: "Shanzhong", use: "Chest tightness, anxiety, breathing", url: "/points/cv17-shanzhong-acupressure-point" }, { code: "CV22", name: "Tiantu", use: "Cough, sore throat, breathing", url: "/points/cv22-tiantu-acupressure-point" }, { code: "LU1", name: "Zhongfu", use: "Cough, chest and shoulder tension", url: "/points/lu1-zhongfu-acupressure-point" }], conditions: [{ label: "Anxiety relief guide", url: "/conditions/acupressure-for-anxiety" }, { label: "Nausea relief guide", url: "/conditions/acupressure-for-nausea" }] },
+  { key: "abdomen", name: "Abdomen", bodyUrl: "/body/abdomen-acupressure-points", blurb: "Bloating, constipation, cramping, indigestion", causes: ["Constipation and sluggish bowels", "Bloating and gas", "Indigestion and feeling full after meals", "Menstrual cramping and lower abdominal coldness"], redFlags: ["Sudden, severe, or worsening abdominal pain", "Abdominal pain with fever or vomiting", "Blood in the stool", "Pregnancy — avoid abdomen pressure points entirely"], points: [{ code: "ST25", name: "Tianshu", use: "Constipation, bloating, cramping", url: "/points/st25-tianshu-acupressure-point" }, { code: "CV12", name: "Zhongwan", use: "Indigestion, nausea, fullness", url: "/points/cv12-zhongwan-acupressure-point" }, { code: "CV6", name: "Qihai", use: "Fatigue, digestion, cold abdomen", url: "/points/cv6-qihai-acupressure-point" }, { code: "CV4", name: "Guanyuan", use: "Menstrual cramps, lower abdomen cold", url: "/points/cv4-guanyuan-acupressure-point" }], conditions: [{ label: "Constipation relief guide", url: "/conditions/acupressure-for-constipation" }, { label: "Nausea relief guide", url: "/conditions/acupressure-for-nausea" }] },
+  { key: "back", name: "Back", bodyUrl: "/body/back-acupressure-points", blurb: "Low back pain, muscle strain, sciatica-like pain", causes: ["Low back pain and muscle strain", "Upper back tension", "Sciatica-like pain radiating down the leg", "Cold, achy, or tired back"], redFlags: ["Back pain with fever", "Back pain after a fall or accident", "Loss of bladder or bowel control, or numbness in the groin area", "Progressive leg weakness"], points: [{ code: "BL23", name: "Shenshu", use: "Low back pain, fatigue, kidney support", url: "/points/bl23-shenshu-acupressure-point" }, { code: "BL40", name: "Weizhong", use: "Low back pain, sciatica", url: "/points/bl40-weizhong-acupressure-point" }, { code: "BL13", name: "Feishu", use: "Upper back, cough, congestion", url: "/points/bl13-feishu-acupressure-point" }, { code: "GV14", name: "Dazhui", use: "Neck-back junction, immunity", url: "/points/gv14-dazhui-acupressure-point" }], conditions: [{ label: "Back pain relief guide", url: "/conditions/acupressure-for-back-pain" }, { label: "Sleep quality guide", url: "/conditions/acupressure-for-sleep" }] },
+  { key: "arm", name: "Arm & Wrist", bodyUrl: "/body/arm-wrist-acupressure-points", blurb: "Wrist strain, nausea, motion sickness, elbow tension", causes: ["Wrist and forearm strain", "Motion sickness and nausea", "Elbow and forearm tension", "Travel queasiness"], redFlags: ["Wrist pain after an injury with swelling", "Sudden arm weakness", "Progressive numbness or tingling in the hand"], points: [{ code: "PC6", name: "Neiguan", use: "Nausea, motion sickness, anxiety", url: "/points/pc6-neiguan-acupressure-point" }, { code: "LI4", name: "Hegu", use: "Headaches, pain relief, immunity", url: "/points/li4-hegu-acupressure-point" }, { code: "LU7", name: "Lieque", use: "Cough, nasal congestion, headaches", url: "/points/lu7-lieque-acupressure-point" }, { code: "LI11", name: "Quchi", use: "Skin irritation, immunity, fever", url: "/points/li11-quchi-acupressure-point" }], conditions: [{ label: "Nausea relief guide", url: "/conditions/acupressure-for-nausea" }, { label: "Headache relief guide", url: "/conditions/acupressure-for-headache" }] },
+  { key: "hand", name: "Hand", bodyUrl: "/body/hand-acupressure-chart", blurb: "Headaches, nausea, stress — the fastest points to reach", causes: ["Headache and facial pain trigger points", "Nausea and motion sickness", "Stress and racing thoughts", "Nighttime wakefulness"], redFlags: ["Severe or persistent hand pain", "Hand pain with swelling after an injury", "Pins-and-needles that will not go away"], points: [{ code: "LI4", name: "Hegu", use: "Headaches, pain relief, immunity", url: "/points/li4-hegu-acupressure-point" }, { code: "HT7", name: "Shenmen", use: "Sleep, anxiety, heart calming", url: "/points/ht7-shenmen-acupressure-point" }], conditions: [{ label: "Headache relief guide", url: "/conditions/acupressure-for-headache" }, { label: "Sleep quality guide", url: "/conditions/acupressure-for-sleep" }, { label: "Anxiety relief guide", url: "/conditions/acupressure-for-anxiety" }, { label: "Nausea relief guide", url: "/conditions/acupressure-for-nausea" }] },
+  { key: "leg", name: "Leg", bodyUrl: "/body/leg-acupressure-points", blurb: "Knee strain, leg fatigue, menstrual cramping", causes: ["Knee and leg strain", "Heavy, tired legs", "Menstrual cramping", "Digestive sluggishness"], redFlags: ["Leg pain with swelling, redness, and warmth", "Inability to bear weight after an injury", "Sudden, severe calf pain"], points: [{ code: "ST36", name: "Zusanli", use: "Digestion, energy, immunity", url: "/points/st36-zusanli-acupressure-point" }, { code: "SP6", name: "Sanyinjiao", use: "Menstrual cramps, sleep, digestion", url: "/points/sp6-sanyinjiao-acupressure-point" }, { code: "GB34", name: "Yanglingquan", use: "Joints, tendons, muscle tension", url: "/points/gb34-yanglingquan-acupressure-point" }, { code: "LV3", name: "Taichong", use: "Stress, headaches, menstrual issues", url: "/points/lv3-taichong-acupressure-point" }], conditions: [{ label: "Sleep quality guide", url: "/conditions/acupressure-for-sleep" }, { label: "Back pain relief guide", url: "/conditions/acupressure-for-back-pain" }] },
+  { key: "foot", name: "Foot", bodyUrl: "/body/foot-acupressure-points", blurb: "Fatigue, grounding, stress, headaches from below", causes: ["Tired, heavy feet at the end of the day", "Stress and racing thoughts", "Headaches and tension", "Feeling ungrounded or wired"], redFlags: ["Foot pain with swelling and redness after an injury", "New numbness or tingling (especially with diabetes)", "Open sores or slow-healing wounds on the feet"], points: [{ code: "KI1", name: "Yongquan", use: "Anxiety, sleep, grounding energy", url: "/points/ki1-yongquan-acupressure-point" }, { code: "LV3", name: "Taichong", use: "Stress, headaches, blood pressure", url: "/points/lv3-taichong-acupressure-point" }, { code: "BL60", name: "Kunlun", use: "Back, neck, and ankle pain", url: "/points/bl60-kunlun-acupressure-point" }, { code: "KD3", name: "Taixi", use: "Fatigue, sleep, low back", url: "/points/kd3-taixi-acupressure-point" }], conditions: [{ label: "Sleep quality guide", url: "/conditions/acupressure-for-sleep" }, { label: "Headache relief guide", url: "/conditions/acupressure-for-headache" }] }
+];
+
+const regionByKey = Object.fromEntries(regions.map(r => [r.key, r]));
+function panelFor(region) {
+  const pts = (region.points || []).map(p => `
+        <a href="${p.url}" class="group flex items-center gap-3 rounded-lg border border-stone-200 bg-white p-3 transition-all hover:border-emerald-400 hover:shadow-sm dark:border-stone-700 dark:bg-stone-900 dark:hover:border-emerald-600">
+          <span class="shrink-0 w-10 h-10 rounded-md bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center text-emerald-700 dark:text-emerald-400 text-xs font-bold">${p.code}</span>
+          <span class="min-w-0">
+            <span class="block text-sm font-semibold text-stone-900 dark:text-stone-100">${p.name}</span>
+            <span class="block text-xs text-stone-500 dark:text-stone-400 truncate">${p.use}</span>
+          </span>
+        </a>`).join("");
+  const conds = (region.conditions || []).map(c => `<a href="${c.url}" class="inline-flex items-center gap-1 text-sm font-medium text-emerald-700 hover:text-emerald-600 dark:text-emerald-400 dark:hover:text-emerald-300 transition-colors">${c.label} →</a>`).join(" &nbsp;·&nbsp; ");
+  const note = region.note ? `<p class="mt-3 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">${region.note}</p>` : "";
+  return `<article data-region-panel="${region.key}" class="hidden">
+      <div class="flex items-start justify-between gap-3 mb-4">
+        <div>
+          <h2 class="text-xl font-bold tracking-tight text-stone-900 dark:text-stone-100">${region.name}</h2>
+          <p class="text-sm text-stone-500 dark:text-stone-400 mt-1">${region.blurb}</p>
+        </div>
+        <a href="${region.bodyUrl}" class="shrink-0 inline-flex items-center gap-1 rounded-lg border border-emerald-600 px-3 py-1.5 text-xs font-medium text-emerald-700 transition-colors hover:bg-emerald-50 dark:text-emerald-400 dark:hover:bg-emerald-900/20">Full region guide →</a>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <h3 class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-2">Common causes &amp; what it feels like</h3>
+          <ul class="space-y-1.5 text-sm text-stone-600 dark:text-stone-300">
+            ${region.causes.map(c => `<li class="flex gap-2"><span class="text-emerald-600 dark:text-emerald-400">•</span>${c}</li>`).join("")}
+          </ul>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 p-4 dark:border-red-900/40 dark:bg-red-950/30">
+          <h3 class="text-xs font-semibold uppercase tracking-widest text-red-600 dark:text-red-400 mb-2">See a doctor if</h3>
+          <ul class="space-y-1.5 text-sm text-red-700 dark:text-red-300">
+            ${region.redFlags.map(f => `<li class="flex gap-2"><span aria-hidden="true">⚠</span>${f}</li>`).join("")}
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-2">Acupressure points for this region</h3>
+          <div class="grid gap-2">${pts || `<p class="text-sm text-stone-500 dark:text-stone-400">${region.note || "No dedicated point page yet."}</p>`}</div>
+        </div>
+        <div>
+          <h3 class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-2">Condition guides</h3>
+          <p class="text-sm">${conds || "—"}</p>
+        </div>
+      </div>
+    </article>`;
+}
+const panelsHtml = regions.map(panelFor).join("");
+---
+<BaseLayout title="Where Does It Hurt? Interactive Pain Map" description="Interactive acupressure pain map. Click a body region to see common causes, red-flag symptoms that need a doctor, and the best acupressure points and condition guides for that area." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Pain Map", href: "/tools/pain-map" }]} datePublished="2026-08-19" dateModified="2026-08-19" articleSchema={true}>
+<div class="max-w-6xl mx-auto px-4 py-12 lg:px-6">
+  <div class="text-center mb-10">
+    <span class="text-xs font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Interactive Tool</span>
+    <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mt-2 mb-3">Where Does It Hurt?</h1>
+    <p class="text-stone-500 dark:text-stone-400 text-lg max-w-2xl mx-auto">Click a region on the body to see the most common causes of pain there, the red-flag symptoms that mean you should see a doctor first, and the best acupressure points and guides to try. Built as a starting point — not a diagnosis.</p>
+  </div>
+
+  <div class="grid md:grid-cols-[360px_1fr] gap-6 items-start mb-14">
+    <div class="mx-auto md:mx-0 md:sticky md:top-24">
+      <div class="relative">
+        <svg width="360" height="620" viewBox="0 0 360 620" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[360px] mx-auto" role="group" aria-label="Interactive body map">
+          <defs><radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(45,106,79,0.15)"></stop><stop offset="100%" stop-color="rgba(45,106,79,0)"></stop></radialGradient></defs>
+          <g class="region-shape base-outline">
+            <path d="M180 4 C130 4 118 22 118 52 L118 92 L130 92 L130 52 C130 26 142 20 180 20 C218 20 230 26 230 52 L230 92 L242 92 L242 52 C242 22 230 4 180 4 Z" fill="rgba(45,106,79,0.02)" stroke="#a8a29e" stroke-width="1.5" opacity="0.5"></path>
+            <path d="M115 122 L115 320 C115 332 125 338 145 338 L215 338 C235 338 245 332 245 320 L245 122" fill="none" stroke="#a8a29e" stroke-width="1.5" opacity="0.4"></path>
+            <path d="M130 338 L122 470 L120 500 C120 518 130 525 142 525 L158 525 L162 500 L170 470 L175 338" fill="none" stroke="#a8a29e" stroke-width="1.5" opacity="0.4"></path>
+            <path d="M230 338 L238 470 L240 500 C240 518 230 525 218 525 L202 525 L198 500 L190 470 L185 338" fill="none" stroke="#a8a29e" stroke-width="1.5" opacity="0.4"></path>
+          </g>
+          <g class="region" data-region="head" tabindex="0" role="button" aria-label="Head region">
+            <ellipse cx="180" cy="48" rx="44" ry="48" fill="rgba(45,106,79,0.10)" stroke="#2d6a4f" stroke-width="1.5"></ellipse>
+            <text x="180" y="42" font-family="system-ui" font-size="11" fill="#2d6a4f" font-weight="600" text-anchor="middle">Head</text>
+          </g>
+          <g class="region" data-region="face" tabindex="0" role="button" aria-label="Face region">
+            <ellipse cx="180" cy="74" rx="34" ry="22" fill="rgba(45,106,79,0.10)" stroke="#2d6a4f" stroke-width="1"></ellipse>
+            <text x="180" y="78" font-family="system-ui" font-size="9" fill="#2d6a4f" font-weight="500" text-anchor="middle">Face</text>
+          </g>
+          <g class="region" data-region="ear" tabindex="0" role="button" aria-label="Ear region">
+            <ellipse cx="132" cy="60" rx="10" ry="14" fill="rgba(45,106,79,0.10)" stroke="#2d6a4f" stroke-width="1"></ellipse>
+            <ellipse cx="228" cy="60" rx="10" ry="14" fill="rgba(45,106,79,0.10)" stroke="#2d6a4f" stroke-width="1"></ellipse>
+          </g>
+          <g class="region" data-region="neck" tabindex="0" role="button" aria-label="Neck region">
+            <rect x="165" y="92" width="30" height="30" rx="5" fill="rgba(45,106,79,0.10)" stroke="#2d6a4f" stroke-width="1"></rect>
+            <text x="180" y="112" font-family="system-ui" font-size="9" fill="#2d6a4f" font-weight="500" text-anchor="middle">Neck</text>
+          </g>
+          <g class="region" data-region="shoulder" tabindex="0" role="button" aria-label="Shoulder region">
+            <path d="M100 122 C85 120 55 124 45 134 C40 139 38 148 42 155 L60 155 C65 145 85 138 105 138 Z" fill="rgba(45,106,79,0.10)" stroke="#2d6a4f" stroke-width="1"></path>
+            <path d="M260 122 C275 120 305 124 315 134 C320 139 322 148 318 155 L300 155 C295 145 275 138 255 138 Z" fill="rgba(45,106,79,0.10)" stroke="#2d6a4f" stroke-width="1"></path>
+            <text x="73" y="137" font-family="system-ui" font-size="8" fill="#2d6a4f" font-weight="500" text-anchor="middle">Shoulder</text>
+            <text x="287" y="137" font-family="system-ui" font-size="8" fill="#2d6a4f" font-weight="500" text-anchor="middle">Shoulder</text>
+          </g>
+          <g class="region" data-region="chest" tabindex="0" role="button" aria-label="Chest region">
+            <path d="M118 122 L118 190 L242 190 L242 122 Z" fill="rgba(45,106,79,0.10)" stroke="#2d6a4f" stroke-width="1"></path>
+            <text x="180" y="162" font-family="system-ui" font-size="11" fill="#2d6a4f" font-weight="600" text-anchor="middle">Chest</text>
+          </g>
+          <g class="region" data-region="abdomen" tabindex="0" role="button" aria-label="Abdomen region">
+            <path d="M118 190 L118 318 L242 318 L242 190 Z" fill="rgba(45,106,79,0.10)" stroke="#2d6a4f" stroke-width="1"></path>
+            <text x="180" y="260" font-family="system-ui" font-size="11" fill="#2d6a4f" font-weight="600" text-anchor="middle">Abdomen</text>
+          </g>
+          <g class="region" data-region="back" tabindex="0" role="button" aria-label="Back region">
+            <path d="M118 122 L118 318 L242 318 L242 122 Z" fill="none" stroke="#2d6a4f" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.6"></path>
+            <text x="180" y="420" font-family="system-ui" font-size="12" fill="#2d6a4f" font-weight="600" text-anchor="middle">Back</text>
+            <text x="180" y="436" font-family="system-ui" font-size="9" fill="#a8a29e" text-anchor="middle">(opposite side — bladder meridian)</text>
+          </g>
+          <g class="region" data-region="arm" tabindex="0" role="button" aria-label="Arm and wrist region">
+            <path d="M42 155 L28 200 L24 230 L24 260 C24 270 28 275 36 275 L46 275 C52 275 54 270 54 260 L54 230 L62 200 L60 155" fill="rgba(45,106,79,0.10)" stroke="#2d6a4f" stroke-width="1"></path>
+            <path d="M318 155 L332 200 L336 230 L336 260 C336 270 332 275 324 275 L314 275 C308 275 306 270 306 260 L306 230 L298 200 L300 155" fill="rgba(45,106,79,0.10)" stroke="#2d6a4f" stroke-width="1"></path>
+            <text x="180" y="232" font-family="system-ui" font-size="10" fill="#2d6a4f" font-weight="500" text-anchor="middle">Arm</text>
+          </g>
+          <g class="region" data-region="hand" tabindex="0" role="button" aria-label="Hand region">
+            <rect x="18" y="275" width="40" height="28" rx="6" fill="rgba(45,106,79,0.10)" stroke="#2d6a4f" stroke-width="1"></rect>
+            <text x="38" y="293" font-family="system-ui" font-size="9" fill="#2d6a4f" font-weight="500" text-anchor="middle">Hand</text>
+            <rect x="302" y="275" width="40" height="28" rx="6" fill="rgba(45,106,79,0.10)" stroke="#2d6a4f" stroke-width="1"></rect>
+            <text x="322" y="293" font-family="system-ui" font-size="9" fill="#2d6a4f" font-weight="500" text-anchor="middle">Hand</text>
+          </g>
+          <g class="region" data-region="leg" tabindex="0" role="button" aria-label="Leg region">
+            <path d="M130 338 L122 470 L120 500 C120 518 130 525 142 525 L158 525 L162 500 L170 470 L175 338" fill="rgba(45,106,79,0.10)" stroke="#2d6a4f" stroke-width="1"></path>
+            <path d="M230 338 L238 470 L240 500 C240 518 230 525 218 525 L202 525 L198 500 L190 470 L185 338" fill="rgba(45,106,79,0.10)" stroke="#2d6a4f" stroke-width="1"></path>
+            <text x="148" y="490" font-family="system-ui" font-size="9" fill="#2d6a4f" font-weight="500" text-anchor="middle">Leg</text>
+            <text x="212" y="490" font-family="system-ui" font-size="9" fill="#2d6a4f" font-weight="500" text-anchor="middle">Leg</text>
+          </g>
+          <g class="region" data-region="foot" tabindex="0" role="button" aria-label="Foot region">
+            <rect x="122" y="525" width="48" height="24" rx="8" fill="rgba(45,106,79,0.10)" stroke="#2d6a4f" stroke-width="1"></rect>
+            <text x="146" y="541" font-family="system-ui" font-size="9" fill="#2d6a4f" font-weight="500" text-anchor="middle">Foot</text>
+            <rect x="190" y="525" width="48" height="24" rx="8" fill="rgba(45,106,79,0.10)" stroke="#2d6a4f" stroke-width="1"></rect>
+            <text x="214" y="541" font-family="system-ui" font-size="9" fill="#2d6a4f" font-weight="500" text-anchor="middle">Foot</text>
+          </g>
+        </svg>
+        <p class="text-center text-xs text-stone-400 mt-2">Tap or click a region</p>
+      </div>
+    </div>
+
+    <div class="min-h-[480px]">
+      <div id="pain-panels">
+        <Fragment set:html={panelsHtml} />
+      </div>
+    </div>
+  </div>
+
+  <section class="max-w-3xl mx-auto mb-12">
+    <h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">How to Use This Map</h2>
+    <ul class="list-disc pl-6 space-y-2 text-stone-600 dark:text-stone-300 leading-relaxed">
+      <li>Start where it hurts: tap the matching body region to see what commonly causes that discomfort and which acupressure points are worth trying.</li>
+      <li>Read the <span class="text-red-600 dark:text-red-400 font-medium">"See a doctor if"</span> list first. Acupressure is for everyday tension and minor discomfort — it is not a substitute for medical care.</li>
+      <li>Click any point card to open the full guide with exact location, how to press, and how long to hold.</li>
+      <li>If you feel pain in several regions at once, the condition guides (headache, back pain, sleep, anxiety, nausea) show complete routines that combine points across the body.</li>
+      <li>Prefer browsing by anatomy? The <a href="/atlas" class="text-emerald-700 hover:underline dark:text-emerald-400">interactive atlas</a> organizes the same twelve regions with point location guides.</li>
+    </ul>
+  </section>
+
+  <section class="max-w-3xl mx-auto mb-12">
+    <h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Frequently Asked Questions</h2>
+    <details class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900 mb-3"><summary class="cursor-pointer font-medium text-stone-900 dark:text-stone-100">Is this a medical diagnostic tool?</summary><div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">No. It maps common everyday causes of pain and the red-flag symptoms that need a doctor's attention, based on how acupressure practitioners and primary care generally categorize these complaints. It cannot replace an examination.</div></details>
+    <details class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900 mb-3"><summary class="cursor-pointer font-medium text-stone-900 dark:text-stone-100">Why does the map show the back as the opposite side?</summary><div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">The most important back points sit along the Bladder meridian in two lines beside the spine, so the back is drawn separately with a dashed outline for clarity.</div></details>
+    <details class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900 mb-3"><summary class="cursor-pointer font-medium text-stone-900 dark:text-stone-100">I have chest pain. Should I press a point?</summary><div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">If chest pain comes with sweating, shortness of breath, or pain spreading to the jaw or arm, seek emergency care immediately — do not delay to try acupressure. For mild stress-related tightness, the chest region guide shows gentle points, and the anxiety guide offers a full routine.</div></details>
+    <details class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900"><summary class="cursor-pointer font-medium text-stone-900 dark:text-stone-100">Which region should a beginner start with?</summary><div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">The hand and foot regions. Their points are easy to find and reach, and they cover common needs such as headaches, nausea, stress, and sleep.</div></details>
+  </section>
+</div>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    var regions = document.querySelectorAll('.region[data-region]');
+    var panels = document.querySelectorAll('[data-region-panel]');
+    var active = null;
+
+    function select(key, scroll) {
+      if (active === key) return;
+      active = key;
+      regions.forEach(function (r) {
+        var on = r.getAttribute('data-region') === key;
+        r.classList.toggle('region-active', on);
+        r.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      panels.forEach(function (p) {
+        p.classList.toggle('hidden', p.getAttribute('data-region-panel') !== key);
+      });
+      if (scroll) {
+        var panel = document.querySelector('[data-region-panel="' + key + '"]');
+        var rect = panel.getBoundingClientRect();
+        if (rect.top < 0) { panel.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      }
+    }
+
+    regions.forEach(function (r) {
+      r.style.cursor = 'pointer';
+      r.setAttribute('aria-pressed', 'false');
+      r.addEventListener('click', function () { select(this.getAttribute('data-region'), true); });
+      r.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(this.getAttribute('data-region'), true); }
+      });
+    });
+
+    var first = document.querySelector('[data-region]');
+    if (first) select(first.getAttribute('data-region'), false);
+  });
+</script>
+<style>
+  .region { transition: opacity 0.15s ease; }
+  .region-active > ellipse, .region-active > rect, .region-active > path { filter: url(#glow); stroke-width: 2.5 !important; }
+  .region-active > text { font-weight: 700 !important; }
+  .region:not(.region-active) { opacity: 0.75; }
+  .region:hover, .region:focus-visible { outline: none; }
+  .region:hover > ellipse, .region:hover > rect, .region:hover > path, .region:focus-visible > ellipse, .region:focus-visible > rect, .region:focus-visible > path { stroke-width: 2.5; }
+</style>
+</BaseLayout>
