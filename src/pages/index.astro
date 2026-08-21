@@ -1,7 +1,486 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const points = [
+  { code: "LI4", name: "Hegu", region: "Hand", img: "/images/li4-location.webp", alt: "LI4 Hegu acupressure point on the hand", url: "/points/li4-hegu-acupressure-point", location: "Web between thumb and index finger", tags: ["Pain relief", "Headache", "Sinus"] },
+  { code: "PC6", name: "Neiguan", region: "Arm", img: "/images/pc6-location.webp", alt: "PC6 Neiguan acupressure point on the inner forearm", url: "/points/pc6-neiguan-acupressure-point", location: "Inner forearm, three finger-widths below the wrist crease", tags: ["Nausea", "Anxiety", "Motion sickness"] },
+  { code: "ST36", name: "Zusanli", region: "Leg", img: "/images/st36-location.webp", alt: "ST36 Zusanli acupressure point below the knee", url: "/points/st36-zusanli-acupressure-point", location: "Four finger-widths below the kneecap, beside the shin bone", tags: ["Digestion", "Energy", "Immunity"] },
+  { code: "SP6", name: "Sanyinjiao", region: "Leg", img: "/images/sp6-location.webp", alt: "SP6 Sanyinjiao acupressure point on the inner lower leg", url: "/points/sp6-sanyinjiao-acupressure-point", location: "Inner lower leg, four finger-widths above the inner ankle", tags: ["Women's health", "Sleep", "Circulation"] },
+  { code: "GB20", name: "Fengchi", region: "Neck", img: "/images/gb20-location.webp", alt: "GB20 Fengchi acupressure point at the base of the skull", url: "/points/gb20-fengchi-acupressure-point", location: "Hollows at the base of the skull", tags: ["Headache", "Neck tension", "Sinuses"] },
+  { code: "HT7", name: "Shenmen", region: "Wrist", img: "/images/ht7-location.webp", alt: "HT7 Shenmen acupressure point on the wrist", url: "/points/ht7-shenmen-acupressure-point", location: "Inner wrist crease, in line with the little finger", tags: ["Insomnia", "Anxiety", "Heart calm"] },
+  { code: "LV3", name: "Taichong", region: "Foot", img: "/images/lv3-location.webp", alt: "LV3 Taichong acupressure point on the top of the foot", url: "/points/lv3-taichong-acupressure-point", location: "Top of the foot, between the first and second toe bones", tags: ["Stress", "Headache", "Liver qi"] },
+  { code: "Yintang", name: "Hall of Impression", region: "Face", img: "/images/yintang-location.webp", alt: "Yintang acupressure point between the eyebrows", url: "/points/yintang-acupressure-point", location: "Midway between the eyebrows", tags: ["Anxiety", "Stress", "Clear thinking"] },
+  { code: "BL40", name: "Weizhong", region: "Leg", img: "/images/bl40-location.webp", alt: "BL40 Weizhong acupressure point behind the knee", url: "/points/bl40-weizhong-acupressure-point", location: "Center of the crease behind the knee", tags: ["Back pain", "Sciatica", "Knee pain"] },
+  { code: "BL60", name: "Kunlun", region: "Ankle", img: "/images/bl60-location.webp", alt: "BL60 Kunlun acupressure point by the outer ankle", url: "/points/bl60-kunlun-acupressure-point", location: "Between the outer ankle bone and Achilles tendon", tags: ["Leg pain", "Headache", "Ankle pain"] },
+  { code: "CV17", name: "Shanzhong", region: "Chest", img: "/images/cv17-location.webp", alt: "CV17 Shanzhong acupressure point on the chest", url: "/points/cv17-shanzhong-acupressure-point", location: "Center of the sternum at the nipple line", tags: ["Breathing", "Emotional release", "Chest tightness"] },
+  { code: "CV6", name: "Qihai", region: "Abdomen", img: "/images/cv6-location.webp", alt: "CV6 Qihai acupressure point on the lower abdomen", url: "/points/cv6-qihai-acupressure-point", location: "Midline, two finger-widths below the navel", tags: ["Vitality", "Digestion", "Fatigue"] },
+  { code: "GB21", name: "Jianjing", region: "Shoulder", img: "/images/gb21-location.webp", alt: "GB21 Jianjing acupressure point on the shoulder", url: "/points/gb21-jianjing-acupressure-point", location: "Highest point of the shoulder", tags: ["Shoulder tension", "Neck pain", "Stiffness"] },
+  { code: "KD3", name: "Taixi", region: "Ankle", img: "/images/kd3-location.webp", alt: "KD3 Taixi acupressure point by the inner ankle", url: "/points/kd3-taixi-acupressure-point", location: "Between the inner ankle bone and Achilles tendon", tags: ["Kidney energy", "Fatigue", "Low back pain"] },
+  { code: "KI1", name: "Yongquan", region: "Foot", img: "/images/ki1-location.webp", alt: "KI1 Yongquan acupressure point on the sole of the foot", url: "/points/ki1-yongquan-acupressure-point", location: "Sole of the foot, where a crease forms when toes curl", tags: ["Calming", "Grounding", "Insomnia"] },
+  { code: "LI11", name: "Quchi", region: "Arm", img: "/images/li11-location.webp", alt: "LI11 Quchi acupressure point at the elbow", url: "/points/li11-quchi-acupressure-point", location: "Outer end of the elbow crease", tags: ["Allergies", "Skin health", "Immunity"] },
+];
+
+const featuredPoints = points.slice(0, 8);
+
+const regions = [
+  { label: "Face", url: "/body/face-acupressure-points" },
+  { label: "Head", url: "/body/head-acupressure-points" },
+  { label: "Neck", url: "/body/neck-acupressure-points" },
+  { label: "Shoulders", url: "/body/shoulder-acupressure-points" },
+  { label: "Chest", url: "/body/chest-acupressure-points" },
+  { label: "Arms & Wrists", url: "/body/arm-wrist-acupressure-points" },
+  { label: "Hands", url: "/body/hand-acupressure-chart" },
+  { label: "Abdomen", url: "/body/abdomen-acupressure-points" },
+  { label: "Back", url: "/body/back-acupressure-points" },
+  { label: "Legs", url: "/body/leg-acupressure-points" },
+  { label: "Feet", url: "/body/foot-acupressure-points" },
+  { label: "Ears", url: "/body/ear-acupressure-points" },
+];
+
+const conditions = [
+  { title: "Headaches", url: "/conditions/acupressure-for-headache", blurb: "LI4, GB20 and Taiyang for tension and sinus headaches", best: "LI4 · GB20" },
+  { title: "Migraines", url: "/conditions/acupressure-for-migraine", blurb: "Points that calm the head and settle migraine nausea", best: "PC6 · GB20" },
+  { title: "Neck Pain", url: "/conditions/acupressure-for-neck-pain", blurb: "Release tension held in the neck and shoulders", best: "GB20 · GB21" },
+  { title: "Back Pain", url: "/conditions/acupressure-for-back-pain", blurb: "Target the lower back and sciatic pathways", best: "BL40 · BL60 · KD3" },
+  { title: "Nausea", url: "/conditions/acupressure-for-nausea", blurb: "The most research-backed use of acupressure", best: "PC6" },
+  { title: "Anxiety & Stress", url: "/conditions/acupressure-for-anxiety", blurb: "Calming points for a racing mind and tense body", best: "Yintang · HT7" },
+  { title: "Sleep", url: "/conditions/acupressure-for-sleep", blurb: "A nightly routine for falling and staying asleep", best: "HT7 · SP6 · KI1" },
+  { title: "Constipation", url: "/conditions/acupressure-for-constipation", blurb: "Support digestive rhythm and abdominal comfort", best: "ST36 · CV6" },
+];
+
+const research = [
+  { area: "Nausea & vomiting", stat: "Strongest", detail: "The long-running Cochrane systematic review of P6/PC6 stimulation found non-invasive stimulation reduces post-operative nausea and vomiting — the strongest evidence on this site.", source: "Lee & Fan, Cochrane Database Syst Rev 2009" },
+  { area: "Pain", stat: "Promising", detail: "Systematic reviews of acupressure for pain, including back, neck, and headache, describe the evidence as promising but limited in quality, with many small or difficult-to-blind trials.", source: "Chen & Wang, 2014" },
+  { area: "Anxiety", stat: "Positive", detail: "A systematic review and meta-analysis of acupressure for anxiety found a positive overall direction of effect while calling for more high-quality trials.", source: "Chen HM et al., 2022" },
+  { area: "Sleep", stat: "Preliminary", detail: "A randomized controlled trial found acupressure improved sleep quality in nursing-home residents; the wider evidence base is promising but still preliminary.", source: "Liao et al., 2020" },
+  { area: "Headache", stat: "Promising", detail: "A randomized trial found one month of acupressure more effective than a muscle relaxant for chronic headache; review evidence is promising but limited in quality.", source: "Hsieh et al., 2010" },
+  { area: "Safety", stat: "Low risk", detail: "Acupressure is generally considered low-risk when performed as described on this site; mild, temporary soreness is possible. Serious adverse events in controlled trials are rare.", source: "Across the studies cited on this site" },
+];
 ---
 
-<BaseLayout title="Acupressure Guide — Evidence-Based Pressure Points & Natural Healing" description="Learn acupressure through traditional wisdom and modern science. Explore our interactive body atlas to discover pressure points, their locations, and how to use them." websiteSchema={true}>
-<section class="relative overflow-hidden min-h-[420px] lg:aspect-[12/5] bg-emerald-800 flex items-center"><img src="/images/hero-body.webp" alt="" width="1672" height="941" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true"><div class="absolute inset-0 bg-gradient-to-r from-emerald-800/90 from-0% via-emerald-800/40 via-50% to-emerald-800/20 to-80%"></div><div class="relative z-10 max-w-[1200px] mx-auto px-4 lg:px-6 w-full"><div class="max-w-[520px] py-16 md:py-20"><h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">Learn Acupressure<br><span class="text-copper">Through Traditional Wisdom<br>& Modern Science</span></h1><p class="mt-4 text-base text-emerald-100/80 leading-relaxed max-w-md">Explore acupressure points, learn how they work, and discover practical self-care techniques grounded in both ancient tradition and clinical research.</p><div class="mt-8 flex flex-wrap gap-3"><a href="/atlas" class="inline-flex items-center rounded-lg bg-copper px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-copper/90 active:scale-[0.98]">Explore Points</a><a href="/learn" class="inline-flex items-center rounded-lg border border-white/25 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-white/10 active:scale-[0.98]">Learning Center</a></div></div></div></section><section class="py-20 md:py-28"><div class="mx-auto max-w-5xl px-4 lg:px-6"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100">Where would you like to start?</h2><div class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"><a href="/history" class="group rounded-xl border border-stone-200 bg-white p-6 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(45,106,79,0.08)] dark:border-stone-700 dark:bg-stone-900 dark:hover:border-emerald-600"><h3 class="font-semibold text-stone-900 dark:text-stone-100">History</h3><p class="mt-1.5 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">How acupressure evolved from ancient China to modern clinical practice.</p><span class="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 group-hover:gap-1.5 transition-all">Explore ›</span></a><a href="/atlas" class="group rounded-xl border border-stone-200 bg-white p-6 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(45,106,79,0.08)] dark:border-stone-700 dark:bg-stone-900 dark:hover:border-emerald-600"><h3 class="font-semibold text-stone-900 dark:text-stone-100">Points Atlas</h3><p class="mt-1.5 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Explore acupressure points through an interactive body map.</p><span class="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 group-hover:gap-1.5 transition-all">Explore ›</span></a><a href="/learn" class="group rounded-xl border border-stone-200 bg-white p-6 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(45,106,79,0.08)] dark:border-stone-700 dark:bg-stone-900 dark:hover:border-emerald-600"><h3 class="font-semibold text-stone-900 dark:text-stone-100">Learning Center</h3><p class="mt-1.5 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Fundamentals, safety, techniques, and the science behind the practice.</p><span class="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 group-hover:gap-1.5 transition-all">Explore ›</span></a><a href="/about" class="group rounded-xl border border-stone-200 bg-white p-6 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(45,106,79,0.08)] dark:border-stone-700 dark:bg-stone-900 dark:hover:border-emerald-600"><h3 class="font-semibold text-stone-900 dark:text-stone-100">About</h3><p class="mt-1.5 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Our mission, our approach, and the team behind this knowledge platform.</p><span class="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 group-hover:gap-1.5 transition-all">Explore ›</span></a></div></div></section><section class="py-20 md:py-28 bg-emerald-50/60 dark:bg-emerald-900/10"><div class="mx-auto max-w-5xl px-4 lg:px-6"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100">Explore the Body</h2><p class="mt-2 text-sm text-stone-500 dark:text-stone-400">Click a body region to discover its acupressure points.</p><div class="mt-10 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4"><a href="/body/head-acupressure-points" class="flex flex-col items-center gap-3 rounded-xl border border-emerald-200/60 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_16px_rgba(45,106,79,0.06)] dark:border-emerald-800 dark:bg-stone-900 dark:hover:border-emerald-600 group"><svg viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16"><ellipse cx="60" cy="55" rx="38" ry="45" fill="rgba(45,106,79,0.06)" stroke="#2d6a4f" stroke-width="1.5"></ellipse><ellipse cx="60" cy="45" rx="22" ry="16" fill="rgba(45,106,79,0.04)" stroke="#2d6a4f" stroke-width="0.8" opacity="0.5"></ellipse><circle cx="60" cy="40" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="60" cy="65" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="42" cy="55" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="78" cy="55" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="60" cy="80" r="2" fill="#2d6a4f" opacity="0.5"></circle><text x="60" y="120" font-family="system-ui" font-size="10" fill="#2d6a4f" text-anchor="middle" font-weight="600">Head</text></svg><span class="text-xs font-medium text-stone-600 dark:text-stone-400 text-center leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Head</span></a><a href="/body/face-acupressure-points" class="flex flex-col items-center gap-3 rounded-xl border border-emerald-200/60 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_16px_rgba(45,106,79,0.06)] dark:border-emerald-800 dark:bg-stone-900 dark:hover:border-emerald-600 group"><svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16"><ellipse cx="50" cy="50" rx="32" ry="40" fill="rgba(45,106,79,0.06)" stroke="#2d6a4f" stroke-width="1.5"></ellipse><circle cx="36" cy="40" r="3" fill="#2d6a4f" opacity="0.4"></circle><circle cx="64" cy="40" r="3" fill="#2d6a4f" opacity="0.4"></circle><path d="M40 55 Q50 62 60 55" fill="none" stroke="#2d6a4f" stroke-width="1" opacity="0.4"></path><circle cx="50" cy="55" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="50" cy="35" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="42" cy="50" r="1.5" fill="#2d6a4f" opacity="0.5"></circle><circle cx="58" cy="50" r="1.5" fill="#2d6a4f" opacity="0.5"></circle><text x="50" y="105" font-family="system-ui" font-size="10" fill="#2d6a4f" text-anchor="middle" font-weight="600">Face</text></svg><span class="text-xs font-medium text-stone-600 dark:text-stone-400 text-center leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Face</span></a><a href="/body/ear-acupressure-points" class="flex flex-col items-center gap-3 rounded-xl border border-emerald-200/60 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_16px_rgba(45,106,79,0.06)] dark:border-emerald-800 dark:bg-stone-900 dark:hover:border-emerald-600 group"><svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16"><ellipse cx="50" cy="50" rx="20" ry="30" fill="rgba(45,106,79,0.06)" stroke="#2d6a4f" stroke-width="1.5"></ellipse><ellipse cx="50" cy="48" rx="10" ry="18" fill="none" stroke="#2d6a4f" stroke-width="0.8" opacity="0.4"></ellipse><circle cx="50" cy="38" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="50" cy="50" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="50" cy="62" r="2" fill="#2d6a4f" opacity="0.5"></circle><text x="50" y="105" font-family="system-ui" font-size="10" fill="#2d6a4f" text-anchor="middle" font-weight="600">Ear</text></svg><span class="text-xs font-medium text-stone-600 dark:text-stone-400 text-center leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Ear</span></a><a href="/body/neck-acupressure-points" class="flex flex-col items-center gap-3 rounded-xl border border-emerald-200/60 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_16px_rgba(45,106,79,0.06)] dark:border-emerald-800 dark:bg-stone-900 dark:hover:border-emerald-600 group"><svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16"><rect x="20" y="15" width="40" height="55" rx="12" fill="rgba(45,106,79,0.06)" stroke="#2d6a4f" stroke-width="1.5"></rect><ellipse cx="40" cy="45" rx="12" ry="18" fill="none" stroke="#2d6a4f" stroke-width="0.8" opacity="0.3"></ellipse><circle cx="40" cy="28" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="40" cy="42" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="40" cy="56" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="28" cy="42" r="1.5" fill="#2d6a4f" opacity="0.4"></circle><circle cx="52" cy="42" r="1.5" fill="#2d6a4f" opacity="0.4"></circle><text x="40" y="105" font-family="system-ui" font-size="10" fill="#2d6a4f" text-anchor="middle" font-weight="600">Neck</text></svg><span class="text-xs font-medium text-stone-600 dark:text-stone-400 text-center leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Neck</span></a><a href="/body/shoulder-acupressure-points" class="flex flex-col items-center gap-3 rounded-xl border border-emerald-200/60 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_16px_rgba(45,106,79,0.06)] dark:border-emerald-800 dark:bg-stone-900 dark:hover:border-emerald-600 group"><svg viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16"><path d="M10 50 Q30 20 70 30 Q110 20 130 50" fill="rgba(45,106,79,0.06)" stroke="#2d6a4f" stroke-width="1.5"></path><circle cx="30" cy="40" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="70" cy="35" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="110" cy="40" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="50" cy="50" r="1.5" fill="#2d6a4f" opacity="0.4"></circle><circle cx="90" cy="50" r="1.5" fill="#2d6a4f" opacity="0.4"></circle><text x="70" y="85" font-family="system-ui" font-size="10" fill="#2d6a4f" text-anchor="middle" font-weight="600">Shoulder</text></svg><span class="text-xs font-medium text-stone-600 dark:text-stone-400 text-center leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Shoulder</span></a><a href="/body/arm-wrist-acupressure-points" class="flex flex-col items-center gap-3 rounded-xl border border-emerald-200/60 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_16px_rgba(45,106,79,0.06)] dark:border-emerald-800 dark:bg-stone-900 dark:hover:border-emerald-600 group"><svg viewBox="0 0 60 160" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16"><path d="M20 10 Q15 40 10 70 Q8 100 10 130 Q12 145 30 145 Q48 145 50 130 Q52 100 50 70 Q45 40 40 10 Z" fill="rgba(45,106,79,0.06)" stroke="#2d6a4f" stroke-width="1.5"></path><circle cx="30" cy="30" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="30" cy="70" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="30" cy="100" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="30" cy="130" r="2" fill="#2d6a4f" opacity="0.5"></circle><text x="30" y="158" font-family="system-ui" font-size="10" fill="#2d6a4f" text-anchor="middle" font-weight="600">Arm</text></svg><span class="text-xs font-medium text-stone-600 dark:text-stone-400 text-center leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Arm &amp; Wrist</span></a><a href="/body/hand-acupressure-chart" class="flex flex-col items-center gap-3 rounded-xl border border-emerald-200/60 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_16px_rgba(45,106,79,0.06)] dark:border-emerald-800 dark:bg-stone-900 dark:hover:border-emerald-600 group"><svg viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16"><rect x="20" y="50" width="80" height="60" rx="12" fill="rgba(45,106,79,0.06)" stroke="#2d6a4f" stroke-width="1.5"></rect><rect x="10" y="20" width="18" height="45" rx="8" fill="rgba(45,106,79,0.06)" stroke="#2d6a4f" stroke-width="1"></rect><rect x="46" y="8" width="18" height="55" rx="8" fill="rgba(45,106,79,0.06)" stroke="#2d6a4f" stroke-width="1"></rect><rect x="82" y="18" width="18" height="45" rx="8" fill="rgba(45,106,79,0.06)" stroke="#2d6a4f" stroke-width="1"></rect><rect x="36" y="65" width="48" height="35" rx="6" fill="none" stroke="#2d6a4f" stroke-width="0.8" opacity="0.3"></rect><circle cx="26" cy="80" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="60" cy="80" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="94" cy="80" r="2" fill="#2d6a4f" opacity="0.5"></circle><text x="60" y="135" font-family="system-ui" font-size="10" fill="#2d6a4f" text-anchor="middle" font-weight="600">Hand</text></svg><span class="text-xs font-medium text-stone-600 dark:text-stone-400 text-center leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Hand</span></a><a href="/body/chest-acupressure-points" class="flex flex-col items-center gap-3 rounded-xl border border-emerald-200/60 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_16px_rgba(45,106,79,0.06)] dark:border-emerald-800 dark:bg-stone-900 dark:hover:border-emerald-600 group"><svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16"><path d="M20 10 Q50 5 80 10 L80 80 Q50 90 20 80 Z" fill="rgba(45,106,79,0.06)" stroke="#2d6a4f" stroke-width="1.5"></path><line x1="30" y1="40" x2="70" y2="40" stroke="#2d6a4f" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,3"></line><circle cx="50" cy="35" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="35" cy="55" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="65" cy="55" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="50" cy="75" r="2" fill="#2d6a4f" opacity="0.5"></circle><text x="50" y="112" font-family="system-ui" font-size="10" fill="#2d6a4f" text-anchor="middle" font-weight="600">Chest</text></svg><span class="text-xs font-medium text-stone-600 dark:text-stone-400 text-center leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Chest</span></a><a href="/body/abdomen-acupressure-points" class="flex flex-col items-center gap-3 rounded-xl border border-emerald-200/60 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_16px_rgba(45,106,79,0.06)] dark:border-emerald-800 dark:bg-stone-900 dark:hover:border-emerald-600 group"><svg viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16"><path d="M20 5 Q50 0 80 5 L85 95 Q50 105 15 95 Z" fill="rgba(45,106,79,0.06)" stroke="#2d6a4f" stroke-width="1.5"></path><circle cx="50" cy="20" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="50" cy="45" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="35" cy="60" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="65" cy="60" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="50" cy="80" r="2" fill="#2d6a4f" opacity="0.5"></circle><text x="50" y="122" font-family="system-ui" font-size="10" fill="#2d6a4f" text-anchor="middle" font-weight="600">Abdomen</text></svg><span class="text-xs font-medium text-stone-600 dark:text-stone-400 text-center leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Abdomen</span></a><a href="/body/back-acupressure-points" class="flex flex-col items-center gap-3 rounded-xl border border-emerald-200/60 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_16px_rgba(45,106,79,0.06)] dark:border-emerald-800 dark:bg-stone-900 dark:hover:border-emerald-600 group"><svg viewBox="0 0 80 140" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16"><rect x="10" y="10" width="60" height="110" rx="16" fill="rgba(45,106,79,0.06)" stroke="#2d6a4f" stroke-width="1.5"></rect><line x1="40" y1="15" x2="40" y2="115" stroke="#2d6a4f" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,4"></line><circle cx="40" cy="30" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="40" cy="50" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="30" cy="65" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="50" cy="65" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="40" cy="85" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="40" cy="105" r="2" fill="#2d6a4f" opacity="0.5"></circle><text x="40" y="135" font-family="system-ui" font-size="10" fill="#2d6a4f" text-anchor="middle" font-weight="600">Back</text></svg><span class="text-xs font-medium text-stone-600 dark:text-stone-400 text-center leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Back</span></a><a href="/body/leg-acupressure-points" class="flex flex-col items-center gap-3 rounded-xl border border-emerald-200/60 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_16px_rgba(45,106,79,0.06)] dark:border-emerald-800 dark:bg-stone-900 dark:hover:border-emerald-600 group"><svg viewBox="0 0 60 170" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16"><path d="M15 10 Q10 40 8 80 Q6 120 10 150 Q14 160 30 160 Q46 160 50 150 Q54 120 52 80 Q50 40 45 10 Z" fill="rgba(45,106,79,0.06)" stroke="#2d6a4f" stroke-width="1.5"></path><circle cx="30" cy="30" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="30" cy="60" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="20" cy="90" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="40" cy="90" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="30" cy="120" r="2" fill="#2d6a4f" opacity="0.5"></circle><text x="30" y="168" font-family="system-ui" font-size="10" fill="#2d6a4f" text-anchor="middle" font-weight="600">Leg</text></svg><span class="text-xs font-medium text-stone-600 dark:text-stone-400 text-center leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Leg</span></a><a href="/body/foot-acupressure-points" class="flex flex-col items-center gap-3 rounded-xl border border-emerald-200/60 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_16px_rgba(45,106,79,0.06)] dark:border-emerald-800 dark:bg-stone-900 dark:hover:border-emerald-600 group"><svg viewBox="0 0 140 80" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16"><path d="M20 20 Q30 8 70 8 Q110 8 120 20 Q130 35 125 55 Q120 70 100 70 L40 70 Q20 70 15 55 Q10 40 20 20 Z" fill="rgba(45,106,79,0.06)" stroke="#2d6a4f" stroke-width="1.5"></path><circle cx="50" cy="40" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="70" cy="35" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="90" cy="40" r="2" fill="#2d6a4f" opacity="0.5"></circle><circle cx="60" cy="55" r="1.5" fill="#2d6a4f" opacity="0.4"></circle><circle cx="80" cy="55" r="1.5" fill="#2d6a4f" opacity="0.4"></circle><text x="70" y="78" font-family="system-ui" font-size="10" fill="#2d6a4f" text-anchor="middle" font-weight="600">Foot</text></svg><span class="text-xs font-medium text-stone-600 dark:text-stone-400 text-center leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Foot</span></a></div><div class="mt-8 text-center"><a href="/atlas" class="inline-flex items-center gap-1.5 text-sm font-medium text-emerald-600 hover:text-emerald-500 dark:text-emerald-400 transition-colors">Open interactive atlas ›</a></div></div></section><section class="py-20 md:py-28"><div class="mx-auto max-w-5xl px-4 lg:px-6"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100">Featured Acupressure Points</h2><div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"><a href="/points/li4-hegu-acupressure-point" class="group rounded-xl border border-stone-200 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(45,106,79,0.06)] dark:border-stone-700 dark:bg-stone-900 dark:hover:border-emerald-600"><div class="flex items-center gap-1.5 mb-2"><span class="text-copper text-xs">★★★★★</span></div><h3 class="font-semibold text-stone-900 dark:text-stone-100 text-sm">LI4 (Hegu)</h3><p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Pain relief, headaches, immune support</p><span class="mt-2 inline-flex items-center text-xs font-medium text-emerald-600 dark:text-emerald-400 group-hover:gap-1 transition-all">Learn ›</span></a><a href="/points/pc6-neiguan-acupressure-point" class="group rounded-xl border border-stone-200 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(45,106,79,0.06)] dark:border-stone-700 dark:bg-stone-900 dark:hover:border-emerald-600"><div class="flex items-center gap-1.5 mb-2"><span class="text-copper text-xs">★★★★★</span></div><h3 class="font-semibold text-stone-900 dark:text-stone-100 text-sm">PC6 (Neiguan)</h3><p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Nausea, anxiety, motion sickness</p><span class="mt-2 inline-flex items-center text-xs font-medium text-emerald-600 dark:text-emerald-400 group-hover:gap-1 transition-all">Learn ›</span></a><a href="/points/st36-zusanli-acupressure-point" class="group rounded-xl border border-stone-200 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(45,106,79,0.06)] dark:border-stone-700 dark:bg-stone-900 dark:hover:border-emerald-600"><div class="flex items-center gap-1.5 mb-2"><span class="text-copper text-xs">★★★★★</span></div><h3 class="font-semibold text-stone-900 dark:text-stone-100 text-sm">ST36 (Zusanli)</h3><p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Digestion, energy, longevity</p><span class="mt-2 inline-flex items-center text-xs font-medium text-emerald-600 dark:text-emerald-400 group-hover:gap-1 transition-all">Learn ›</span></a><a href="/points/sp6-sanyinjiao-acupressure-point" class="group rounded-xl border border-stone-200 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(45,106,79,0.06)] dark:border-stone-700 dark:bg-stone-900 dark:hover:border-emerald-600"><div class="flex items-center gap-1.5 mb-2"><span class="text-copper text-xs">★★★★★</span></div><h3 class="font-semibold text-stone-900 dark:text-stone-100 text-sm">SP6 (Sanyinjiao)</h3><p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Women&#39;s health, sleep, circulation</p><span class="mt-2 inline-flex items-center text-xs font-medium text-emerald-600 dark:text-emerald-400 group-hover:gap-1 transition-all">Learn ›</span></a><a href="/points/gb20-fengchi-acupressure-point" class="group rounded-xl border border-stone-200 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(45,106,79,0.06)] dark:border-stone-700 dark:bg-stone-900 dark:hover:border-emerald-600"><div class="flex items-center gap-1.5 mb-2"><span class="text-copper text-xs">★★★★★</span></div><h3 class="font-semibold text-stone-900 dark:text-stone-100 text-sm">GB20 (Fengchi)</h3><p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Headaches, neck tension, sinuses</p><span class="mt-2 inline-flex items-center text-xs font-medium text-emerald-600 dark:text-emerald-400 group-hover:gap-1 transition-all">Learn ›</span></a><a href="/points/ht7-shenmen-acupressure-point" class="group rounded-xl border border-stone-200 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(45,106,79,0.06)] dark:border-stone-700 dark:bg-stone-900 dark:hover:border-emerald-600"><div class="flex items-center gap-1.5 mb-2"><span class="text-copper text-xs">★★★★★</span></div><h3 class="font-semibold text-stone-900 dark:text-stone-100 text-sm">HT7 (Shenmen)</h3><p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Insomnia, anxiety, heart calm</p><span class="mt-2 inline-flex items-center text-xs font-medium text-emerald-600 dark:text-emerald-400 group-hover:gap-1 transition-all">Learn ›</span></a></div><div class="mt-8 text-center"><a href="/points/acupressure-points" class="inline-flex items-center gap-1.5 rounded-lg border border-emerald-300 px-5 py-2.5 text-sm font-medium text-emerald-700 transition-all hover:bg-emerald-50 dark:border-emerald-700 dark:text-emerald-400 dark:hover:bg-emerald-900/20">View all 16 points ›</a></div></div></section><section class="py-20 md:py-28 bg-emerald-50/60 dark:bg-emerald-900/10"><div class="mx-auto max-w-5xl px-4 lg:px-6"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100">Learning Center</h2><p class="mt-2 text-sm text-stone-500 dark:text-stone-400">Everything you need to understand and practice acupressure with confidence.</p><div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4"><a href="/basics/what-is-acupressure" class="rounded-xl border border-stone-200 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_16px_rgba(45,106,79,0.06)] dark:border-stone-700 dark:bg-stone-900 dark:hover:border-emerald-600 group"><h3 class="font-semibold text-stone-900 dark:text-stone-100 text-sm">Getting Started</h3><p class="text-xs text-stone-500 dark:text-stone-400 mt-1.5 leading-relaxed">What acupressure is and how to begin.</p><span class="mt-3 inline-flex items-center text-xs font-medium text-emerald-600 dark:text-emerald-400 group-hover:gap-1 transition-all">Read ›</span></a><a href="/basics/benefits-of-acupressure" class="rounded-xl border border-stone-200 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_16px_rgba(45,106,79,0.06)] dark:border-stone-700 dark:bg-stone-900 dark:hover:border-emerald-600 group"><h3 class="font-semibold text-stone-900 dark:text-stone-100 text-sm">Benefits</h3><p class="text-xs text-stone-500 dark:text-stone-400 mt-1.5 leading-relaxed">Evidence-supported health benefits.</p><span class="mt-3 inline-flex items-center text-xs font-medium text-emerald-600 dark:text-emerald-400 group-hover:gap-1 transition-all">Read ›</span></a><a href="/techniques/how-to-do-acupressure" class="rounded-xl border border-stone-200 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_16px_rgba(45,106,79,0.06)] dark:border-stone-700 dark:bg-stone-900 dark:hover:border-emerald-600 group"><h3 class="font-semibold text-stone-900 dark:text-stone-100 text-sm">How To</h3><p class="text-xs text-stone-500 dark:text-stone-400 mt-1.5 leading-relaxed">Techniques for effective self-care.</p><span class="mt-3 inline-flex items-center text-xs font-medium text-emerald-600 dark:text-emerald-400 group-hover:gap-1 transition-all">Read ›</span></a><a href="/research/does-acupressure-work" class="rounded-xl border border-stone-200 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_16px_rgba(45,106,79,0.06)] dark:border-stone-700 dark:bg-stone-900 dark:hover:border-emerald-600 group"><h3 class="font-semibold text-stone-900 dark:text-stone-100 text-sm">Evidence</h3><p class="text-xs text-stone-500 dark:text-stone-400 mt-1.5 leading-relaxed">What clinical research reveals.</p><span class="mt-3 inline-flex items-center text-xs font-medium text-emerald-600 dark:text-emerald-400 group-hover:gap-1 transition-all">Read ›</span></a><a href="/safety" class="rounded-xl border border-stone-200 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_16px_rgba(45,106,79,0.06)] dark:border-stone-700 dark:bg-stone-900 dark:hover:border-emerald-600 group"><h3 class="font-semibold text-stone-900 dark:text-stone-100 text-sm">Safety</h3><p class="text-xs text-stone-500 dark:text-stone-400 mt-1.5 leading-relaxed">Guidelines, precautions, and contraindications.</p><span class="mt-3 inline-flex items-center text-xs font-medium text-emerald-600 dark:text-emerald-400 group-hover:gap-1 transition-all">Read ›</span></a></div><div class="mt-8 text-center"><a href="/learn" class="inline-flex items-center gap-1.5 text-sm font-medium text-emerald-600 hover:text-emerald-500 dark:text-emerald-400 transition-colors">Browse all guides ›</a></div></div></section><section class="py-20 md:py-28"><div class="mx-auto max-w-3xl px-4 lg:px-6"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100">Latest Guides</h2><div class="mt-10 space-y-2"><a href="/basics/what-is-acupressure" class="flex items-center justify-between rounded-xl border border-stone-200 bg-white px-6 py-4 text-sm text-stone-600 transition-all hover:border-emerald-300 hover:shadow-[0_2px_12px_rgba(45,106,79,0.06)] dark:border-stone-700 dark:bg-stone-900 dark:text-stone-400 dark:hover:border-emerald-600 group"><span>What Is Acupressure?</span><span class="text-stone-300 dark:text-stone-600 group-hover:text-emerald-500 transition-colors">→</span></a><a href="/research/does-acupressure-work" class="flex items-center justify-between rounded-xl border border-stone-200 bg-white px-6 py-4 text-sm text-stone-600 transition-all hover:border-emerald-300 hover:shadow-[0_2px_12px_rgba(45,106,79,0.06)] dark:border-stone-700 dark:bg-stone-900 dark:text-stone-400 dark:hover:border-emerald-600 group"><span>Does Acupressure Really Work?</span><span class="text-stone-300 dark:text-stone-600 group-hover:text-emerald-500 transition-colors">→</span></a><a href="/basics/acupressure-vs-massage" class="flex items-center justify-between rounded-xl border border-stone-200 bg-white px-6 py-4 text-sm text-stone-600 transition-all hover:border-emerald-300 hover:shadow-[0_2px_12px_rgba(45,106,79,0.06)] dark:border-stone-700 dark:bg-stone-900 dark:text-stone-400 dark:hover:border-emerald-600 group"><span>Acupressure vs Massage</span><span class="text-stone-300 dark:text-stone-600 group-hover:text-emerald-500 transition-colors">→</span></a><a href="/techniques/how-to-do-acupressure" class="flex items-center justify-between rounded-xl border border-stone-200 bg-white px-6 py-4 text-sm text-stone-600 transition-all hover:border-emerald-300 hover:shadow-[0_2px_12px_rgba(45,106,79,0.06)] dark:border-stone-700 dark:bg-stone-900 dark:text-stone-400 dark:hover:border-emerald-600 group"><span>How to Do Acupressure at Home</span><span class="text-stone-300 dark:text-stone-600 group-hover:text-emerald-500 transition-colors">→</span></a><a href="/conditions/acupressure-for-headache" class="flex items-center justify-between rounded-xl border border-stone-200 bg-white px-6 py-4 text-sm text-stone-600 transition-all hover:border-emerald-300 hover:shadow-[0_2px_12px_rgba(45,106,79,0.06)] dark:border-stone-700 dark:bg-stone-900 dark:text-stone-400 dark:hover:border-emerald-600 group"><span>Acupressure for Headaches</span><span class="text-stone-300 dark:text-stone-600 group-hover:text-emerald-500 transition-colors">→</span></a><a href="/conditions/acupressure-for-anxiety" class="flex items-center justify-between rounded-xl border border-stone-200 bg-white px-6 py-4 text-sm text-stone-600 transition-all hover:border-emerald-300 hover:shadow-[0_2px_12px_rgba(45,106,79,0.06)] dark:border-stone-700 dark:bg-stone-900 dark:text-stone-400 dark:hover:border-emerald-600 group"><span>Acupressure for Anxiety</span><span class="text-stone-300 dark:text-stone-600 group-hover:text-emerald-500 transition-colors">→</span></a></div></div></section>
+<BaseLayout
+  title="Acupressure: 16 Essential Pressure Points, Techniques & Evidence-Based Relief"
+  description="Evidence-based acupressure guide. Learn what acupressure is, how it works, 16 essential pressure points by body region, condition-specific protocols, clinical research, and safety precautions."
+  websiteSchema={true}
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-emerald-50/70 via-white to-white dark:from-emerald-950/20 dark:via-stone-950 dark:to-stone-950">
+    <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(55% 60% at 15% 8%, rgba(16,185,129,0.10), transparent 60%), radial-gradient(40% 50% at 90% 90%, rgba(16,185,129,0.08), transparent 60%);"></div>
+    <div class="relative z-10 max-w-[1200px] mx-auto px-4 lg:px-6 w-full">
+      <div class="grid lg:grid-cols-2 gap-10 items-center py-16 md:py-24">
+        <div style="animation: rise 0.7s cubic-bezier(0.16,1,0.3,1) both">
+          <p class="text-xs font-semibold uppercase tracking-widest text-emerald-700 dark:text-emerald-400 mb-4">The complete self-care guide</p>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-stone-900 dark:text-stone-50 leading-tight">
+            Acupressure — <span class="italic text-emerald-700 dark:text-emerald-400">Ancient Healing,<br />Modern Evidence</span>
+          </h1>
+          <p class="mt-4 text-base md:text-lg text-stone-600 dark:text-stone-300 leading-relaxed max-w-lg">A drug-free, needle-free Traditional Chinese Medicine technique. Press the right points to relieve pain, nausea, headache, anxiety and poor sleep.</p>
+          <div class="mt-8 flex flex-wrap gap-3" style="animation: rise 0.7s cubic-bezier(0.16,1,0.3,1) 120ms both">
+            <a href="/atlas" class="inline-flex items-center rounded-lg bg-emerald-700 px-6 py-3 text-sm font-medium text-white transition-all hover:bg-emerald-800 active:scale-[0.98]">Explore the Body Atlas</a>
+            <a href="/tools/pain-map" class="inline-flex items-center rounded-lg border border-stone-300 px-6 py-3 text-sm font-medium text-stone-700 transition-all hover:border-emerald-300 hover:text-emerald-700 active:scale-[0.98] dark:border-stone-700 dark:text-stone-300 dark:hover:border-emerald-600 dark:hover:text-emerald-400">Where Does It Hurt?</a>
+            <a href="/basics/what-is-acupressure" class="inline-flex items-center rounded-lg border border-stone-300 px-6 py-3 text-sm font-medium text-stone-700 transition-all hover:border-emerald-300 hover:text-emerald-700 active:scale-[0.98] dark:border-stone-700 dark:text-stone-300 dark:hover:border-emerald-600 dark:hover:text-emerald-400">What Is Acupressure?</a>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-stone-200 bg-white p-2 shadow-[0_12px_40px_rgba(28,66,48,0.10)] dark:border-stone-800 dark:bg-stone-900" style="animation: rise 0.7s cubic-bezier(0.16,1,0.3,1) 180ms both">
+          <img src="/images/hero-body.webp" alt="Acupressure point locations across the body, from head to feet" width="1672" height="941" fetchpriority="high" class="w-full h-64 sm:h-80 lg:h-[420px] object-cover object-center rounded-xl" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats bar -->
+  <section class="border-y border-stone-200 bg-white dark:border-stone-800 dark:bg-stone-950">
+    <div class="max-w-[1200px] mx-auto px-4 lg:px-6 py-10 grid grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+      <div>
+        <div class="text-3xl font-bold text-emerald-700 dark:text-emerald-400" data-count="16">16</div>
+        <div class="mt-1 text-sm text-stone-500 dark:text-stone-400">Essential point guides, each with location photos and technique</div>
+      </div>
+      <div>
+        <div class="text-3xl font-bold text-emerald-700 dark:text-emerald-400" data-count="12">12</div>
+        <div class="mt-1 text-sm text-stone-500 dark:text-stone-400">Body regions from head to feet, browsable in the interactive atlas</div>
+      </div>
+      <div>
+        <div class="text-3xl font-bold text-emerald-700 dark:text-emerald-400" data-count="8">8</div>
+        <div class="mt-1 text-sm text-stone-500 dark:text-stone-400">Condition-specific step-by-step treatment protocols</div>
+      </div>
+      <div>
+        <div class="text-3xl font-bold text-emerald-700 dark:text-emerald-400" data-count="200" data-suffix="+">200+</div>
+        <div class="mt-1 text-sm text-stone-500 dark:text-stone-400">Clinical trials reviewed in our evidence summaries</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Too many points -> find your two -->
+  <section class="relative overflow-hidden">
+    <div class="relative">
+      <div class="marquee overflow-hidden border-b border-stone-200 py-8 dark:border-stone-800" role="presentation" aria-hidden="true">
+        <div class="marquee-track flex w-max items-center will-change-transform" aria-hidden="true">
+          {[0, 1].map((copy) => (
+            <div key={copy} class="flex shrink-0 items-center gap-8 pr-8">
+              {[
+                "HEADACHE", "LI4 · Hegu", "NAUSEA", "PC6 · Neiguan", "ANXIETY", "HT7 · Shenmen", "INSOMNIA", "KI1 · Yongquan", "NECK PAIN", "GB21 · Jianjing", "BACK PAIN", "BL40 · Weizhong", "STRESS", "Yintang", "DIGESTION", "ST36 · Zusanli", "MIGRAINE", "GB20 · Fengchi", "TENSION", "LV3 · Taichong", "FATIGUE", "CV6 · Qihai", "SCIATICA", "BL60 · Kunlun", "SLEEP", "SP6 · Sanyinjiao", "CONSTIPATION", "CV17 · Shanzhong"
+              ].map((t, i) => (
+                <span class={`shrink-0 whitespace-nowrap text-4xl md:text-5xl font-bold tracking-tight uppercase ${i % 2 === 0 ? "text-stone-200 dark:text-stone-800" : "text-emerald-700/50 italic dark:text-emerald-500/50"}`}>{t}</span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="relative z-10 max-w-[1200px] mx-auto px-4 lg:px-6 py-16 md:py-24">
+        <div class="max-w-2xl mx-auto text-center" style="animation: rise 0.7s cubic-bezier(0.16,1,0.3,1) both">
+          <p class="text-xs font-semibold uppercase tracking-widest text-emerald-700 dark:text-emerald-400 mb-4">16 points. 12 regions. 8 conditions.</p>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight text-stone-900 dark:text-stone-50">Too many points.<br />Find <span class="italic text-emerald-700 dark:text-emerald-400">your</span> two.</h2>
+          <p class="mt-4 text-base md:text-lg text-stone-600 dark:text-stone-300 leading-relaxed max-w-xl mx-auto">You don't need the whole map. Start with what you feel — every condition guide narrows it to the two or three points that matter most.</p>
+          <div class="mt-8 flex flex-wrap gap-3 justify-center">
+            <a href="/conditions" class="inline-flex items-center rounded-lg bg-emerald-700 px-6 py-3 text-sm font-medium text-white transition-all hover:bg-emerald-800 active:scale-[0.98]">Find relief by symptom</a>
+            <a href="/atlas" class="inline-flex items-center rounded-lg border border-stone-300 px-6 py-3 text-sm font-medium text-stone-700 transition-all hover:border-emerald-300 hover:text-emerald-700 active:scale-[0.98] dark:border-stone-700 dark:text-stone-300 dark:hover:border-emerald-600 dark:hover:text-emerald-400">Browse points by region</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is acupressure -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-5xl mx-auto px-4 lg:px-6">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-100">What Is Acupressure?</h2>
+      <div class="mt-8 grid gap-8 md:grid-cols-2">
+        <div>
+          <p class="text-stone-600 dark:text-stone-300 leading-relaxed">Acupressure is a therapeutic technique rooted in Traditional Chinese Medicine that applies firm pressure to specific points on the body, known as acupoints. These points lie along energy pathways called meridians, and stimulating them with fingers, thumbs, elbows, or simple tools helps restore balance, relieve pain, and support the body's natural healing.</p>
+          <p class="mt-4 text-stone-600 dark:text-stone-300 leading-relaxed">Unlike acupuncture — which inserts thin needles — acupressure works entirely on the surface of the skin. No needles, no prescriptions, no appointments. That makes it one of the safest and most accessible self-care practices available, and it can be learned in minutes.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="/basics/what-is-acupressure" class="inline-flex items-center rounded-lg bg-emerald-700 px-5 py-2.5 text-sm font-medium text-white transition-all hover:bg-emerald-800 active:scale-[0.98]">Read the Complete Guide</a>
+            <a href="/basics/how-does-acupressure-work" class="inline-flex items-center rounded-lg border border-stone-300 px-5 py-2.5 text-sm font-medium text-stone-700 transition-all hover:border-emerald-300 hover:text-emerald-700 active:scale-[0.98] dark:border-stone-700 dark:text-stone-300 dark:hover:border-emerald-600 dark:hover:text-emerald-400">How It Works</a>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="rounded-xl border border-stone-200 bg-stone-50 p-5 dark:border-stone-800 dark:bg-stone-900/50">
+            <h3 class="font-semibold text-stone-900 dark:text-stone-100">Key facts</h3>
+            <ul class="mt-3 space-y-2 text-sm text-stone-600 dark:text-stone-300">
+              <li><strong class="text-stone-800 dark:text-stone-200">No needles.</strong> Pressure applied with fingers only — nothing penetrates the skin.</li>
+              <li><strong class="text-stone-800 dark:text-stone-200">Self-administered.</strong> You do not need a practitioner to perform acupressure on yourself.</li>
+              <li><strong class="text-stone-800 dark:text-stone-200">3,000+ years old.</strong> Roots in TCM healing traditions, now studied in modern clinical trials.</li>
+              <li><strong class="text-stone-800 dark:text-stone-200">Recognized.</strong> The WHO recognizes acupressure for pain management and nausea.</li>
+            </ul>
+          </div>
+          <div class="rounded-xl border border-emerald-200/70 bg-emerald-50/60 p-5 dark:border-emerald-900/50 dark:bg-emerald-950/20">
+            <h3 class="font-semibold text-stone-900 dark:text-stone-100">The difference from acupuncture</h3>
+            <p class="mt-2 text-sm text-stone-600 dark:text-stone-300 leading-relaxed">Acupuncture uses needles inserted by a licensed practitioner. Acupressure applies the same points with finger pressure and works only on the surface. Most people find acupressure ideal for daily self-care between acupuncture sessions.</p>
+            <a href="/basics/acupressure-vs-acupuncture" class="mt-3 inline-block text-sm font-medium text-emerald-700 hover:underline dark:text-emerald-400">Acupressure vs acupuncture →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Find relief by symptom -->
+  <section class="py-16 md:py-24 bg-white border-y border-stone-200 dark:border-stone-800 dark:bg-stone-950">
+    <div class="max-w-[1200px] mx-auto px-4 lg:px-6">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-100">Find Relief by <em class="italic text-emerald-700 dark:text-emerald-400">Symptom</em></h2>
+          <p class="mt-2 text-stone-500 dark:text-stone-400 max-w-2xl">Start with what you feel. Each protocol lists the exact points, their locations, technique, and a step-by-step routine.</p>
+        </div>
+        <a href="/conditions" class="text-sm font-medium text-emerald-700 hover:underline dark:text-emerald-400">All condition guides →</a>
+      </div>
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+        {conditions.map((c) => (
+          <a href={c.url} class="group rounded-xl border border-stone-200 bg-white p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(16,120,87,0.08)] dark:border-stone-800 dark:bg-stone-900 dark:hover:border-emerald-600">
+            <h3 class="font-semibold text-stone-900 group-hover:text-emerald-700 dark:text-stone-100 dark:group-hover:text-emerald-400">{c.title}</h3>
+            <p class="mt-1.5 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">{c.blurb}</p>
+            <p class="mt-3 inline-flex items-center rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-medium text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">{c.best} →</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Body atlas -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-[1200px] mx-auto px-4 lg:px-6">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <div class="flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-100">Explore the Body</h2>
+              <p class="mt-2 text-stone-500 dark:text-stone-400">Every region has its own point guide — start anywhere.</p>
+            </div>
+            <a href="/atlas" class="text-sm font-medium text-emerald-700 hover:underline dark:text-emerald-400">Open interactive atlas →</a>
+          </div>
+          <div class="mt-6 rounded-xl border border-stone-200 bg-stone-50 p-6 dark:border-stone-800 dark:bg-stone-900/50">
+            <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed">The <a href="/atlas" class="text-emerald-700 hover:underline dark:text-emerald-400">interactive body atlas</a> links every region — head, face, hands, feet and more — to the points that live there. Click or search to jump straight to a point or symptom you care about.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              {regions.map((r) => (
+                <a href={r.url} class="rounded-full border border-stone-200 bg-white px-3 py-1.5 text-xs font-medium text-stone-600 transition-colors hover:border-emerald-300 hover:bg-emerald-50 hover:text-emerald-700 dark:border-stone-700 dark:bg-stone-900 dark:text-stone-400 dark:hover:border-emerald-600 dark:hover:text-emerald-400 dark:hover:bg-emerald-900/20">{r.label}</a>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div class="rounded-xl border border-stone-200 overflow-hidden dark:border-stone-800">
+          <img src="/images/hero-body.webp" alt="Acupressure body atlas regions from head to feet" width="1672" height="941" loading="lazy" class="w-full h-56 object-cover object-center" />
+          <div class="p-5">
+            <h3 class="font-semibold text-stone-900 dark:text-stone-100">From head to feet</h3>
+            <p class="mt-1 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">The ears have a full reflex map. The feet hold KI1, the sole point used for grounding and sleep. The back carries the Bladder meridian, the longest channel in the body. Every region links to the points that live there.</p>
+            <a href="/atlas" class="mt-3 inline-block rounded-lg bg-emerald-700 px-5 py-2.5 text-sm font-medium text-white transition-all hover:bg-emerald-800 active:scale-[0.98]">Explore the Atlas</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Essential points -->
+  <section class="py-16 md:py-24 bg-white border-y border-stone-200 dark:border-stone-800 dark:bg-stone-950">
+    <div class="max-w-[1200px] mx-auto px-4 lg:px-6">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-100">16 Essential <em class="italic text-emerald-700 dark:text-emerald-400">Acupressure</em> Points</h2>
+          <p class="mt-2 text-stone-500 dark:text-stone-400 max-w-2xl">The points most people reach for first. Each card links to a full guide with photos, technique, research and safety notes.</p>
+        </div>
+        <a href="/points/acupressure-points" class="text-sm font-medium text-emerald-700 hover:underline dark:text-emerald-400">All 16 point guides →</a>
+      </div>
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+        {featuredPoints.map((p) => (
+          <a href={p.url} class="group rounded-xl border border-stone-200 bg-white overflow-hidden transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(16,120,87,0.08)] dark:border-stone-800 dark:bg-stone-900 dark:hover:border-emerald-600">
+            <div class="aspect-[4/3] bg-emerald-50 overflow-hidden dark:bg-emerald-950/30">
+              <img src={p.img} alt={p.alt} loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between gap-2">
+                <h3 class="font-semibold text-stone-900 dark:text-stone-100">{p.code} · {p.name}</h3>
+                <span class="shrink-0 rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-400">{p.region}</span>
+              </div>
+              <p class="mt-1.5 text-xs text-stone-500 dark:text-stone-400 leading-relaxed">{p.location}</p>
+              <div class="mt-2.5 flex flex-wrap gap-1">
+                {p.tags.map((t) => <span class="rounded bg-stone-100 px-1.5 py-0.5 text-[10px] text-stone-500 dark:bg-stone-800 dark:text-stone-400">{t}</span>)}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+      <p class="mt-4 text-sm text-stone-500 dark:text-stone-400">Plus <a href="/points/bl40-weizhong-acupressure-point" class="text-emerald-700 hover:underline dark:text-emerald-400">BL40</a>, <a href="/points/bl60-kunlun-acupressure-point" class="text-emerald-700 hover:underline dark:text-emerald-400">BL60</a>, <a href="/points/cv17-shanzhong-acupressure-point" class="text-emerald-700 hover:underline dark:text-emerald-400">CV17</a>, <a href="/points/cv6-qihai-acupressure-point" class="text-emerald-700 hover:underline dark:text-emerald-400">CV6</a>, <a href="/points/gb21-jianjing-acupressure-point" class="text-emerald-700 hover:underline dark:text-emerald-400">GB21</a>, <a href="/points/kd3-taixi-acupressure-point" class="text-emerald-700 hover:underline dark:text-emerald-400">KD3</a>, <a href="/points/ki1-yongquan-acupressure-point" class="text-emerald-700 hover:underline dark:text-emerald-400">KI1</a> and <a href="/points/li11-quchi-acupressure-point" class="text-emerald-700 hover:underline dark:text-emerald-400">LI11</a> — 16 guides in total.</p>
+    </div>
+  </section>
+
+  <!-- Evidence & research -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-5xl mx-auto px-4 lg:px-6">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-100">Does Acupressure <em class="italic text-emerald-700 dark:text-emerald-400">Work</em>? What the Research Says</h2>
+          <p class="mt-2 text-stone-500 dark:text-stone-400 max-w-2xl">Summary of the strongest published evidence, condition by condition. Full citations on our <a href="/research/does-acupressure-work" class="text-emerald-700 hover:underline dark:text-emerald-400">evidence review</a>.</p>
+        </div>
+        <a href="/research" class="text-sm font-medium text-emerald-700 hover:underline dark:text-emerald-400">All research →</a>
+      </div>
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 reveal">
+        {research.map((r) => (
+          <div class="group relative overflow-hidden rounded-xl border border-stone-200 bg-stone-50 p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(16,120,87,0.08)] dark:border-stone-800 dark:bg-stone-900/50">
+            <div class="text-3xl font-bold tracking-tight text-emerald-700 dark:text-emerald-400">{r.stat}</div>
+            <h3 class="mt-2 font-semibold text-stone-900 dark:text-stone-100">{r.area}</h3>
+            <p class="mt-2 text-sm text-stone-600 dark:text-stone-300 leading-relaxed">{r.detail}</p>
+            <p class="mt-3 text-xs text-stone-400 dark:text-stone-500">{r.source}</p>
+          </div>
+        ))}
+      </div>
+      <div class="mt-6 rounded-xl border border-emerald-200 bg-emerald-50 p-5 dark:border-emerald-900/50 dark:bg-emerald-950/20">
+        <p class="text-sm text-stone-700 dark:text-stone-300 leading-relaxed"><strong>The bottom line:</strong> the strongest evidence supports acupressure for post-operative nausea and vomiting, and reviews describe the evidence for pain, anxiety, and sleep as promising but limited in quality. It has a good safety record when performed as described on this site. Acupressure is a complement to medical care, not a replacement. See <a href="/research/does-acupressure-work" class="text-emerald-700 font-medium hover:underline dark:text-emerald-400">the full evidence review</a> for caveats and citations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compare -->
+  <section class="py-16 md:py-24 bg-white border-y border-stone-200 dark:border-stone-800 dark:bg-stone-950">
+    <div class="max-w-5xl mx-auto px-4 lg:px-6">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-100">How Acupressure Compares</h2>
+      <p class="mt-2 text-stone-500 dark:text-stone-400">Choosing the right practice starts with knowing the difference.</p>
+      <div class="mt-8 grid gap-6 md:grid-cols-2 reveal">
+        <a href="/basics/acupressure-vs-acupuncture" class="group rounded-xl border border-stone-200 bg-stone-50 p-6 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(16,120,87,0.08)] dark:border-stone-800 dark:bg-stone-900 dark:hover:border-emerald-600">
+          <h3 class="text-lg font-bold text-stone-900 dark:text-stone-100">Acupressure vs Acupuncture</h3>
+          <p class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Same points and meridians, different delivery. Needles require a licensed practitioner; pressure you can do yourself anytime.</p>
+          <span class="mt-4 inline-block text-sm font-medium text-emerald-700 group-hover:underline dark:text-emerald-400">Compare the two →</span>
+        </a>
+        <a href="/basics/acupressure-vs-massage" class="group rounded-xl border border-stone-200 bg-stone-50 p-6 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(16,120,87,0.08)] dark:border-stone-800 dark:bg-stone-900 dark:hover:border-emerald-600">
+          <h3 class="text-lg font-bold text-stone-900 dark:text-stone-100">Acupressure vs Massage</h3>
+          <p class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Massage relaxes whole muscle groups with broad strokes. Acupressure targets specific points for local and referred effects.</p>
+          <span class="mt-4 inline-block text-sm font-medium text-emerald-700 group-hover:underline dark:text-emerald-400">See the differences →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Relief in three steps -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-5xl mx-auto px-4 lg:px-6">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-100">Relief in <em class="italic text-emerald-700 dark:text-emerald-400">three</em> steps</h2>
+        <p class="mt-2 text-stone-500 dark:text-stone-400">No equipment. No appointments. Just your own two hands.</p>
+      </div>
+      <div class="mt-10 grid gap-6 md:grid-cols-3 reveal">
+        <div class="rounded-xl border border-stone-200 bg-white p-6 dark:border-stone-800 dark:bg-stone-900">
+          <div class="text-2xl font-bold text-emerald-700 dark:text-emerald-400">01</div>
+          <h3 class="mt-3 font-semibold text-stone-900 dark:text-stone-100">Locate</h3>
+          <p class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Find your point with the location photos and landmark guides in each point page.</p>
+        </div>
+        <div class="rounded-xl border border-stone-200 bg-white p-6 dark:border-stone-800 dark:bg-stone-900">
+          <div class="text-2xl font-bold text-emerald-700 dark:text-emerald-400">02</div>
+          <h3 class="mt-3 font-semibold text-stone-900 dark:text-stone-100">Press</h3>
+          <p class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Apply firm, steady pressure for 45–60 seconds with small circular motions.</p>
+        </div>
+        <div class="rounded-xl border border-stone-200 bg-white p-6 dark:border-stone-800 dark:bg-stone-900">
+          <div class="text-2xl font-bold text-emerald-700 dark:text-emerald-400">03</div>
+          <h3 class="mt-3 font-semibold text-stone-900 dark:text-stone-100">Breathe</h3>
+          <p class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Breathe deeply through each hold. Repeat 1–3 times, both sides where it applies.</p>
+        </div>
+      </div>
+      <div class="mt-8 text-center">
+        <a href="/techniques/how-to-do-acupressure" class="inline-flex items-center rounded-lg bg-emerald-700 px-6 py-3 text-sm font-medium text-white transition-all hover:bg-emerald-800 active:scale-[0.98]">Master the full technique →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-5xl mx-auto px-4 lg:px-6">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-100">Acupressure Safety</h2>
+      <p class="mt-2 text-stone-500 dark:text-stone-400">Know before you press. No serious adverse events have been reported in controlled trials — but a few groups need extra caution.</p>
+      <div class="mt-8 grid gap-6 md:grid-cols-2 reveal">
+        <a href="/safety/acupressure-pregnancy" class="group rounded-xl border border-stone-200 bg-stone-50 p-6 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(16,120,87,0.08)] dark:border-stone-800 dark:bg-stone-900 dark:hover:border-emerald-600">
+          <h3 class="text-lg font-bold text-stone-900 dark:text-stone-100">During pregnancy</h3>
+          <p class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">LI4, SP6, BL60 and GB21 can stimulate uterine contractions and should be avoided. PC6, Yintang and HT7 are safe for symptoms like morning sickness and anxiety — always confirm with your OB-GYN first.</p>
+          <span class="mt-4 inline-block text-sm font-medium text-emerald-700 group-hover:underline dark:text-emerald-400">Pregnancy safety guide →</span>
+        </a>
+        <a href="/safety/who-should-avoid-acupressure" class="group rounded-xl border border-stone-200 bg-stone-50 p-6 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(16,120,87,0.08)] dark:border-stone-800 dark:bg-stone-900 dark:hover:border-emerald-600">
+          <h3 class="text-lg font-bold text-stone-900 dark:text-stone-100">Who should avoid it</h3>
+          <p class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Avoid over open wounds, burns, varicose veins, surgical sites and active infection. Use light pressure with blood thinners, and ask a doctor if you have a clotting disorder or recent surgery.</p>
+          <span class="mt-4 inline-block text-sm font-medium text-emerald-700 group-hover:underline dark:text-emerald-400">Full contraindications →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learning center -->
+  <section class="py-16 md:py-24 bg-white border-y border-stone-200 dark:border-stone-800 dark:bg-stone-950">
+    <div class="max-w-[1200px] mx-auto px-4 lg:px-6">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-100">Learning Center</h2>
+          <p class="mt-2 text-stone-500 dark:text-stone-400">Everything you need to go from curious to confident.</p>
+        </div>
+        <a href="/learn" class="text-sm font-medium text-emerald-700 hover:underline dark:text-emerald-400">Enter the Learning Center →</a>
+      </div>
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+        <a href="/basics/benefits-of-acupressure" class="group rounded-xl border border-stone-200 p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(16,120,87,0.08)] dark:border-stone-800 dark:bg-stone-900 dark:hover:border-emerald-600"><h3 class="font-semibold text-stone-900 dark:text-stone-100">Benefits</h3><p class="mt-1.5 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">What acupressure can — and cannot — help with, based on evidence.</p></a>
+        <a href="/techniques/how-to-do-acupressure" class="group rounded-xl border border-stone-200 p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(16,120,87,0.08)] dark:border-stone-800 dark:bg-stone-900 dark:hover:border-emerald-600"><h3 class="font-semibold text-stone-900 dark:text-stone-100">Techniques</h3><p class="mt-1.5 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Step-by-step methods: pressure, duration, patterns and routines.</p></a>
+        <a href="/research" class="group rounded-xl border border-stone-200 p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(16,120,87,0.08)] dark:border-stone-800 dark:bg-stone-900 dark:hover:border-emerald-600"><h3 class="font-semibold text-stone-900 dark:text-stone-100">Research</h3><p class="mt-1.5 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">The evidence base behind each condition, with full references.</p></a>
+        <a href="/history" class="group rounded-xl border border-stone-200 p-5 transition-all hover:border-emerald-300 hover:shadow-[0_4px_20px_rgba(16,120,87,0.08)] dark:border-stone-800 dark:bg-stone-900 dark:hover:border-emerald-600"><h3 class="font-semibold text-stone-900 dark:text-stone-100">History</h3><p class="mt-1.5 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Three millennia of healing, from imperial China to modern clinics.</p></a>
+      </div>
+      <p class="mt-6 text-sm text-stone-500 dark:text-stone-400">Written and edited by <strong class="text-stone-700 dark:text-stone-300">the Acupressure Guide Editorial Team</strong>, with verifiable medical references and safety guidance. Read more <a href="/about" class="text-emerald-700 hover:underline dark:text-emerald-400">about how we research and review content</a>.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4 lg:px-6">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-100">Frequently Asked Questions</h2>
+      <p class="mt-2 text-stone-500 dark:text-stone-400">Quick answers to the questions we hear most.</p>
+      <dl class="mt-8 space-y-3">
+        <details class="group rounded-xl border border-stone-200 bg-white dark:border-stone-800 dark:bg-stone-900">
+          <summary class="flex cursor-pointer items-center justify-between px-5 py-4 font-medium text-stone-900 dark:text-stone-100">What is acupressure? <span class="ml-2 shrink-0 text-stone-400 transition-transform group-open:rotate-180">▾</span></summary>
+          <div class="px-5 pb-4 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Acupressure is a self-administered technique from Traditional Chinese Medicine. You apply firm finger pressure to specific points on the body — called acupoints — that lie along energy channels known as meridians. Unlike acupuncture, nothing pierces the skin, which makes it safe and easy to learn at home.</div>
+        </details>
+        <details class="group rounded-xl border border-stone-200 bg-white dark:border-stone-800 dark:bg-stone-900">
+          <summary class="flex cursor-pointer items-center justify-between px-5 py-4 font-medium text-stone-900 dark:text-stone-100">How does acupressure work? <span class="ml-2 shrink-0 text-stone-400 transition-transform group-open:rotate-180">▾</span></summary>
+          <div class="px-5 pb-4 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">In TCM, pressing points clears blocked energy (qi) so it flows smoothly along the meridians. From a modern view, stimulating points activates the body's own pain-modulating pathways, releases tension in surrounding muscle, and shifts the nervous system toward its rest-and-digest state — which helps explain the effects on pain, nausea and anxiety.</div>
+        </details>
+        <details class="group rounded-xl border border-stone-200 bg-white dark:border-stone-800 dark:bg-stone-900">
+          <summary class="flex cursor-pointer items-center justify-between px-5 py-4 font-medium text-stone-900 dark:text-stone-100">Does acupressure actually work? <span class="ml-2 shrink-0 text-stone-400 transition-transform group-open:rotate-180">▾</span></summary>
+          <div class="px-5 pb-4 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">The evidence is strongest for nausea and vomiting (a Cochrane review of P6 stimulation for post-operative nausea and vomiting), pain, and anxiety. Meta-analyses also support it for sleep and headaches. Studies find it does not work equally for everything — evidence for some conditions is still preliminary — and it should complement, not replace, medical care.</div>
+        </details>
+        <details class="group rounded-xl border border-stone-200 bg-white dark:border-stone-800 dark:bg-stone-900">
+          <summary class="flex cursor-pointer items-center justify-between px-5 py-4 font-medium text-stone-900 dark:text-stone-100">What are the best acupressure points for headaches? <span class="ml-2 shrink-0 text-stone-400 transition-transform group-open:rotate-180">▾</span></summary>
+          <div class="px-5 pb-4 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">LI4 (Hegu) on the hand and GB20 (Fengchi) at the base of the skull are the two most-studied points for headache relief. Taiyang at the temples helps side-of-head pain, and PC6 is useful when a migraine brings nausea. A 2024 systematic review and meta-analysis of 14 randomized controlled trials found acupressure associated with significant reductions in headache intensity and frequency compared with control, though the review noted the supporting trials were small and heterogeneous.</div>
+        </details>
+        <details class="group rounded-xl border border-stone-200 bg-white dark:border-stone-800 dark:bg-stone-900">
+          <summary class="flex cursor-pointer items-center justify-between px-5 py-4 font-medium text-stone-900 dark:text-stone-100">Is acupressure safe? Who should avoid it? <span class="ml-2 shrink-0 text-stone-400 transition-transform group-open:rotate-180">▾</span></summary>
+          <div class="px-5 pb-4 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">In controlled trials no serious adverse events were reported. Avoid pressure over open wounds, burns, varicose veins, surgical sites and infection. In pregnancy, stay away from LI4, SP6, BL60 and GB21. Use light pressure if you take blood thinners, and check with a doctor if you have a clotting disorder or recent surgery.</div>
+        </details>
+        <details class="group rounded-xl border border-stone-200 bg-white dark:border-stone-800 dark:bg-stone-900">
+          <summary class="flex cursor-pointer items-center justify-between px-5 py-4 font-medium text-stone-900 dark:text-stone-100">What is the difference between acupressure and acupuncture? <span class="ml-2 shrink-0 text-stone-400 transition-transform group-open:rotate-180">▾</span></summary>
+          <div class="px-5 pb-4 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Both target the same acupoints and meridians. Acupuncture uses thin needles inserted by a licensed practitioner, and its effects are often described as stronger and longer lasting. Acupressure uses only finger pressure on the surface, so you can practice it on yourself any time — both are complementary tools.</div>
+        </details>
+        <details class="group rounded-xl border border-stone-200 bg-white dark:border-stone-800 dark:bg-stone-900">
+          <summary class="flex cursor-pointer items-center justify-between px-5 py-4 font-medium text-stone-900 dark:text-stone-100">How long should I press an acupressure point? <span class="ml-2 shrink-0 text-stone-400 transition-transform group-open:rotate-180">▾</span></summary>
+          <div class="px-5 pb-4 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Most guides recommend firm, steady pressure for 45-90 seconds per point, using small circular motions, repeated 1-3 times on both sides where applicable. You should feel a dull ache or warmth — never sharp pain or bruising. Deep breathing through each hold improves the effect.</div>
+        </details>
+        <details class="group rounded-xl border border-stone-200 bg-white dark:border-stone-800 dark:bg-stone-900">
+          <summary class="flex cursor-pointer items-center justify-between px-5 py-4 font-medium text-stone-900 dark:text-stone-100">Can acupressure help with anxiety and sleep? <span class="ml-2 shrink-0 text-stone-400 transition-transform group-open:rotate-180">▾</span></summary>
+          <div class="px-5 pb-4 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">The evidence is promising but not definitive. A systematic review and meta-analysis of acupressure for anxiety found a positive overall direction of effect, and a randomized trial found acupressure improved sleep quality in nursing-home residents. Yintang, HT7, SP6 and KI1 are the points most used in these studies.</div>
+        </details>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <section class="pb-16 pt-4">
+    <div class="max-w-3xl mx-auto px-4 lg:px-6">
+      <div class="rounded-xl border border-stone-200 bg-stone-100 p-5 text-sm text-stone-500 dark:border-stone-800 dark:bg-stone-900 dark:text-stone-400">
+        <p><strong>Medical Disclaimer:</strong> This content is for informational purposes only and is not medical advice. Acupressure is a complementary practice — it cannot diagnose, treat, cure or prevent disease and should never delay or replace professional medical care. Consult a licensed healthcare provider before using acupressure, especially if you are pregnant, have a medical condition, or take medication.</p>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is acupressure?", "acceptedAnswer": { "@type": "Answer", "text": "Acupressure is a self-administered technique from Traditional Chinese Medicine. You apply firm finger pressure to specific acupoints that lie along energy channels known as meridians. Unlike acupuncture, nothing pierces the skin, making it safe to learn and practice at home." } },
+      { "@type": "Question", "name": "How does acupressure work?", "acceptedAnswer": { "@type": "Answer", "text": "In TCM, pressing points clears blocked energy (qi) so it flows smoothly along meridians. From a modern view, stimulating points activates the body's pain-modulating pathways, relaxes surrounding muscle, and shifts the nervous system toward a rest-and-digest state." } },
+      { "@type": "Question", "name": "Does acupressure actually work?", "acceptedAnswer": { "@type": "Answer", "text": "Evidence is strongest for nausea and vomiting: the long-running Cochrane review of P6/PC6 stimulation found it reduces post-operative nausea and vomiting. Reviews describe the evidence for pain, anxiety, and sleep as promising but limited in quality. Acupressure should complement — not replace — medical care." } },
+      { "@type": "Question", "name": "What are the best acupressure points for headaches?", "acceptedAnswer": { "@type": "Answer", "text": "LI4 (Hegu) on the hand and GB20 (Fengchi) at the base of the skull are the points most commonly used for headache relief. Taiyang helps side-of-head pain, and PC6 helps when a migraine brings nausea. A randomized trial found one month of acupressure more effective than a muscle relaxant for chronic headache, though review evidence is limited in quality." } },
+      { "@type": "Question", "name": "Is acupressure safe? Who should avoid it?", "acceptedAnswer": { "@type": "Answer", "text": "No serious adverse events were reported in controlled trials. Avoid pressure over open wounds, burns, varicose veins and surgical sites. In pregnancy, avoid LI4, SP6, BL60 and GB21. Use light pressure on blood thinners, and check with a doctor about clotting disorders." } },
+      { "@type": "Question", "name": "What is the difference between acupressure and acupuncture?", "acceptedAnswer": { "@type": "Answer", "text": "Both target the same acupoints and meridians. Acupuncture uses needles inserted by a licensed practitioner, with effects often described as stronger and longer lasting. Acupressure uses only finger pressure on the surface, so you can practice it yourself any time." } },
+      { "@type": "Question", "name": "Can acupressure help with anxiety and sleep?", "acceptedAnswer": { "@type": "Answer", "text": "The evidence is promising but not definitive. A systematic review and meta-analysis of acupressure for anxiety found a positive overall direction of effect, and a randomized trial found acupressure improved sleep quality in nursing-home residents. Yintang, HT7, SP6 and KI1 are the most-used points." } }
+    ]
+  })} />
+
+  <script is:inline>
+    (function () {
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var revealEls = document.querySelectorAll('.reveal');
+      if (reduce || !('IntersectionObserver' in window)) {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      } else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach(function (el) { io.observe(el); });
+      }
+
+      var counters = document.querySelectorAll('[data-count]');
+      if (!reduce && 'IntersectionObserver' in window && counters.length) {
+        var co = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            co.unobserve(entry.target);
+            var el = entry.target;
+            var target = parseInt(el.getAttribute('data-count'), 10);
+            var suffix = el.getAttribute('data-suffix') || '';
+            var duration = 1200;
+            var start = performance.now();
+            function tick(now) {
+              var p = Math.min((now - start) / duration, 1);
+              var eased = 1 - Math.pow(1 - p, 3);
+              el.textContent = Math.round(target * eased) + suffix;
+              if (p < 1) requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+          });
+        }, { threshold: 0.4 });
+        counters.forEach(function (el) { co.observe(el); });
+      }
+    })();
+  </script>
 </BaseLayout>
