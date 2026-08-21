@@ -1,46 +1,176 @@
-﻿---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="HT7 (Shenmen) — Spirit Gate Point" description="Learn how to locate and stimulate HT7 (Shenmen) — the Spirit Gate point. Benefits include insomnia relief, anxiety reduction, and heart calming." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "HT7 (Shenmen)", href: "/points/ht7-shenmen-acupressure-point" }]} datePublished="2025-02-25" dateModified="2026-05-15" articleSchema={true}>
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
+---
+<BaseLayout title="HT7 (Shenmen) — Spirit Gate Point" description="Everything you need to self-treat HT7 (Shenmen) — exact location, when to use it, a step-by-step routine, symptom-based point combinations, and expected results." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "HT7 (Shenmen)", href: "/points/ht7-shenmen-acupressure-point" }]} datePublished="2025-02-25" dateModified="2026-08-19" articleSchema={true}>
   <article class="max-w-3xl mx-auto px-4 py-12 lg:px-6">
     <h1 class="mb-4">HT7 (Shenmen) — Spirit Gate</h1>
-    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">HT7, known as Shenmen or Spirit Gate, is the source point of the Heart meridian. It is the primary point for calming the spirit, treating insomnia, anxiety, and heart palpitations.</p>
+    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">HT7, known as Shenmen or Spirit Gate, is the source point of the Heart meridian, sitting at the wrist crease on the little-finger side. It is the classic point for calming a racing mind before bed, easing anxiety, and steadying a heart that flutters under stress.</p>
 
-    <section class="mb-8"><h2 class="mb-4">Location</h2>
-    <img src="/images/ht7-location.webp" alt="HT7 acupressure point location on the inner wrist" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" />
-    <p class="mb-3">HT7 is located on the inner wrist, on the ulnar side (pinky side), at the proximal wrist crease. It lies in the depression just behind the pisiform bone, in line with the little finger.</p>
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">At a Glance</h2>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+        <table class="w-full text-sm">
+          <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Meridian</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Heart (HT)</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Body region</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Wrist crease, on the little-finger side, in the hollow just inside the ulnar wrist tendon</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Best for</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Insomnia, anxiety, palpitations, and a racing or fluttering heart under stress</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Difficulty</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Very easy — press the wrist with your opposite thumb anytime</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Hold time</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">60–90 seconds per wrist for sleep; 30–60 seconds for a quick calm</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Frequency</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Nightly, or as needed during anxious moments</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Pairs well with</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300"><a href="/points/yintang-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">Yintang</a>, <a href="/points/ki1-yongquan-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">KI1 (Yongquan)</a>, <a href="/points/sp6-sanyinjiao-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">SP6 (Sanyinjiao)</a></td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Skip if</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Recent wrist injury or broken skin over the point (see Precautions)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Benefits &amp; Uses</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Why HT7 Matters</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed">HT7 is the master point for calming the mind in traditional Chinese medicine. Its name, Shenmen, translates to "Spirit Gate" — the gateway through which the spirit settles — and it is the classic target in routines for insomnia, anxiety, and heart-centered calm. When the Heart lacks sufficient blood or Yin nourishment, the Shen cannot settle at night, producing racing thoughts and restless sleep; HT7 is understood to restore that nourishment.</p>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed">Practically, HT7 is one of the easiest points on the body to use: it sits at the wrist crease, reachable with your opposite thumb at a desk, in bed, or on a plane. It is considered the single most important point for insomnia in traditional practice — effective for both difficulty falling asleep and waking in the night — and it is a common first choice whenever stress makes the heart feel like it is beating out of rhythm.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Location</h2>
+    <img src="/images/ht7-location.webp" alt="HT7 acupressure point location on the inner wrist" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" width="350" height="270" loading="lazy">
+    <p class="mb-3">HT7 is located on the inner wrist, on the ulnar (little-finger) side, at the proximal wrist crease. Rest your arm palm-up and bend the wrist slightly — you will see a prominent tendon on the little-finger side. HT7 sits in the small hollow just inside (toward the thumb side, the radial side) of that tendon, in line with the little finger, at the crease.</p>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3"><strong>Three quick confirmations you have the right spot:</strong> (1) it is the soft depression at the wrist crease, just inside the prominent tendon on the little-finger side; (2) it is distinctly tender when pressed, more than the surrounding wrist; (3) pressing it produces a deep, achy sensation rather than the sharp pinch you feel if you press the bone or nerve directly.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">When to Use HT7 (and When Not)</h2>
+    <div class="grid sm:grid-cols-2 gap-4 mb-3">
+      <div class="rounded-xl border border-emerald-200 bg-emerald-50 dark:border-emerald-900/40 dark:bg-emerald-900/20 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Use it when</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• Your mind races and you cannot settle into sleep</li>
+          <li>• You feel anxious, nervous, or keyed up during the day</li>
+          <li>• Your heart flutters, races, or pounds in stressful moments</li>
+          <li>• You want a discreet, reachable point for a quick calm anytime</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-stone-50 dark:border-stone-700 dark:bg-stone-800/50 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Hold off if</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• You recently injured the wrist or have a wrist fracture</li>
+          <li>• The skin over the point is broken, cut, or has a rash</li>
+          <li>• The wrist is swollen, warm, or acutely painful</li>
+          <li>• Palpitations come with chest pain, breathlessness, or fainting — treat as an emergency</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-sm text-stone-500 dark:text-stone-400">Use the <em>Hold off</em> column as a safety filter: HT7 is a comfort practice for stress and sleep, not a treatment for heart conditions. Palpitations with chest pain, breathlessness, or fainting need emergency care.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Benefits &amp; Uses</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
       <li><strong>Insomnia:</strong> HT7 promotes restful sleep and helps quiet a racing mind at bedtime.</li>
-      <li><strong>Anxiety and panic:</strong> It reduces feelings of anxiety, nervousness, and panic attacks.</li>
-      <li><strong>Heart palpitations:</strong> HT7 helps regulate heart rhythm and calms palpitations related to stress.</li>
+      <li><strong>Anxiety:</strong> It reduces feelings of anxiety, nervousness, and panic.</li>
+      <li><strong>Heart palpitations:</strong> HT7 helps calm palpitations and heart flutter linked to stress.</li>
       <li><strong>Emotional regulation:</strong> It stabilizes mood swings, irritability, and emotional sensitivity.</li>
-      <li><strong>Mental clarity:</strong> HT7 improves focus and mental clarity by calming the mind.</li>
+      <li><strong>Mental calm:</strong> HT7 supports focus and a settled mind by calming the spirit.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">How to Massage HT7</h2>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">How to Massage HT7</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">This point is often tender in people with chronic insomnia or stress, so favor lighter pressure with a longer hold. For sleep, hold 60–90 seconds per wrist in a quiet, dim space; for a quick daytime calm, 30–60 seconds is plenty.</p>
     <ol class="list-decimal pl-6 space-y-2 text-stone-700 dark:text-stone-300">
       <li>Turn your hand so your palm faces upward.</li>
-      <li>Place the thumb of your opposite hand on the HT7 point at the wrist crease.</li>
+      <li>Place the thumb of your opposite hand on the HT7 point at the wrist crease, little-finger side.</li>
       <li>Apply gentle to moderate pressure in a small circular motion.</li>
-      <li>Hold for 30?0 seconds, breathing slowly and deeply.</li>
+      <li>Hold for 30–90 seconds, breathing slowly and deeply.</li>
       <li>Repeat on the other wrist as needed, especially before sleep.</li>
     </ol>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed"><strong>Common mistake to avoid:</strong> pressing the nerve or the bone rather than the soft hollow. If you feel a sharp, electric zing down the palm or fingers, you are off the point — shift slightly and ease the pressure. The target is a deep, dull, achy calm, not a zap.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Science &amp; Research</h2>
-    <p class="mb-3">A 2020 randomized controlled trial in <em>Journal of Clinical Nursing</em> found that HT7 acupressure significantly improved sleep quality in older adults with insomnia compared to sham treatment.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/32077624/" target="_blank" rel="noopener">1</a></sup> Research in <em>BMC Complementary and Alternative Medicine</em> demonstrated that HT7 stimulation reduced anxiety scores in patients preparing for cardiac surgery.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/30572886/" target="_blank" rel="noopener">2</a></sup></p>
-    <p class="mb-3">A 2021 fMRI study in <em>Neuroscience Letters</em> showed that HT7 acupressure modulates the default mode network and limbic system, brain areas associated with emotional regulation and self-referential thought.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/33964379/" target="_blank" rel="noopener">3</a></sup></p>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Combine HT7 with These Points</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">A full calming routine works better than pressing one point. Pick the row closest to your situation and work the points in the order shown, 60–90 seconds each.</p>
+    <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+      <table class="w-full text-sm">
+        <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+          <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-44">Goal / symptom</th><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400">Routine (in order)</th></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Falling asleep</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">HT7 → <a href="/points/yintang-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">Yintang</a> → <a href="/points/ki1-yongquan-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">KI1</a>, 60–90s each, in bed with the lights low</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Waking in the night</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">HT7 (60s per wrist) → Yintang, staying in bed, no screens, before resettling</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Anxiety and a racing mind</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">HT7 → <a href="/points/sp6-sanyinjiao-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">SP6</a> → KI1, 60s each, 1–2 times daily</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Stress-related palpitations</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">HT7 → <a href="/points/pc6-neiguan-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">PC6 (Neiguan)</a>, slow deep breaths; seek urgent care if chest pain, breathlessness, or fainting occurs</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-sm text-stone-500 dark:text-stone-400">For a fuller program, see the <a href="/body/hand-acupressure-chart" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">hand acupressure chart</a> and our <a href="/conditions/acupressure-for-sleep" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for sleep</a> and <a href="/conditions/acupressure-for-anxiety" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for anxiety</a> pages.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Precautions</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">What to Expect</h2>
+    <div class="space-y-3">
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">First session (today)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">HT7 is usually tender, and the deep, achy sensation can be surprising. Most people feel noticeably calmer within a few minutes of slow pressure — shoulders drop, breathing steadies. Do not expect perfect sleep on night one; the first session is mostly about learning the spot.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Days 3–7 (consistent nightly practice)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">With a nightly routine, the tenderness usually eases and falling asleep often feels easier. This matches the pattern in studies of acupressure for insomnia and anxiety, where benefits tend to appear after several days of regular use rather than a single session.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Weeks 2–4</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">For chronic insomnia, HT7 works best as part of a full sleep routine — consistent bedtimes, dim light, and no screens. If sleep has not improved after 2–3 weeks, or if palpitations are frequent, see a clinician. Chest pain, breathlessness, or fainting with palpitations is an emergency, not a cue to press harder.</p>
+      </div>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Science &amp; Research</h2>
+    <p class="mb-3">Evidence on acupressure for insomnia and anxiety has grown in recent years. Systematic reviews and randomized controlled trials have examined acupressure as an adjunct for these conditions, with results that are generally promising but limited in quality. Meta-analyses of acupressure for sleep and anxiety tend to show a positive direction of effect, though many of the included studies are small and their methodological quality varies considerably.</p>
+    <p class="mb-3">Researchers consistently note that acupressure trials are hard to blind, because the treatment is physical and participants can usually tell whether they are being treated. This makes it difficult to separate the specific effects of a particular point such as HT7 from the general benefits of touch, pressure, and relaxation. The overall picture — which we discuss in detail on our <a href="/research/does-acupressure-work" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">does acupressure work?</a> review — is one of encouraging signals alongside a clear need for larger, higher-quality studies before firm conclusions can be drawn. For sleep and anxiety specifically, our <a href="/conditions/acupressure-for-sleep" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for sleep</a> page and <a href="/conditions/acupressure-for-anxiety" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for anxiety</a> page summarize the strongest available evidence.</p>
+
+    <EvidenceBox refs={["liao-2020-sleep", "chen-2022-anxiety"]} note="The trials and reviews above evaluated acupressure for sleep and anxiety, the two uses of HT7. Neither is a study of HT7 in isolation." />
+
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Precautions</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
-      <li>Use gentle pressure ?the wrist area contains sensitive nerves and blood vessels.</li>
-      <li>Avoid if you have a recent wrist injury, fracture, or carpal tunnel syndrome.</li>
-      <li>Do not apply pressure if there are skin irritations, cuts, or rashes on the wrist.</li>
-      <li>If you experience numbness or tingling in the hand, stop immediately.</li>
+      <li>Avoid if you recently injured the wrist or have a wrist fracture.</li>
+      <li>Do not press over broken skin, cuts, rashes, or blisters on the wrist.</li>
+      <li>Use gentle pressure — the wrist contains sensitive nerves and blood vessels.</li>
+      <li>Stop if you feel numbness or tingling in the hand or fingers.</li>
+      <li>See a doctor (or emergency care) if palpitations come with chest pain, breathlessness, or fainting.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">Related Points</h2>
-    <p class="mb-3">HT7 pairs well with <a href="/points/pc6-neiguan-acupressure-point">PC6 (Neiguan)</a> for anxiety and palpitations. For insomnia, combine with <a href="/points/sp6-sanyinjiao-acupressure-point">SP6 (Sanyinjiao)</a> and <a href="/points/ki1-yongquan-acupressure-point">KI1 (Yongquan)</a>.</p>
-  </section></article>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Red Flags — See a Professional</h2>
+    <div class="rounded-xl border border-red-200 bg-red-50 dark:border-red-900/40 dark:bg-red-900/20 p-4 text-sm">
+      <p class="text-stone-700 dark:text-stone-300 mb-2">Stop self-treatment and see a doctor if you notice any of the following:</p>
+      <ul class="list-disc pl-6 space-y-1 text-stone-700 dark:text-stone-300">
+        <li>Palpitations together with chest pain, breathlessness, or fainting — call for emergency help</li>
+        <li>A resting heart that races, flutters, or skips beats frequently</li>
+        <li>Insomnia that persists after 2–3 weeks, especially with loud snoring or breathing pauses</li>
+        <li>Anxiety or panic that is interfering with work, sleep, or daily life</li>
+        <li>Wrist pain, swelling, or numbness that appears suddenly or after an injury</li>
+      </ul>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Frequently Asked Questions</h2>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Where is HT7 and how do I find it?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">HT7 sits at the wrist crease on the little-finger side. Rest your arm palm-up and bend the wrist slightly to see the prominent tendon on the little-finger side — the point is in the soft hollow just inside that tendon, in line with the little finger. It is usually tender, so start light.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How long and how often should I press HT7?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">For sleep, hold 60–90 seconds per wrist with slow circular pressure in a quiet, dim space. For a quick daytime calm, 30–60 seconds per wrist is enough. Use it nightly for sleep, and as needed during anxious moments — consistency matters more than a single long press.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Is HT7 effective for both falling and staying asleep?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Yes. HT7 is traditionally used for both difficulty falling asleep and waking in the night. If you wake at 3 a.m., a short 60-second hold per wrist, staying in bed with no screens, can help you settle back down. Pair it with Yintang and KI1 for a fuller bedtime routine.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Can I press HT7 at work or in public?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Yes — this is one of HT7's best features. The wrist is easy to reach discreetly under a desk or table with your opposite thumb. A short 30–60 second press before a meeting, phone call, or stressful moment is enough to steady yourself without anyone noticing.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Why does pressing HT7 help with anxiety and palpitations?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">HT7 is the source point of the Heart meridian, which traditional medicine links to the Shen, or spirit. Calming the point is understood to settle a restless mind and steady a heart that flutters under stress. It is a relaxation practice — but palpitations with chest pain, breathlessness, or fainting need emergency care.</div>
+    </details>
+    <details class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">When should I see a doctor instead of using HT7?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">See a doctor if palpitations come with chest pain, breathlessness, or fainting (call for emergency help), if your heart races or skips beats often, or if insomnia and anxiety persist after 2–3 weeks of consistent practice. Sleep and heart symptoms deserve a proper evaluation, not just more pressure.</div>
+    </details>
+    </section>
+
+    <div class="mt-10 text-center">
+      <a href="/points" class="inline-flex items-center gap-1 text-sm text-stone-500 hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Back to All Points</a>
+    </div>
+  </article>
 </BaseLayout>

@@ -1,46 +1,172 @@
-﻿---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="CV6 (Qihai) — Sea of Qi Point" description="Learn how to locate and stimulate CV6 (Qihai) — the Sea of Qi point. Benefits include vitality, digestive support, and immune system strengthening." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "CV6 (Qihai)", href: "/points/cv6-qihai-acupressure-point" }]} datePublished="2025-03-10" dateModified="2026-05-15" articleSchema={true}>
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
+---
+<BaseLayout title="CV6 (Qihai) — Sea of Qi Point" description="Everything you need to self-treat CV6 (Qihai) — exact location, when to use it, a step-by-step routine, symptom-based point combinations, and expected results." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "CV6 (Qihai)", href: "/points/cv6-qihai-acupressure-point" }]} datePublished="2025-03-10" dateModified="2026-08-19" articleSchema={true}>
   <article class="max-w-3xl mx-auto px-4 py-12 lg:px-6">
     <h1 class="mb-4">CV6 (Qihai) — Sea of Qi</h1>
-    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">CV6, known as Qihai or Sea of Qi, is one of the most important energy points on the body. Located on the lower abdomen, it is used for vitality, digestion, and immune strength.</p>
+    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">CV6, known as Qihai or Sea of Qi, is one of the most important energy points on the body. Located on the lower abdomen, it is used for vitality, digestion, and immune strength — fatigue, low energy, sluggish digestion, and a tendency to feel cold.</p>
 
-    <section class="mb-8"><h2 class="mb-4">Location</h2>
-    <img src="/images/cv6-location.webp" alt="CV6 acupressure point location on the lower abdomen" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" />
-    <p class="mb-3">CV6 is on the midline of the lower abdomen, 1.5 cun (about two finger-widths) below the navel (umbilicus). It lies on the Conception Vessel (Ren Mai).</p>
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">At a Glance</h2>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+        <table class="w-full text-sm">
+          <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Meridian</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Conception Vessel (CV / Ren Mai)</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Body region</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Lower abdomen, on the midline about two of your own finger-widths below the navel</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Best for</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Fatigue and low energy, sluggish digestion, immune support, feeling cold, recovery after illness</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Difficulty</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Easy — reachable lying down with light pressure</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Hold time</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">1–2 minutes per session, in slow circles</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Frequency</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">1–2 times daily, preferably in the morning</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Pairs well with</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">CV4 (Guanyuan), <a href="/points/st36-zusanli-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">ST36 (Zusanli)</a>, <a href="/points/ki1-yongquan-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">KI1 (Yongquan)</a></td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Skip if</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Pregnancy, recent abdominal surgery, or a full bladder / heavy meal</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Benefits &amp; Uses</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Why CV6 Matters</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed">CV6 is one of the most important energy points on the body, and its position on the lower midline explains why. It sits on the Conception Vessel about two finger-widths below the navel, in the zone classically linked to energy, or qi, and vitality. Because the abdomen holds the points used most often for digestive concerns — bloating, indigestion, constipation, and nausea — CV6 serves both low energy and an unsettled digestive system.</p>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed">In the traditional model, lower-abdomen points regulate the smooth flow of qi for the stomach and intestines, and CV6 is described as directly stimulating intestinal activity and strengthening digestive fire. On a physical level, gentle abdominal pressure can relax the belly wall and support the natural rhythm of digestion — if the belly is relaxed and settled, not full.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Location</h2>
+    <img src="/images/cv6-location.webp" alt="CV6 acupressure point location on the lower abdomen" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" width="699" height="318" loading="lazy">
+    <p class="mb-3">CV6 is on the midline of the lower abdomen, 1.5 cun (about two finger-widths) below the navel (umbilicus). It lies on the Conception Vessel (Ren Mai). As a lower-midline point, it is classically treated with extra care during pregnancy.</p>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3"><strong>Three quick confirmations you have the right spot:</strong> (1) it sits on the exact midline, about two of your own finger-widths below the navel; (2) it is soft tissue, closer to the navel than to the pubic bone; (3) gentle pressure may produce a sense of warmth or a mild "pull," but never a sharp pain.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">When to Use CV6 (and When Not)</h2>
+    <div class="grid sm:grid-cols-2 gap-4 mb-3">
+      <div class="rounded-xl border border-emerald-200 bg-emerald-50 dark:border-emerald-900/40 dark:bg-emerald-900/20 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Use it when</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• You feel persistently tired, drained, or run down</li>
+          <li>• Digestion feels sluggish or the belly feels bloated</li>
+          <li>• You want a daily immune-maintenance point during cold season</li>
+          <li>• You tend to feel cold, or you are recovering from an illness</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-stone-50 dark:border-stone-700 dark:bg-stone-800/50 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Hold off if</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• You are pregnant — CV6 is generally avoided during pregnancy</li>
+          <li>• You have had recent abdominal surgery or have a hernia near the navel</li>
+          <li>• The bladder is full, or you have just eaten a heavy meal</li>
+          <li>• The lower abdomen is painful to the touch or the pain is unexplained</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-sm text-stone-500 dark:text-stone-400">Use the <em>Hold off</em> column as a safety filter: CV6 is a restorative, maintenance point, not first aid — and persistent, unexplained fatigue deserves a medical checkup.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Benefits &amp; Uses</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
-      <li><strong>Vitality and energy:</strong> CV6 restores Qi and is used for general fatigue, weakness, and debility.</li>
-      <li><strong>Digestive health:</strong> It strengthens digestion, relieves bloating, and helps with chronic diarrhea.</li>
-      <li><strong>Immune support:</strong> Regular stimulation of CV6 is believed to strengthen Wei Qi (defensive energy) and resistance to illness.</li>
-      <li><strong>Reproductive health:</strong> CV6 supports reproductive organs and is used for menstrual irregularities and fertility support.</li>
-      <li><strong>Emotional grounding:</strong> It helps with feelings of emptiness, insecurity, and lack of grounding.</li>
+      <li><strong>Vitality and energy:</strong> CV6 is the classic point for restoring qi and is used for general fatigue, weakness, and debility.</li>
+      <li><strong>Digestive health:</strong> It strengthens digestion, relieves bloating, and helps with chronic loose stools.</li>
+      <li><strong>Immune support:</strong> Regular stimulation of CV6 is believed to strengthen defensive energy and resistance to illness.</li>
+      <li><strong>Feeling cold:</strong> Used in the traditional model when the person generally runs cold or lacks inner warmth.</li>
+      <li><strong>Recovery:</strong> A foundational point for rebuilding energy after illness, stress, or prolonged tiredness.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">How to Massage CV6</h2>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">How to Massage CV6</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">Wait at least 30 to 60 minutes after eating, and avoid pressing over surgical scars. The point responds best to light, slow, breath-matched pressure.</p>
     <ol class="list-decimal pl-6 space-y-2 text-stone-700 dark:text-stone-300">
       <li>Lie on your back with your abdomen relaxed and uncovered.</li>
       <li>Place two or three fingertips on the CV6 point below the navel.</li>
       <li>Apply gentle, warm pressure in a clockwise circular motion.</li>
-      <li>Breathe deeply into your lower abdomen for 2— minutes.</li>
+      <li>Breathe deeply into your lower abdomen for 2–3 minutes.</li>
       <li>Repeat once or twice daily, preferably in the morning.</li>
     </ol>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed"><strong>Common mistake to avoid:</strong> pressing hard into a full belly or tensed abdomen. CV6 works with light, breath-matched circles on a relaxed abdomen — forcing the pressure creates discomfort without adding benefit.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Science &amp; Research</h2>
-    <p class="mb-3">A 2019 study in <em>Journal of Acupuncture and Meridian Studies</em> found that CV6 moxibustion (heat therapy) improved immune function markers in older adults with chronic fatigue.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/31182209/" target="_blank" rel="noopener">1</a></sup> Research in <em>BMC Gastroenterology</em> showed that CV6 acupressure reduced bloating and improved bowel regularity in IBS patients.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/29649994/" target="_blank" rel="noopener">2</a></sup></p>
-    <p class="mb-3">A 2021 systematic review in <em>Medicine</em> found that CV6 stimulation improved quality of life and reduced fatigue in cancer survivors undergoing rehabilitation.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/33832049/" target="_blank" rel="noopener">3</a></sup></p>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Combine CV6 with These Points</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">An energy or digestive routine is more effective than pressing one point. Pick the row closest to your situation and work the points in the order shown, 1–2 minutes each.</p>
+    <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+      <table class="w-full text-sm">
+        <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+          <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-44">Goal / symptom</th><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400">Routine (in order)</th></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Fatigue / low energy</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">CV6 → CV4 (Guanyuan) → <a href="/points/st36-zusanli-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">ST36</a>, 1–2 min each, in the morning</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Sluggish digestion / bloating</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">CV6 → ST36 → <a href="/points/cv12-zhongwan-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">CV12</a>, after waiting 30–60 minutes past a meal</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Low immunity / run-down</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">CV6 → ST36 → <a href="/points/li4-hegu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LI4</a>, once daily during cold season</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Feeling cold / recovery</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">CV6 → <a href="/points/ki1-yongquan-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">KI1</a> → ST36, then a warm compress over CV6</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-sm text-stone-500 dark:text-stone-400">For a fuller program, see the <a href="/body/abdomen-acupressure-points" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">abdomen acupressure points</a> body guide and our <a href="/conditions/acupressure-for-sleep" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for sleep</a> page for a grounding wind-down routine.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Precautions</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">What to Expect</h2>
+    <div class="space-y-3">
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">First session (today)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">The point may feel slightly tender, and most people notice a warmer, more relaxed sensation in the lower abdomen within a few minutes of light circular pressure. Do not expect an instant energy boost — CV6 is a restorative, cumulative practice.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Days 3–7 (consistent daily practice)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">With 1–2 sessions per day, the abdomen usually feels warmer and more settled, and some people report waking less drained and digesting more comfortably. This matches the pattern in studies of acupressure for fatigue, where benefits appear after several days of regular use.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Weeks 2–4</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">For chronic fatigue, keep CV6 as part of a routine that includes sleep, nutrition, and movement. Acupressure is a complement, not a replacement — and if exhaustion, weight loss, fever, or night sweats persist, that is a signal to see a clinician rather than continue self-treatment.</p>
+      </div>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Science &amp; Research</h2>
+    <p class="mb-3">Evidence on acupressure for fatigue, immune, and digestive complaints has grown in recent years. Systematic reviews and randomized controlled trials have examined acupressure as an adjunct for fatigue and energy restoration, with results that are generally promising but limited in quality. Lower-abdominal and midline points such as CV6 are among the most commonly studied in these protocols, often combined with warmth-based approaches.</p>
+    <p class="mb-3">Researchers consistently note that acupressure trials are hard to blind, because the treatment is physical and participants can usually tell whether they are being treated. This makes it difficult to separate the specific effects of a particular point from the general benefits of touch, pressure, and relaxation. The overall picture — which we discuss in detail on our <a href="/research/does-acupressure-work">does acupressure work?</a> review — is one of encouraging signals alongside a clear need for larger, higher-quality studies before firm conclusions can be drawn.</p>
+
+    <EvidenceBox refs={["lee-frazier-2011"]} note="The review above evaluated acupressure for symptom management, including energy and digestive complaints. It is not a study of CV6 in isolation." />
+
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Precautions</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
       <li><strong>Avoid during pregnancy:</strong> CV6 stimulation is generally avoided during pregnancy.</li>
-      <li>Do not apply pressure over full bladder or immediately after heavy meals.</li>
+      <li>Do not apply pressure over a full bladder or immediately after heavy meals.</li>
       <li>Avoid if you have abdominal surgery scars or hernias in the area.</li>
-      <li>Use gentle pressure ?the abdomen is sensitive, especially after surgery.</li>
+      <li>Skip the point if there is skin irritation, a rash, or an open wound on the lower abdomen.</li>
+      <li>Use gentle pressure — the abdomen is sensitive, especially after surgery.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">Related Points</h2>
-    <p class="mb-3">CV6 works well with <a href="/points/st36-zusanli-acupressure-point">ST36 (Zusanli)</a> for overall Qi boosting. For reproductive health, combine with <a href="/points/sp6-sanyinjiao-acupressure-point">SP6 (Sanyinjiao)</a> and <a href="/points/kd3-taixi-acupressure-point">KD3 (Taixi)</a>.</p>
-  </section></article>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Red Flags — See a Professional</h2>
+    <div class="rounded-xl border border-red-200 bg-red-50 dark:border-red-900/40 dark:bg-red-900/20 p-4 text-sm">
+      <p class="text-stone-700 dark:text-stone-300 mb-2">Stop self-treatment and see a doctor if you notice any of the following:</p>
+      <ul class="list-disc pl-6 space-y-1 text-stone-700 dark:text-stone-300">
+        <li>Persistent fatigue with unexplained weight loss, fever, or night sweats</li>
+        <li>Unexplained or worsening pain in the lower abdomen</li>
+        <li>Blood in the stool, or black, tarry stools</li>
+        <li>Feeling faint, dizzy, or short of breath with tiredness</li>
+        <li>Exhaustion that has not improved after 2–3 weeks of rest, nutrition, and acupressure</li>
+      </ul>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Frequently Asked Questions</h2>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How do I find CV6 on myself?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">CV6 sits on the midline of the lower abdomen, about two of your own finger-widths below the navel. Measure with your own fingers and press gently — the point is soft tissue, closer to the navel than to the pubic bone.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How long and how often should I press CV6?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Thirty to sixty seconds per point is a good starting range, and one to two minutes works for a deeper feel. Press at roughly 90 degrees to the skin, deepen slowly, and aim for a deep, dull deqi response, never sharp. Repeat once or twice daily.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">When is the best time to stimulate CV6?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Many routines suggest the morning: the constipation guide begins the day by massaging the lower abdomen clockwise for three minutes on waking, and this point's guidance recommends repeating once or twice daily, preferably in the morning.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Is CV6 safe during pregnancy?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">During pregnancy, avoid direct pressure on the abdomen and follow site cautions that include avoiding LI4, SP6, BL60, and GB21. Lower-midline points such as CV6 are classically treated with extra care, so ask a practitioner or midwife first.</div>
+    </details>
+    <details class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">When should I see a doctor instead of using CV6?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">See a doctor for persistent fatigue with unexplained weight loss, fever, or night sweats, for blood in the stool, or for unexplained abdominal pain. CV6 is a restorative supportive practice — not a substitute for a proper diagnosis when symptoms are new, severe, or persistent.</div>
+    </details>
+    </section>
+
+    <div class="mt-10 text-center">
+      <a href="/points" class="inline-flex items-center gap-1 text-sm text-stone-500 hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Back to All Points</a>
+    </div>
+  </article>
 </BaseLayout>

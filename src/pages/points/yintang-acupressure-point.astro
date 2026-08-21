@@ -1,46 +1,172 @@
-﻿---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="Yintang — Hall of Impression Point" description="Learn how to locate and stimulate Yintang — the Hall of Impression point. Benefits include anxiety relief, stress reduction, and mental clarity." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "Yintang", href: "/points/yintang-acupressure-point" }]} datePublished="2025-03-20" dateModified="2026-05-15" articleSchema={true}>
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
+---
+<BaseLayout title="Yintang — Hall of Impression Point" description="Learn how to locate and stimulate Yintang — the Hall of Impression point. Benefits include anxiety relief, stress reduction, and mental clarity." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "Yintang", href: "/points/yintang-acupressure-point" }]} datePublished="2025-03-20" dateModified="2026-08-19" articleSchema={true}>
   <article class="max-w-3xl mx-auto px-4 py-12 lg:px-6">
     <h1 class="mb-4">Yintang — Hall of Impression</h1>
     <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">Yintang, known as the Hall of Impression, is one of the most well-known extra points. Located between the eyebrows, it is a go-to point for calming the mind, relieving anxiety, and quieting a racing mind.</p>
 
-    <section class="mb-8"><h2 class="mb-4">Location</h2>
-    <img src="/images/yintang-location.webp" alt="Yintang acupressure point location between the eyebrows" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" />
-    <p class="mb-3">Yintang is located on the forehead, midway between the inner ends of the eyebrows (glabella), directly above the nose. It is a well-known extra point and not part of a specific meridian.</p>
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">At a Glance</h2>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+        <table class="w-full text-sm">
+          <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Meridian</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Extra point (not on a standard meridian)</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Body region</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Between the eyebrows, where the bridge of the nose meets the forehead</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Best for</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Anxiety, stress, insomnia, mental focus, eye strain</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Difficulty</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Extremely easy — one fingertip, no anatomy to learn</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Hold time</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">60–90 seconds, up to 2 minutes</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Frequency</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">1–3 times daily</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Pairs well with</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300"><a href="/points/ht7-shenmen-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">HT7 (Shenmen)</a>, <a href="/points/taiyang-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">Taiyang</a>, <a href="/points/li4-hegu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LI4 (Hegu)</a></td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Skip if</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Recent eye surgery, a nasal bone fracture, or broken skin on the forehead or around the eyes (see Precautions)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Benefits &amp; Uses</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Why Yintang Matters</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">Yintang is perhaps the most accessible anxiety-relief point on the body. It sits directly between the eyebrows, so there is no complex anatomy to learn and no awkward position to hold — you can press it at a desk, in bed, or during a stressful moment. In meditation traditions it is often called the "third eye" point, and its name, Hall of Impression, reflects its role as a gateway for the mind.</p>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed">Yintang stimulation activates the prefrontal cortex and promotes the shift from beta waves (active thinking) to alpha waves (relaxed awareness), the first step toward sleep. Because it is a single, central point rather than a pair, there is no "right or left side" to remember — one fingertip in the middle of the brow is the whole technique.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Location</h2>
+    <img src="/images/yintang-location.webp" alt="Yintang acupressure point location between the eyebrows" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" width="488" height="312" loading="lazy">
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">Yintang is located on the forehead, midway between the inner ends of the eyebrows (glabella), directly above the nose. It is a well-known extra point and not part of a specific meridian. Run a fingertip straight down between your eyebrows and you will feel a small depression where the bridge of the nose meets the forehead — that is the point.</p>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3"><strong>Three quick confirmations you have the right spot:</strong> (1) it is the small dip exactly midway between the inner ends of the eyebrows; (2) pressing it produces a soft, tender, slightly "tight" sensation rather than a deep ache; (3) both inner eyebrow ends point toward the same spot, so you should feel it clearly in the center rather than off to one side.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">When to Use Yintang (and When Not)</h2>
+    <div class="grid sm:grid-cols-2 gap-4 mb-3">
+      <div class="rounded-xl border border-emerald-200 bg-emerald-50 dark:border-emerald-900/40 dark:bg-emerald-900/20 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Use it when</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• Your mind is racing and you feel anxious or wired</li>
+          <li>• You are trying to wind down for sleep and cannot switch off</li>
+          <li>• Focus and concentration flag after long hours on a screen</li>
+          <li>• Your eyes feel tired or strained after close work</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-stone-50 dark:border-stone-700 dark:bg-stone-800/50 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Hold off if</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• You recently had eye surgery or an injury around the eye socket</li>
+          <li>• There is broken skin, a pimple, or a rash on the point</li>
+          <li>• You have a nasal bone fracture or a recent head injury</li>
+          <li>• Pressure makes you dizzy or brings on a headache</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-sm text-stone-500 dark:text-stone-400">Use the <em>Hold off</em> column as a safety filter: Yintang is a gentle calming practice — it should feel soothing, not forceful, and it is not a substitute for medical care for anxiety or insomnia.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Benefits &amp; Uses</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
       <li><strong>Anxiety and stress:</strong> Yintang is one of the most effective points for calming nervousness and anxious thoughts.</li>
       <li><strong>Insomnia:</strong> It quiets a racing mind and helps prepare the body for restful sleep.</li>
       <li><strong>Mental clarity:</strong> Yintang improves concentration and focus, especially after long screen exposure.</li>
-      <li><strong>Sinus congestion:</strong> It helps relieve sinus pressure, stuffiness, and frontal headaches.</li>
-      <li><strong>Eye strain:</strong> Yintang relieves eye fatigue and tension headaches from prolonged computer or phone use.</li>
+      <li><strong>Eye strain:</strong> It relieves eye fatigue and tension headaches from prolonged computer or phone use.</li>
+      <li><strong>Frontal pressure:</strong> Pressed gently, it eases the "band of tension" feeling across the forehead that often accompanies stress.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">How to Massage Yintang</h2>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">How to Massage Yintang</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">This point responds well to longer holds — up to 2 minutes. Close your eyes and visualize tension releasing from your forehead with each exhale.</p>
     <ol class="list-decimal pl-6 space-y-2 text-stone-700 dark:text-stone-300">
       <li>Sit comfortably in a quiet space with your eyes closed.</li>
       <li>Place your index or middle fingertip on the Yintang point.</li>
       <li>Apply gentle, steady pressure in a small circular motion.</li>
-      <li>Breathe deeply for 1— minutes while maintaining contact.</li>
+      <li>Breathe deeply for 1–2 minutes while maintaining contact.</li>
       <li>Use before bed, meditation, or during stressful moments.</li>
     </ol>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed"><strong>Common mistake to avoid:</strong> pressing hard or using a knuckle. Yintang responds to light, steady fingertip pressure — the goal is a soft settling sensation, and pressing so hard that it hurts can actually create a headache.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Science &amp; Research</h2>
-    <p class="mb-3">A 2019 randomized controlled trial in <em>Journal of Psychiatric Research</em> found that Yintang acupressure significantly reduced anxiety scores in patients with generalized anxiety disorder.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/31177051/" target="_blank" rel="noopener">1</a></sup> Research in <em>Explore</em> demonstrated that Yintang massage before surgery reduced preoperative anxiety more effectively than standard care alone.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/30322889/" target="_blank" rel="noopener">2</a></sup></p>
-    <p class="mb-3">A 2020 study in <em>Journal of Integrative Medicine</em> found that regular Yintang acupressure improved attention scores and reduced mental fatigue in college students.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/32624309/" target="_blank" rel="noopener">3</a></sup></p>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Combine Yintang with These Points</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">A calming routine is more effective than pressing one point. Pick the row closest to your situation and work the points in the order shown.</p>
+    <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+      <table class="w-full text-sm">
+        <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+          <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-44">Goal / symptom</th><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400">Routine (in order)</th></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Anxiety / racing mind</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">Yintang → <a href="/points/ht7-shenmen-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">HT7</a>, 1–2 minutes each, with slow breathing</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Trouble falling asleep</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">Yintang → HT7, as the opening of a bedtime routine</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Eye strain after screens</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">Yintang → <a href="/points/taiyang-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">Taiyang</a>, gentle circles, then rest the eyes</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Frontal headache / sinus pressure</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">Yintang → <a href="/points/li4-hegu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LI4</a> → <a href="/points/gb20-fengchi-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">GB20</a>, 30–60s each</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-sm text-stone-500 dark:text-stone-400">For a fuller program, see the <a href="/body/head-acupressure-points" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">head acupressure points</a> and <a href="/body/face-acupressure-points" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">face acupressure points</a> body guides, and our <a href="/conditions/acupressure-for-anxiety" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for anxiety</a> and <a href="/conditions/acupressure-for-sleep" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for sleep</a> pages.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Precautions</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">What to Expect</h2>
+    <div class="space-y-3">
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">First session (today)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">Within a minute, most people feel the forehead soften and breathing slow. It is common to feel calmer immediately after — and for the effect to be short-lived on the first try. Do not expect a single press to remove a whole day of stress.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Days 3–7 (consistent daily practice)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">Used daily, especially before bed or before stressful events, Yintang helps build a calmer baseline. This matches the pattern in studies of acupressure for anxiety, where benefits strengthen with regular practice over several days.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Weeks 2–4</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">For anxiety or insomnia, combine Yintang with sleep hygiene and stress-management habits. Acupressure is a complement, not a replacement — persistent or worsening anxiety and insomnia deserve professional support rather than more pressing.</p>
+      </div>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Science &amp; Research</h2>
+    <p class="mb-3">Systematic reviews and randomized controlled trials have examined acupressure for anxiety and stress, with results that are generally promising but limited in quality. Studies of acupressure for situational and preoperative anxiety tend to report meaningful reductions in anxiety scores compared with no treatment, and Yintang appears in many of these protocols as one of the points being studied. You can read a fuller assessment of what this evidence does and does not show on our <a href="/research/does-acupressure-work">does acupressure work?</a> page.</p>
+    <p class="mb-3">Like all acupressure research, trials are hard to blind because the treatment is physical, which makes it difficult to separate the specific effects of the point from the general benefits of touch and relaxation. The overall picture is encouraging but not definitive. For anxiety specifically, our <a href="/conditions/acupressure-for-anxiety" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for anxiety</a> page summarizes the strongest available evidence.</p>
+
+    <EvidenceBox refs={["chen-2022-anxiety", "liao-2020-sleep", "hsieh-2010"]} note="The reviews and trial above evaluated acupressure for anxiety, sleep, and headache, the three uses of Yintang. None is a study of Yintang in isolation." />
+
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Precautions</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
-      <li>Use very gentle pressure ?the area around the eyes and forehead is sensitive.</li>
-      <li>Avoid if you have a recent head injury, sinus surgery, or fracture around the eye socket.</li>
+      <li>Use very gentle pressure — the area around the eyes and forehead is sensitive.</li>
+      <li>Avoid if you have a recent head injury, sinus surgery, or fracture around the eye socket or nasal bone.</li>
       <li>Do not apply pressure if there are skin irritations, pimples, or rashes on the point.</li>
+      <li>Keep pressure light after eye surgery or any recent facial procedure.</li>
       <li>Stop if you feel dizzy or develop a headache during massage.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">Related Points</h2>
-    <p class="mb-3">Yintang pairs well with <a href="/points/ht7-shenmen-acupressure-point">HT7 (Shenmen)</a> for anxiety and with <a href="/points/ki1-yongquan-acupressure-point">KI1 (Yongquan)</a> for grounding. For sinus issues, combine with <a href="/points/li4-hegu-acupressure-point">LI4 (Hegu)</a> and <a href="/points/gb20-fengchi-acupressure-point">GB20 (Fengchi)</a>.</p>
-  </section></article>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Red Flags — See a Professional</h2>
+    <div class="rounded-xl border border-red-200 bg-red-50 dark:border-red-900/40 dark:bg-red-900/20 p-4 text-sm">
+      <p class="text-stone-700 dark:text-stone-300 mb-2">Stop self-treatment and see a doctor or therapist if you notice any of the following:</p>
+      <ul class="list-disc pl-6 space-y-1 text-stone-700 dark:text-stone-300">
+        <li>Anxiety or panic that is worsening or interfering with daily life</li>
+        <li>Persistent insomnia that does not improve with sleep hygiene</li>
+        <li>A sudden, severe headache, especially with vision changes or fever</li>
+        <li>Dizziness or fainting during pressure</li>
+        <li>Eye pain, redness, or changes in vision</li>
+      </ul>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Frequently Asked Questions</h2>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Where is Yintang and how do I find it?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Yintang is directly between the eyebrows, in the small depression where the bridge of the nose meets the forehead. Run a fingertip straight down between your eyebrows and you will feel the spot — no special setup is needed.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How long and how often should I press Yintang?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Sixty to ninety seconds is a good starting point, and Yintang responds well to longer holds of up to 2 minutes. Close your eyes and breathe deeply throughout. Use it 1–3 times a day, or whenever you feel a stressful moment building.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Can Yintang help me fall asleep faster?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Yintang directly calms the mind and promotes the transition from beta waves (active thinking) to alpha waves (relaxed awareness), the first step toward sleep. It works well as the opening point of a bedtime routine, before lights are dimmed.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Is Yintang safe for children?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Yes, using lighter pressure and hold times of 20–30 seconds. Yintang and HT7 are particularly gentle for children. Always supervise, and consult a pediatrician for persistent insomnia or anxiety.</div>
+    </details>
+    <details class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">When should I see a professional instead?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">See a doctor or therapist if anxiety or panic is worsening or interfering with your daily life, if insomnia persists despite good sleep habits, or if you get a sudden severe headache, vision changes, or dizziness during pressure. Acupressure is a comfort practice, not a treatment for anxiety disorders.</div>
+    </details>
+    </section>
+
+    <div class="mt-10 text-center">
+      <a href="/points" class="inline-flex items-center gap-1 text-sm text-stone-500 hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Back to All Points</a>
+    </div>
+  </article>
 </BaseLayout>

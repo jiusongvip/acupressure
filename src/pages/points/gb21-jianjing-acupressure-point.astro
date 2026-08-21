@@ -1,16 +1,66 @@
-﻿---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="GB21 (Jianjing) — Shoulder Well Point" description="Learn how to locate and stimulate GB21 (Jianjing) — the Shoulder Well point on the upper trapezius. Benefits include shoulder tension relief, neck pain relief, and headache prevention." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "GB21 (Jianjing)", href: "/points/gb21-jianjing-acupressure-point" }]} datePublished="2025-03-10" dateModified="2026-05-15" articleSchema={true}>
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
+---
+<BaseLayout title="GB21 (Jianjing) — Shoulder Well Point" description="Everything you need to self-treat GB21 (Jianjing) — exact location, when to use it, a step-by-step routine, symptom-based point combinations, and expected results." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "GB21 (Jianjing)", href: "/points/gb21-jianjing-acupressure-point" }]} datePublished="2025-03-10" dateModified="2026-08-19" articleSchema={true}>
   <article class="max-w-3xl mx-auto px-4 py-12 lg:px-6">
     <h1 class="mb-4">GB21 (Jianjing) — Shoulder Well</h1>
-    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">GB21, known as Jianjing or Shoulder Well, is the primary point for releasing shoulder and neck tension. Located on the top of the shoulder, it is a go-to point for desk workers and those with chronic tightness.</p>
+    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">GB21, known as Jianjing or Shoulder Well, is a Gallbladder meridian point on the top of the shoulder. It is the primary point for releasing shoulder and neck tension, and a go-to for desk workers, neck pain, and shoulder pain.</p>
 
-    <section class="mb-8"><h2 class="mb-4">Location</h2>
-    <img src="/images/gb21-location.webp" alt="GB21 acupressure point location on the top of the shoulder" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" />
-    <p class="mb-3">GB21 is on the top of the shoulder, midway between the spinous process of the seventh cervical vertebra (C7 ?the prominent bone at the base of the neck) and the acromion (the tip of the shoulder).</p>
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">At a Glance</h2>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+        <table class="w-full text-sm">
+          <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Meridian</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Gallbladder (GB)</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Body region</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Top of the shoulder, on the upper trapezius</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Best for</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Shoulder and neck tension, neck pain, shoulder pain, tension headaches</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Difficulty</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Easy to reach yourself from the opposite side</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Hold time</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">30–60 seconds per side</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Frequency</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">1–3 times daily</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Pairs well with</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300"><a href="/points/si9-jianzhen-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">SI9 (Jianzhen)</a>, <a href="/points/li15-jianyu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LI15 (Jianyu)</a>, <a href="/points/gb20-fengchi-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">GB20 (Fengchi)</a></td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Skip if</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Pregnant (traditional contraindication), or recent neck/shoulder injury (see Precautions)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Benefits &amp; Uses</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Why GB21 Matters</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed">GB21 sits in the belly of the upper trapezius, the muscle that takes the brunt of desk posture and everyday stress. It is the most important point for neck and shoulder tension because it releases the trapezius, often the primary source of neck pain. Its name, Jianjing, meaning Shoulder Well, describes its position at the highest point of the shoulder, where classical practice treats it as the primary point for upper back and shoulder tension and for tension headaches that originate there.</p>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed">Because GB21 sits on the Gallbladder meridian — which runs down the side of the body and up through the neck — it is classically linked to the whole neck–shoulder girdle rather than one muscle. It is also easy to reach with the opposite hand, which makes it one of the most practical points for people who hold tension in their shoulders all day at a desk, behind a wheel, or during long travel.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Location</h2>
+    <img src="/images/gb21-location.webp" alt="GB21 acupressure point location on the top of the shoulder" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" width="640" height="355" loading="lazy">
+    <p class="mb-3">GB21 is on the top of the shoulder, midway between the spinous process of the seventh cervical vertebra (C7 — the prominent bone at the base of the neck) and the acromion (the tip of the shoulder). In practice, shrug the shoulder and place the thumb on the highest point of the muscle that rises up — the belly of the upper trapezius, roughly above the nipple line.</p>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3"><strong>Three quick confirmations you have the right spot:</strong> (1) it is the single most tender point on the top of the shoulder, at the crown of the muscle that bunches when you shrug; (2) pressing it produces a deep, achy sensation that may spread toward the neck or down the upper arm; (3) it sits clearly on muscle, not on the collar bone or the spine.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">When to Use GB21 (and When Not)</h2>
+    <div class="grid sm:grid-cols-2 gap-4 mb-3">
+      <div class="rounded-xl border border-emerald-200 bg-emerald-50 dark:border-emerald-900/40 dark:bg-emerald-900/20 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Use it when</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• You feel tight, knotted shoulders after desk work, driving, or stress</li>
+          <li>• Neck pain spreads up into the head or down toward the shoulder blade</li>
+          <li>• You get tension headaches that start from the shoulders and neck</li>
+          <li>• You want a daily maintenance point for the whole neck–shoulder girdle</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-stone-50 dark:border-stone-700 dark:bg-stone-800/50 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Hold off if</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• You are pregnant — GB21 is a traditional contraindicated point</li>
+          <li>• You recently injured the neck or shoulder, or had shoulder surgery</li>
+          <li>• There is bruising, a rash, or broken skin over the point</li>
+          <li>• Pressing causes numbness, tingling, or pain running down the arm</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-sm text-stone-500 dark:text-stone-400">Use the <em>Hold off</em> column as a safety filter: GB21 is a comfort practice for chronic tension, not first aid for an acute neck or shoulder injury.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Benefits &amp; Uses</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
       <li><strong>Shoulder tension:</strong> GB21 releases tightness in the trapezius and levator scapulae muscles.</li>
       <li><strong>Neck stiffness:</strong> It improves range of motion in the neck and relieves cervical tension.</li>
@@ -19,28 +69,103 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       <li><strong>Arm and elbow pain:</strong> It can help with referred pain patterns down the arm from shoulder tension.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">How to Massage GB21</h2>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">How to Massage GB21</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">Press with the thumb or the pad of three fingers of the opposite hand, straight down into the muscle. The upper trapezius is dense, so work in slowly until you feel a deep, spreading ache rather than surface-level squeezing.</p>
     <ol class="list-decimal pl-6 space-y-2 text-stone-700 dark:text-stone-300">
+      <li>Sit upright and relax the shoulders down and away from the ears.</li>
       <li>Use the thumb of one hand to reach across to the opposite shoulder.</li>
       <li>Locate GB21 at the highest point of the shoulder muscle.</li>
       <li>Apply firm pressure with your thumb in a kneading or circular motion.</li>
-      <li>Hold for 30?0 seconds while breathing deeply.</li>
-      <li>Repeat on the other shoulder. For best results, have a partner assist.</li>
+      <li>Hold for 30–60 seconds while breathing deeply, then repeat on the other side.</li>
     </ol>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed"><strong>Common mistake to avoid:</strong> pinching or squeezing the muscle between thumb and fingers, which targets the skin instead of the point. Keep the thumb anchored in one spot and let the pressure sink slowly downward — and never press so hard that you feel a sharp pinch or can't breathe steadily.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Science &amp; Research</h2>
-    <p class="mb-3">A 2020 randomized trial in <em>Journal of Physical Therapy Science</em> found that GB21 acupressure significantly reduced neck and shoulder pain in office workers compared to a control group.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/32275103/" target="_blank" rel="noopener">1</a></sup> Research in <em>Acupuncture in Medicine</em> demonstrated that GB21 stimulation increased blood flow to the shoulder muscles and reduced muscle tension measured by EMG.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/30949292/" target="_blank" rel="noopener">2</a></sup></p>
-    <p class="mb-3">A 2021 systematic review in <em>Complementary Therapies in Clinical Practice</em> confirmed that GB21 is one of the most effective points for treating myofascial pain syndrome of the upper trapezius.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/34284274/" target="_blank" rel="noopener">3</a></sup></p>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Combine GB21 with These Points</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">A neck-and-shoulder routine is more effective than pressing one point. Pick the row closest to your situation and work the points in the order shown, 30–60 seconds each.</p>
+    <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+      <table class="w-full text-sm">
+        <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+          <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-44">Goal / symptom</th><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400">Routine (in order)</th></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Shoulder and neck tension</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">GB21 → <a href="/points/gb20-fengchi-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">GB20</a> → <a href="/points/si9-jianzhen-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">SI9</a>, 30–60s each, repeat 1–2 times daily</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Neck pain with stiffness</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">GB20 → GB21 → <a href="/points/li15-jianyu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LI15</a>, holding each 60s, then slow neck rolls</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Tension headache</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">GB21 → GB20 → <a href="/points/li4-hegu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LI4</a>, holding each 60s for up to 3 minutes total</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Desk-worker prevention</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">GB21 + LI15 at midday and again before bed; pair with posture breaks every 30–45 minutes</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-sm text-stone-500 dark:text-stone-400">For a fuller program, see the <a href="/body/shoulder-acupressure-points" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">shoulder acupressure points</a> body guide and our <a href="/conditions/acupressure-for-neck-pain" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for neck pain</a> page.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Precautions</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">What to Expect</h2>
+    <div class="space-y-3">
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">First session (today)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">GB21 is usually one of the most tender points on the body, so expect a strong, deep ache. Most people notice their shoulders drop a little and the neck feels freer within a few minutes, though tension can rebuild as the day goes on.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Days 3–7 (consistent daily practice)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">With 1–2 sessions per day, tenderness at the point usually eases and turning the head often feels smoother. This matches the pattern in studies of acupressure for neck and shoulder pain, where benefits appear after several days of regular use.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Weeks 2–4</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">For chronic tension, pair GB21 with posture habits — screen height, chair support, and regular movement breaks. Acupressure is a complement, not a replacement: if headaches or neck pain persist beyond 2–3 weeks despite daily practice, see a clinician.</p>
+      </div>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Science &amp; Research</h2>
+    <p class="mb-3">Evidence on acupressure for neck and shoulder pain has grown in recent years. Systematic reviews and randomized controlled trials have examined acupressure as an adjunct for pain conditions, with results that are generally promising but limited in quality. Meta-analyses of acupressure for pain tend to show a positive direction of effect, though many of the included studies are small and their methodological quality varies considerably.</p>
+    <p class="mb-3">Researchers consistently note that acupressure trials are hard to blind, because the treatment is physical and participants can usually tell whether they are being treated. This makes it difficult to separate the specific effects of a particular point from the general benefits of touch, pressure, and relaxation. The overall picture — which we discuss in detail on our <a href="/research/does-acupressure-work">does acupressure work?</a> review — is one of encouraging signals alongside a clear need for larger, higher-quality studies before firm conclusions can be drawn. For neck and shoulder tension specifically, our <a href="/conditions/acupressure-for-neck-pain" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for neck pain</a> page and the <a href="/body/shoulder-acupressure-points" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">shoulder acupressure points</a> guide summarize the strongest available evidence.</p>
+
+    <EvidenceBox refs={["chen-wang-2014", "hsieh-2010"]} note="The reviews above evaluated acupressure for pain and for headache, the conditions GB21 is most used for. Neither is a study of GB21 in isolation." />
+
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Precautions</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
-      <li><strong>Avoid during pregnancy:</strong> GB21 is contraindicated in pregnancy as it may stimulate uterine contractions.</li>
-      <li>Use caution if you have a recent shoulder injury, rotator cuff tear, or shoulder surgery.</li>
-      <li>Do not apply pressure over broken skin, moles, or skin lesions on the shoulder.</li>
-      <li>Stop if pressure causes numbness or tingling radiating down the arm.</li>
+      <li><strong>Avoid during pregnancy:</strong> GB21 is a traditional contraindicated point — stimulation may trigger uterine contractions.</li>
+      <li>Avoid if you have a recent neck or shoulder injury, rotator cuff tear, or shoulder surgery.</li>
+      <li>Do not press over broken skin, moles, rashes, or lesions on the shoulder.</li>
+      <li>Stop if pressure causes numbness, tingling, or radiating pain down the arm.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">Related Points</h2>
-    <p class="mb-3">GB21 pairs well with <a href="/points/gb20-fengchi-acupressure-point">GB20 (Fengchi)</a> for comprehensive neck and shoulder relief. For tension headaches, combine with <a href="/points/li4-hegu-acupressure-point">LI4 (Hegu)</a> and <a href="/points/gb20-fengchi-acupressure-point">GB20</a>.</p>
-  </section></article>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Red Flags — See a Professional</h2>
+    <div class="rounded-xl border border-red-200 bg-red-50 dark:border-red-900/40 dark:bg-red-900/20 p-4 text-sm">
+      <p class="text-stone-700 dark:text-stone-300 mb-2">Stop self-treatment and see a doctor or physiotherapist if you notice any of the following:</p>
+      <ul class="list-disc pl-6 space-y-1 text-stone-700 dark:text-stone-300">
+        <li>Neck or shoulder pain that appeared suddenly after a fall, twist, or heavy lift</li>
+        <li>Numbness, tingling, or weakness running down the arm or into the hand</li>
+        <li>A stiff neck with fever and severe headache, which needs urgent evaluation</li>
+        <li>Dizziness or unsteadiness that comes with neck movement</li>
+        <li>Pain that has not improved after 2–3 weeks of regular acupressure and gentle movement</li>
+      </ul>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Frequently Asked Questions</h2>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How do I find GB21 on my own shoulder?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Shrug the shoulder and place the opposite hand on the highest point of the muscle that rises up. GB21 sits midway between the base of the neck — the prominent C7 bone — and the tip of the shoulder, in the firm belly of the upper trapezius.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Why is GB21 avoided during pregnancy?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">GB21 is a traditional contraindicated point during pregnancy because stimulation may trigger uterine contractions, so it is left out of pregnancy routines. Always seek your healthcare provider's guidance before using any acupressure during pregnancy.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How long and how often should I press GB21?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Hold GB21 for 30–60 seconds per bout, working up to 1–2 minutes per shoulder, and repeat on both sides. You can do this 1–3 times daily. Turning the head slowly side to side during the hold helps the trapezius release.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Can I press GB21 at work?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Yes. GB21 is easy to reach with your own opposite hand while seated, which makes it one of the best desk-break points. A short 30–60 second press at midday is enough to release a few hours of shoulder tension, and it pairs well with standing up and rolling the shoulders.</div>
+    </details>
+    <details class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">When should I see a professional instead of pressing GB21?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">See a doctor or physiotherapist if the pain started after an injury, if you have numbness or tingling down the arm, if neck stiffness comes with fever and headache, or if there has been no improvement after 2–3 weeks of regular acupressure. And if you are pregnant, get guidance before using acupressure at all.</div>
+    </details>
+    </section>
+
+    <div class="mt-10 text-center">
+      <a href="/points" class="inline-flex items-center gap-1 text-sm text-stone-500 hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Back to All Points</a>
+    </div>
+  </article>
 </BaseLayout>

@@ -1,46 +1,171 @@
-﻿---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="ST36 (Zusanli) — Leg Three Miles Point" description="Learn how to locate and stimulate ST36 (Zusanli) — the Leg Three Miles point. Benefits include digestive health, energy boost, and immune support." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "ST36 (Zusanli)", href: "/points/st36-zusanli-acupressure-point" }]} datePublished="2025-02-20" dateModified="2026-05-15" articleSchema={true}>
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
+---
+<BaseLayout title="ST36 (Zusanli) — Leg Three Miles Point" description="Everything you need to self-treat ST36 (Zusanli) — exact location, when to use it, a step-by-step routine, symptom-based point combinations, and expected results." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "ST36 (Zusanli)", href: "/points/st36-zusanli-acupressure-point" }]} datePublished="2025-02-20" dateModified="2026-08-19" articleSchema={true}>
   <article class="max-w-3xl mx-auto px-4 py-12 lg:px-6">
     <h1 class="mb-4">ST36 (Zusanli) — Leg Three Miles</h1>
-    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">ST36, known as Zusanli or Leg Three Miles, is a major acupressure point for digestive health, energy, and longevity. It is one of the most commonly used points in both acupuncture and acupressure traditions.</p>
+    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">ST36, known as Zusanli or Leg Three Miles, is a Stomach meridian point on the lower leg. It is a major point for digestive health, energy, immune support, and leg weakness — and one of the most commonly used points in both acupuncture and acupressure traditions.</p>
 
-    <section class="mb-8"><h2 class="mb-4">Location</h2>
-    <img src="/images/st36-location.webp" alt="ST36 acupressure point location on the lower leg" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" />
-    <p class="mb-3">ST36 is located on the lower leg, approximately 4 cun (about four finger-widths) below the bottom of the kneecap, one finger-width lateral (toward the outside) from the shinbone (tibia). It lies on the Stomach meridian.</p>
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">At a Glance</h2>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+        <table class="w-full text-sm">
+          <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Meridian</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Stomach (ST)</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Body region</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Lower leg, just below the knee on the outer shin</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Best for</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Digestion, fatigue, immune support, leg weakness</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Difficulty</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Easy to reach yourself while seated</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Hold time</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">30–60 seconds per leg (up to 2–3 minutes in a full session)</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Frequency</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">1–2 times daily</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Pairs well with</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300"><a href="/points/sp6-sanyinjiao-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">SP6 (Sanyinjiao)</a>, CV12, <a href="/points/ki1-yongquan-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">KI1 (Yongquan)</a></td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Skip if</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Recent injury to the shin or lower leg (see Precautions)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Benefits &amp; Uses</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Why ST36 Matters</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed">ST36 is often called the master point for digestive health in TCM. It sits on the Stomach meridian, which runs down the front of the leg, and its position — just below the knee, outside the shinbone, in a fleshy pocket of muscle — makes it both powerful and easy to reach. Because it is so accessible, it is one of the most frequently used points in daily self-care routines for energy, appetite, and recovery.</p>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed">In TCM, ST36 builds Qi and supports the Stomach and Spleen, the organ pair behind appetite, peristalsis, and general digestive weakness. Strong digestive energy is seen as a foundation for a calm mind as well as a working gut — which is why ST36 appears in routines for fatigue, immune support, and even stress. Classically it is also used for weakness and tiredness of the legs, making it a point for the whole body rather than the belly alone.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Location</h2>
+    <img src="/images/st36-location.webp" alt="ST36 acupressure point location on the lower leg" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" width="2773" height="1471" loading="lazy">
+    <p class="mb-3">ST36 is located on the lower leg, 3 cun (about four finger-widths) below the lower edge of the kneecap, one finger-width lateral (toward the outside) from the front crest of the shinbone (tibia), on the Stomach meridian. To find it, slide four finger-widths down the outer edge of the shinbone and press just outside the bone, in the fleshy belly of the tibialis anterior muscle.</p>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3"><strong>Three quick confirmations you have the right spot:</strong> (1) it sits one finger-width outside the sharp front edge of the shinbone, not on the bone itself; (2) pressing into the muscle produces a deep, dull ache that may travel down the leg toward the foot; (3) wiggling the ankle while pressing confirms you are in the belly of the muscle, not on the tendon.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">When to Use ST36 (and When Not)</h2>
+    <div class="grid sm:grid-cols-2 gap-4 mb-3">
+      <div class="rounded-xl border border-emerald-200 bg-emerald-50 dark:border-emerald-900/40 dark:bg-emerald-900/20 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Use it when</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• You feel bloated, heavy, or sluggish after meals</li>
+          <li>• Your energy dips mid-afternoon or you feel run down</li>
+          <li>• Your legs feel weak, heavy, or tired after standing or walking</li>
+          <li>• You want a daily maintenance point through cold season</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-stone-50 dark:border-stone-700 dark:bg-stone-800/50 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Hold off if</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• You recently injured the shin, knee, or lower leg</li>
+          <li>• The lower leg is bruised, swollen, or has broken skin</li>
+          <li>• You have significant varicose veins right over the point</li>
+          <li>• Pressing causes sharp, shooting pain or numbness down the leg</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-sm text-stone-500 dark:text-stone-400">Use the <em>Hold off</em> column as a safety filter: ST36 is a comfort practice for digestion and energy, not first aid for a leg injury.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Benefits &amp; Uses</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
-      <li><strong>Digestive health:</strong> ST36 regulates the entire digestive system ?it is used for bloating, indigestion, nausea, and poor appetite.</li>
+      <li><strong>Digestive health:</strong> ST36 regulates the digestive system — it is used for bloating, indigestion, nausea, and poor appetite.</li>
       <li><strong>Energy and vitality:</strong> Known as a Qi-building point, it helps combat fatigue and general weakness.</li>
-      <li><strong>Immune support:</strong> Regular stimulation strengthens the immune system and increases resistance to illness.</li>
+      <li><strong>Immune support:</strong> Regular stimulation supports the immune system and increases resistance to illness.</li>
       <li><strong>Longevity:</strong> In traditional Chinese medicine, ST36 is considered a longevity point that supports overall health and vitality.</li>
-      <li><strong>Leg strength:</strong> It improves circulation in the lower limbs and may help with knee pain and weakness.</li>
+      <li><strong>Leg strength:</strong> It is traditionally used for weakness, heaviness, and tiredness of the lower limbs.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">How to Massage ST36</h2>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">How to Massage ST36</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">Because the calf muscles are large, ST36 tolerates firm, sustained pressure, and you may feel a dull ache or a sensation traveling down the leg. Work in slowly until the pressure feels deep and even.</p>
     <ol class="list-decimal pl-6 space-y-2 text-stone-700 dark:text-stone-300">
       <li>Sit with your knee bent and foot flat on the floor.</li>
-      <li>Place your thumbs on ST36 points on both legs.</li>
-      <li>Apply firm pressure using a circular kneading motion or steady push.</li>
-      <li>Hold for 1— minutes per leg, breathing deeply.</li>
-      <li>Repeat daily for best results.</li>
+      <li>Place your thumb on the ST36 point on one leg, just outside the shinbone.</li>
+      <li>Apply firm pressure using a circular kneading motion or a steady push.</li>
+      <li>Hold for 30–60 seconds (up to 2–3 minutes for a fuller session) while breathing deeply.</li>
+      <li>Release slowly, switch legs, and repeat once or twice daily.</li>
     </ol>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed"><strong>Common mistake to avoid:</strong> pressing on the sharp front edge of the shinbone itself, which is painful and misses the point entirely. Slide one finger-width outside the bone into the muscle belly — the target sensation is a deep, dull, spreading ache, never a sharp edge-on-bone pinch.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Science &amp; Research</h2>
-    <p class="mb-3">A 2020 meta-analysis in <em>Medicine</em> found that ST36 acupressure improved gastrointestinal function in post-operative patients and reduced nausea.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/33031396/" target="_blank" rel="noopener">1</a></sup> Research in <em>Journal of Neurogastroenterology and Motility</em> showed that ST36 stimulation increased gastric motility and vagal activity.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/27156346/" target="_blank" rel="noopener">2</a></sup></p>
-    <p class="mb-3">A study in <em>Evidence-Based Complementary and Alternative Medicine</em> demonstrated that ST36 acupressure enhanced natural killer cell activity, supporting the immune-boosting claims of traditional use.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/24693282/" target="_blank" rel="noopener">3</a></sup></p>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Combine ST36 with These Points</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">ST36 is at its best in combination. Pick the row closest to your situation and work the points in the order shown, 30–60 seconds each.</p>
+    <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+      <table class="w-full text-sm">
+        <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+          <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-44">Goal / symptom</th><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400">Routine (in order)</th></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Digestion and bloating</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">ST36 → <a href="/points/sp6-sanyinjiao-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">SP6</a> → CV12, 30–60s each, after meals</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Fatigue and low energy</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">ST36 → <a href="/points/ki1-yongquan-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">KI1</a> → SP6, holding each 60s, morning and evening</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Immune support</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">ST36 → <a href="/points/li4-hegu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LI4</a> → <a href="/points/li11-quchi-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LI11</a>, 1–2 times daily through cold season</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Leg weakness</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">ST36 → SP6 → KI1, then gentle calf raises and walking</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-sm text-stone-500 dark:text-stone-400">For a fuller program, see the <a href="/body/leg-acupressure-points" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">leg acupressure points</a> body guide and pair ST36 with <a href="/points/sp6-sanyinjiao-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">SP6 (Sanyinjiao)</a> for digestion and sleep.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Precautions</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">What to Expect</h2>
+    <div class="space-y-3">
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">First session (today)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">ST36 is often pleasantly tender, and pressing it usually brings a deep, warming release within a minute. Some people notice a lighter, more settled stomach and a small energy lift after the first session, though the effects of a single press are subtle.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Days 3–7 (consistent daily practice)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">With 1–2 sessions per day, digestion often feels calmer and the mid-afternoon dip less steep. This matches the pattern in studies of acupressure for digestive and energy-related complaints, where benefits appear after several days of regular use.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Weeks 2–4</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">For chronic fatigue or persistent digestive issues, treat ST36 as part of a broader routine — sleep, meals, hydration, and movement. Acupressure is a complement, not a replacement: if fatigue is persistent or unexplained, or digestive symptoms worsen, see a clinician.</p>
+      </div>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Science &amp; Research</h2>
+    <p class="mb-3">Evidence on acupressure for digestive and energy-related complaints has grown in recent years. Systematic reviews and randomized controlled trials have examined acupressure as an adjunct for these conditions, with results that are generally promising but limited in quality. Meta-analyses of acupressure for gastrointestinal symptoms tend to show a positive direction of effect, though many of the included studies are small and their methodological quality varies considerably.</p>
+    <p class="mb-3">Researchers consistently note that acupressure trials are hard to blind, because the treatment is physical and participants can usually tell whether they are being treated. This makes it difficult to separate the specific effects of a particular point from the general benefits of touch, pressure, and relaxation. The overall picture — which we discuss in detail on our <a href="/research/does-acupressure-work">does acupressure work?</a> review — is one of encouraging signals alongside a clear need for larger, higher-quality studies before firm conclusions can be drawn.</p>
+
+    <EvidenceBox refs={["lee-frazier-2011", "song-2015"]} note="The reviews above evaluated acupressure for symptom management, including digestive and energy complaints. Neither is a study of ST36 in isolation, but ST36 is among the most frequently used points in these trials." />
+
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Precautions</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
-      <li>Do not massage directly over a bruise, wound, or infection on the lower leg.</li>
-      <li>Avoid deep pressure if you have varicose veins in the area.</li>
-      <li>Use gentle pressure on the elderly or those with fragile bones.</li>
-      <li>Discontinue if you experience discomfort or unusual pain.</li>
+      <li>Avoid if you have a recent injury to the shin, knee, or lower leg.</li>
+      <li>Do not massage directly over a bruise, wound, rash, or infection on the lower leg.</li>
+      <li>Avoid deep pressure over significant varicose veins in the area.</li>
+      <li>Stop if you experience sharp pain, numbness, or discomfort radiating down the leg.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">Related Points</h2>
-    <p class="mb-3">ST36 works well with <a href="/points/cv6-qihai-acupressure-point">CV6 (Qihai)</a> for Qi deficiency and fatigue. For digestive issues, combine with <a href="/points/sp6-sanyinjiao-acupressure-point">SP6 (Sanyinjiao)</a> and <a href="/points/li4-hegu-acupressure-point">LI4 (Hegu)</a>.</p>
-  </section></article>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Red Flags — See a Professional</h2>
+    <div class="rounded-xl border border-red-200 bg-red-50 dark:border-red-900/40 dark:bg-red-900/20 p-4 text-sm">
+      <p class="text-stone-700 dark:text-stone-300 mb-2">Stop self-treatment and see a doctor if you notice any of the following:</p>
+      <ul class="list-disc pl-6 space-y-1 text-stone-700 dark:text-stone-300">
+        <li>Leg pain that started suddenly after an injury, or an inability to bear weight</li>
+        <li>A painful, swollen, red, or warm calf, which can signal a blood clot and needs urgent evaluation</li>
+        <li>Numbness, tingling, or weakness in the leg or foot</li>
+        <li>Persistent or unexplained fatigue, or unintentional weight loss</li>
+        <li>Digestive symptoms that do not improve after 2–3 weeks, or are accompanied by bleeding, fever, or severe pain</li>
+      </ul>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Frequently Asked Questions</h2>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How do I find ST36?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Stack four fingers from the lower edge of the kneecap down the outer shin. ST36 sits one finger-width outside the sharp front edge of the shinbone, in the flesh of the tibialis anterior muscle. Feel for the deepest, dullest tender spot — not a sharp nerve jolt.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How long and how often should I press ST36?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Plan 30–60 seconds per leg with firm, steady pressure, on both legs, 1–2 times daily. Sixty to ninety seconds suits a quick digestive nudge after a meal; two to three minutes makes a fuller relaxation session.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Can ST36 help with digestion and fatigue?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Yes. ST36 is the master point for digestive health, regulating intestinal motility and helping with bloating, indigestion, and poor appetite. Because it builds Qi, it is also used for fatigue and low energy — work it in the morning and again in the late afternoon for the most benefit.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Can I press ST36 at work?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Yes. ST36 is easy to reach while seated at a desk — bend the knee, find the spot outside the shinbone, and press with a thumb or a firm fingertip. A 60-second press mid-afternoon is a good energy reset, and it pairs naturally with standing up and moving around.</div>
+    </details>
+    <details class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">When should I stop ST36 and see a doctor?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Stop and see a doctor if you have leg pain after an injury, a painful swollen red calf, numbness or weakness in the leg, persistent unexplained fatigue, or digestive symptoms that do not improve after 2–3 weeks or come with bleeding, fever, or severe pain.</div>
+    </details>
+    </section>
+
+    <div class="mt-10 text-center">
+      <a href="/points" class="inline-flex items-center gap-1 text-sm text-stone-500 hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Back to All Points</a>
+    </div>
+  </article>
 </BaseLayout>

@@ -1,46 +1,172 @@
-﻿---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="LI11 (Quchi) — Pool at the Crook Point" description="Learn how to locate and stimulate LI11 (Quchi) — the Pool at the Crook point. Benefits include allergy relief, skin health support, and immune system strengthening." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "LI11 (Quchi)", href: "/points/li11-quchi-acupressure-point" }]} datePublished="2025-03-20" dateModified="2026-05-15" articleSchema={true}>
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
+---
+<BaseLayout title="LI11 (Quchi) — Pool at the Crook Point" description="Everything you need to self-treat LI11 (Quchi) — exact location, when to use it, a step-by-step routine, symptom-based point combinations, and expected results." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "LI11 (Quchi)", href: "/points/li11-quchi-acupressure-point" }]} datePublished="2025-03-20" dateModified="2026-08-19" articleSchema={true}>
   <article class="max-w-3xl mx-auto px-4 py-12 lg:px-6">
     <h1 class="mb-4">LI11 (Quchi) — Pool at the Crook</h1>
-    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">LI11, known as Quchi or Pool at the Crook, is a key point for clearing heat, treating allergies, skin conditions, and supporting immune function.</p>
+    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">LI11, known as Quchi or Pool at the Crook, is a key point for clearing heat, treating allergies, skin conditions, and supporting immune function. Located at the outer end of the elbow crease, it also relieves local elbow and arm strain.</p>
 
-    <section class="mb-8"><h2 class="mb-4">Location</h2>
-    <img src="/images/li11-location.webp" alt="LI11 acupressure point location at the outer elbow" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" />
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">At a Glance</h2>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+        <table class="w-full text-sm">
+          <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Meridian</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Large Intestine (LI)</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Body region</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Outer end of the elbow crease, in the depression that forms when the elbow is bent</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Best for</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Allergies, skin conditions (eczema, acne), immune support, fever, tennis elbow and arm strain</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Difficulty</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Easy — exposed when the elbow is bent</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Hold time</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">30–60 seconds per arm</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Frequency</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">2–3 times daily during allergy season</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Pairs well with</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300"><a href="/points/li4-hegu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LI4 (Hegu)</a>, <a href="/points/sp6-sanyinjiao-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">SP6 (Sanyinjiao)</a>, <a href="/points/gb20-fengchi-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">GB20 (Fengchi)</a></td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Skip if</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">A recent elbow injury, fracture, or surgery, or broken skin, burns, or rashes over the elbow</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Why LI11 Matters</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed">LI11 is one of the Large Intestine meridian's most-used points, and its position at the outer end of the elbow crease makes it easy to reach for self-care. It is the site's key point for clearing heat, listed for allergies, skin health, and immunity. Because the Large Intestine meridian runs from the fingertips toward the face, LI11 is classically linked to conditions in the head and upper body, such as sinus congestion, allergic rhinitis, and hives.</p>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed">The same band of arm points also provides local relief in the limb, and LI11 is commonly used for tennis elbow, elbow stiffness, and arm fatigue. In allergy season it pairs with LI4 for immune support, and for skin conditions it combines with SP6 to cool blood and clear heat — sustained pressure at the elbow is felt clearly and quickly.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Location</h2>
+    <img src="/images/li11-location.webp" alt="LI11 acupressure point location at the outer elbow" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" width="620" height="309" loading="lazy">
     <p class="mb-3">LI11 is at the outer end of the elbow crease, in the depression that forms when the elbow is bent. It lies midway between the lateral epicondyle of the humerus and the elbow crease.</p>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3"><strong>Three quick confirmations you have the right spot:</strong> (1) it sits at the outer end of the crease, not at the center of the elbow; (2) the depression deepens when you bend the elbow; (3) firm pressure yields a deep, dull ache — a sharp jolt into the forearm means you are off the point.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Benefits &amp; Uses</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">When to Use LI11 (and When Not)</h2>
+    <div class="grid sm:grid-cols-2 gap-4 mb-3">
+      <div class="rounded-xl border border-emerald-200 bg-emerald-50 dark:border-emerald-900/40 dark:bg-emerald-900/20 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Use it when</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• Hay fever or allergic rhinitis season has your sinuses and eyes irritated</li>
+          <li>• Eczema, acne, or hives are flaring up</li>
+          <li>• You feel run down and want an immune-maintenance point</li>
+          <li>• You have tennis elbow, elbow stiffness, or arm fatigue from repetitive use</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-stone-50 dark:border-stone-700 dark:bg-stone-800/50 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Hold off if</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• You recently injured the elbow, fractured it, or had elbow surgery</li>
+          <li>• There are skin lesions, burns, or rashes over the point</li>
+          <li>• Pressure causes numbness or tingling running down the forearm</li>
+          <li>• You have a high fever — that should be evaluated by a doctor, not self-treated</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-sm text-stone-500 dark:text-stone-400">Use the <em>Hold off</em> column as a safety filter: LI11 is a daily wellness point for allergies, skin, and immunity — not first aid for an acute elbow injury or a high fever.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Benefits &amp; Uses</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
       <li><strong>Allergies:</strong> LI11 helps relieve hay fever, allergic rhinitis, sinus congestion, and hives.</li>
       <li><strong>Skin health:</strong> It is used for eczema, psoriasis, acne, and other inflammatory skin conditions.</li>
       <li><strong>Immune support:</strong> LI11 strengthens the immune system and helps the body fight infections.</li>
-      <li><strong>Fever and inflammation:</strong> It clears heat from the body and helps reduce fever and inflammation.</li>
+      <li><strong>Fever and inflammation:</strong> In the traditional model it clears heat from the body and supports recovery from fever.</li>
       <li><strong>Elbow and arm pain:</strong> LI11 can relieve tennis elbow, elbow stiffness, and arm fatigue.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">How to Massage LI11</h2>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">How to Massage LI11</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">Rest the arm on a stable surface, press at a 90-degree angle, and deepen the pressure gradually until you feel a deep, dull ache. Keep the pressure steady rather than squeezing.</p>
     <ol class="list-decimal pl-6 space-y-2 text-stone-700 dark:text-stone-300">
       <li>Bend your elbow to expose the outer elbow crease.</li>
       <li>Place your opposite thumb on the LI11 point at the end of the crease.</li>
       <li>Apply firm pressure with a small circular or pumping motion.</li>
-      <li>Hold for 30?0 seconds, then switch arms.</li>
-      <li>Repeat 2— times daily during allergy season.</li>
+      <li>Hold for 30–60 seconds, then switch arms.</li>
+      <li>Repeat 2–3 times daily during allergy season.</li>
     </ol>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed"><strong>Common mistake to avoid:</strong> squeezing the elbow instead of pressing at a right angle, or digging into fresh skin lesions. Rest the arm, press perpendicular to the skin, deepen slowly, and skip the point entirely if the skin over it is broken.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Science &amp; Research</h2>
-    <p class="mb-3">A 2018 systematic review in <em>Annals of Allergy, Asthma &amp; Immunology</em> found that LI11 acupuncture (and acupressure) significantly reduced symptoms of allergic rhinitis compared to sham treatment.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/29337636/" target="_blank" rel="noopener">1</a></sup> Research in <em>Journal of Dermatological Treatment</em> showed that LI11 stimulation reduced eczema severity and itch intensity.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/28767138/" target="_blank" rel="noopener">2</a></sup></p>
-    <p class="mb-3">A 2021 study in <em>Inflammation Research</em> demonstrated that LI11 acupressure reduced inflammatory cytokine levels (IL-6, TNF-alpha) in patients with chronic inflammation.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/33512508/" target="_blank" rel="noopener">3</a></sup></p>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Combine LI11 with These Points</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">An allergy or immune routine is more effective than pressing one point. Pick the row closest to your situation and work the points in the order shown, 30–60 seconds each.</p>
+    <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+      <table class="w-full text-sm">
+        <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+          <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-44">Goal / symptom</th><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400">Routine (in order)</th></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Seasonal allergies / hay fever</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300"><a href="/points/li4-hegu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LI4</a> → LI11 → <a href="/points/gb20-fengchi-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">GB20</a>, 2–3 times daily in season</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Skin flare (eczema / acne)</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">LI11 → <a href="/points/sp6-sanyinjiao-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">SP6</a> → LI4, 1–2 min each, once or twice daily</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Immune support / cold season</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">LI11 → LI4 → <a href="/points/st36-zusanli-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">ST36</a>, once daily as a maintenance routine</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Tennis elbow / arm strain</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">LI11 → LI4 → <a href="/points/pc6-neiguan-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">PC6</a>, 60s each, paired with rest of the arm</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-sm text-stone-500 dark:text-stone-400">For more on the points in this area, see the <a href="/body/arm-wrist-acupressure-points" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">arm &amp; wrist acupressure points</a> body guide and the <a href="/body/hand-acupressure-chart" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">hand acupressure chart</a>.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Precautions</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">What to Expect</h2>
+    <div class="space-y-3">
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">First session (today)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">LI11 is often noticeably tender, and most people feel a warm, releasing sensation in the elbow within a minute of sustained pressure. Do not expect allergy or skin symptoms to change after one session — this is a daily-consistency point.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Days 3–7 (consistent daily practice)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">With 2–3 sessions per day during allergy season, sinus stuffiness and skin flares often ease. This matches the pattern in studies of acupressure for allergic rhinitis and inflammatory skin conditions, where benefits appear after several days of regular use.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Weeks 2–4</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">For chronic skin conditions or persistent elbow pain, pair LI11 with SP6 and rest of the arm, and see a dermatologist or doctor for skin that is spreading, oozing, or not improving. Acupressure is a complement, not a replacement — severe allergic reactions need emergency care.</p>
+      </div>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Science &amp; Research</h2>
+    <p class="mb-3">Evidence on acupressure for allergies and skin conditions has grown in recent years. Systematic reviews and randomized controlled trials have examined acupressure and acupuncture as adjuncts for allergic rhinitis and inflammatory skin conditions, with results that are generally promising but limited in quality. LI11 and LI4, as two of the most-studied Large Intestine points, appear frequently in these protocols — often in studies of allergy and immunity outcomes.</p>
+    <p class="mb-3">Researchers consistently note that acupressure trials are hard to blind, because the treatment is physical and participants can usually tell whether they are being treated. This makes it difficult to separate the specific effects of a particular point from the general benefits of touch, pressure, and relaxation. The overall picture — which we discuss in detail on our <a href="/research/does-acupressure-work">does acupressure work?</a> review — is one of encouraging signals alongside a clear need for larger, higher-quality studies before firm conclusions can be drawn.</p>
+
+    <EvidenceBox refs={["chen-wang-2014", "lee-frazier-2011"]} note="The reviews above evaluated acupressure for pain and for symptom management. Neither is a study of LI11 in isolation, but LI11 is among the most frequently used points in these trials." />
+
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Precautions</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
       <li>Avoid if you have a recent elbow injury, fracture, or surgery.</li>
       <li>Do not apply pressure over skin lesions, burns, or rashes at the elbow.</li>
       <li>Use gentle pressure on the elderly or those with fragile skin around the elbow.</li>
       <li>Stop if pressure causes numbness or tingling radiating down the forearm.</li>
+      <li>A high fever, or skin that is spreading, oozing, or accompanied by fever, should be evaluated by a doctor.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">Related Points</h2>
-    <p class="mb-3">LI11 pairs well with <a href="/points/li4-hegu-acupressure-point">LI4 (Hegu)</a> for immune support and allergy relief. For skin conditions, combine with <a href="/points/sp6-sanyinjiao-acupressure-point">SP6 (Sanyinjiao)</a> to cool blood and clear heat.</p>
-  </section></article>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Red Flags — See a Professional</h2>
+    <div class="rounded-xl border border-red-200 bg-red-50 dark:border-red-900/40 dark:bg-red-900/20 p-4 text-sm">
+      <p class="text-stone-700 dark:text-stone-300 mb-2">Stop self-treatment and see a doctor or dermatologist if you notice any of the following:</p>
+      <ul class="list-disc pl-6 space-y-1 text-stone-700 dark:text-stone-300">
+        <li>Difficulty breathing, swelling of the face or throat, or a rapidly spreading rash — this needs emergency care</li>
+        <li>Skin lesions that are oozing, crusting, or accompanied by fever</li>
+        <li>A rapidly spreading or painful skin infection</li>
+        <li>Elbow pain after a significant fall or injury, or an elbow that cannot move</li>
+        <li>Skin or allergy symptoms that have not improved after 2–3 weeks of regular acupressure</li>
+      </ul>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Frequently Asked Questions</h2>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How do I find LI11 on myself?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Bend your elbow and feel for the crease on the inner side of the arm. LI11 sits at the very outer end of that crease, in the depression between the bone and the tendon, midway between the lateral epicondyle of the humerus and the elbow crease.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How long and how often should I press LI11?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Hold each point for 30–60 seconds, then switch arms, repeating 2–3 times daily during allergy season. Increase pressure slowly over 10–15 seconds and breathe evenly until you feel the deep, dull deqi sensation.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Can I press LI11 at work or while traveling?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Yes. LI11 is easy to reach with your opposite thumb while seated at a desk, on a train, or at a meeting — a 30–60 second press on each arm makes a good allergy-season maintenance break. Just make sure the arm is supported so you can press perpendicular to the skin rather than squeezing.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Can LI11 help with elbow and arm pain?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Yes. LI11 can relieve tennis elbow, elbow stiffness, and arm fatigue, and the arm-and-wrist region uses this band of forearm points for repetitive strain and local discomfort. Stop if pressure causes numbness or tingling down the forearm, and see a doctor for elbow pain after a fall or injury.</div>
+    </details>
+    <details class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">When should I see a doctor instead of using LI11?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">See a doctor immediately for difficulty breathing, facial or throat swelling, or a rapidly spreading rash. See a dermatologist for skin that is oozing, crusting, or not improving after 2–3 weeks. LI11 is a daily wellness point — not a substitute for medical care for severe reactions or infections.</div>
+    </details>
+    </section>
+
+    <div class="mt-10 text-center">
+      <a href="/points" class="inline-flex items-center gap-1 text-sm text-stone-500 hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Back to All Points</a>
+    </div>
+  </article>
 </BaseLayout>

@@ -1,45 +1,171 @@
-﻿---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="LI4 (Hegu) — Union Valley Point" description="Learn how to locate and stimulate LI4 (Hegu) — the Union Valley point. Benefits include pain relief, headache relief, and immune system support." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "LI4 (Hegu)", href: "/points/li4-hegu-acupressure-point" }]} datePublished="2025-02-15" dateModified="2026-05-15" articleSchema={true}>
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
+---
+<BaseLayout title="LI4 (Hegu) — Union Valley Point" description="Everything you need to self-treat LI4 (Hegu) — exact location, when to use it, a step-by-step routine, symptom-based point combinations, and expected results." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "LI4 (Hegu)", href: "/points/li4-hegu-acupressure-point" }]} datePublished="2025-02-15" dateModified="2026-08-19" articleSchema={true}>
   <article class="max-w-3xl mx-auto px-4 py-12 lg:px-6">
     <h1 class="mb-4">LI4 (Hegu) — Union Valley</h1>
-    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">LI4, also known as Hegu or Union Valley, is one of the most widely used acupressure points on the body. Located on the hand, it serves as a powerful master point for the head and face.</p>
+    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">LI4, also known as Hegu or Union Valley, is one of the most widely used acupressure points on the body. Located on the hand, it serves as a powerful master point for the head and face — headache, toothache, facial pain, nasal congestion, and immune support.</p>
 
-    <section class="mb-8"><h2 class="mb-4">Location</h2>
-    <img src="/images/li4-location.webp" alt="LI4 acupressure point location on the hand" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" />
-    <p class="mb-3">LI4 is located on the back of the hand in the web between the thumb and index finger. To find it, squeeze your thumb against your index finger ?the point is at the highest point of the muscle bulge, approximately at the midpoint of the second metacarpal bone.</p>
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">At a Glance</h2>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+        <table class="w-full text-sm">
+          <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Meridian</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Large Intestine (LI)</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Body region</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Back of the hand, in the web between thumb and index finger, at the highest point of the muscle bulge</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Best for</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Headache, toothache, facial pain, sinus and nasal congestion, immune support, stress-related tension</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Difficulty</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Easy — the most accessible point on the body</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Hold time</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">30–60 seconds per hand</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Frequency</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">1–3 times daily, or as needed for acute discomfort</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Pairs well with</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300"><a href="/points/gb20-fengchi-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">GB20 (Fengchi)</a>, <a href="/points/lv3-taichong-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LV3 (Taichong)</a>, <a href="/points/li11-quchi-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LI11 (Quchi)</a></td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Skip if</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Pregnancy — LI4 may trigger uterine contractions and is the first point to avoid; also skip on broken skin or recent hand injuries</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Benefits &amp; Uses</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Why LI4 Matters</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed">In traditional practice, LI4 is frequently called the master point for headache- and toothache-type discomfort, and the most important point for head and face pain on the body. Because it sits in the fleshy web between the thumb and index finger, it is one of the easiest points to reach during a busy day.</p>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed">In traditional Chinese medicine, LI4 regulates the flow of qi through the face and head. Most headaches are understood as qi and blood stagnation in the head region, and LI4 restores smooth flow to relieve it. It is especially used for frontal headaches, tension headaches, and sinus pressure, and it is a key point for toothache and facial pain.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Location</h2>
+    <img src="/images/li4-location.webp" alt="LI4 acupressure point location on the hand" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" width="1402" height="1122" loading="lazy">
+    <p class="mb-3">LI4 is located on the back of the hand in the web between the thumb and index finger. To find it, squeeze your thumb against your index finger — the point is at the highest point of the muscle bulge, about at the midpoint of the second metacarpal bone. That tenderness is the reliable landmark.</p>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3"><strong>Three quick confirmations you have the right spot:</strong> (1) it is the highest point of the muscle bulge when you press your thumb toward your index finger, not the skin crease or the bone; (2) pressing it produces a deep, dull, spreading ache; (3) a sharp, electric jolt means you are on a nerve — reposition before continuing.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">When to Use LI4 (and When Not)</h2>
+    <div class="grid sm:grid-cols-2 gap-4 mb-3">
+      <div class="rounded-xl border border-emerald-200 bg-emerald-50 dark:border-emerald-900/40 dark:bg-emerald-900/20 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Use it when</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• You feel a headache or tension building, especially in the front of the head</li>
+          <li>• You have toothache, facial pain, or jaw tension</li>
+          <li>• Your nose is stuffed or your sinuses feel congested</li>
+          <li>• You want a daily immune-maintenance point at the first sign of a cold</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-stone-50 dark:border-stone-700 dark:bg-stone-800/50 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Hold off if</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• You are pregnant — LI4 is the first point to avoid, in any trimester, as it may trigger contractions</li>
+          <li>• There is a cut, wound, or skin infection on the hand</li>
+          <li>• You have a recent hand injury, fracture, or surgery in the area</li>
+          <li>• Pressure produces a sharp, electric jolt or pins-and-needles sensation</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-sm text-stone-500 dark:text-stone-400">Use the <em>Hold off</em> column as a safety filter: LI4 is a first-line self-care point for everyday pain, but it is also the point with the strongest pregnancy caution on this site.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Benefits &amp; Uses</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
-      <li><strong>Pain relief:</strong> LI4 is one of the most powerful analgesic points. It is used for headaches, toothaches, facial pain, and tension headaches.</li>
+      <li><strong>Pain relief:</strong> LI4 is one of the most powerful analgesic points, used for headaches, toothaches, facial pain, and tension headaches.</li>
       <li><strong>Immune support:</strong> Regular stimulation may help strengthen the immune system and reduce the frequency of colds and flu.</li>
-      <li><strong>Sinus and nasal congestion:</strong> LI4 helps open the sinuses and relieve stuffiness associated with allergies and colds.</li>
-      <li><strong>Stress and tension:</strong> It promotes relaxation and reduces stress-related muscle tension in the neck and shoulders.</li>
-      <li><strong>Digestive support:</strong> LI4 can help relieve constipation and regulate bowel movements.</li>
+      <li><strong>Sinus and nasal congestion:</strong> LI4 helps open the sinuses and relieve stuffiness from allergies and colds.</li>
+      <li><strong>Stress and tension:</strong> It promotes relaxation and reduces stress-related tension in the neck, jaw, and shoulders.</li>
+      <li><strong>Head and face master point:</strong> As the traditional master point for the head and face, LI4 is the first point reached for in this region.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">How to Massage LI4</h2>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">How to Massage LI4</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">Pinch the web between your thumb and index finger and press firmly toward the index finger bone. A dull ache radiating along the finger confirms you have found the point.</p>
     <ol class="list-decimal pl-6 space-y-2 text-stone-700 dark:text-stone-300">
       <li>Place the thumb of your opposite hand over the LI4 point.</li>
       <li>Apply firm, steady pressure using a small circular motion or a steady push.</li>
-      <li>Maintain pressure for 30?0 seconds while breathing deeply.</li>
-      <li>Repeat on the other hand. You may feel a dull ache or mild sensation ?this is normal.</li>
+      <li>Maintain pressure for 30–60 seconds while breathing deeply.</li>
+      <li>Repeat on the other hand. You may feel a dull ache or mild sensation — this is normal.</li>
+      <li>For a headache, re-press the point every few minutes until the ache eases.</li>
     </ol>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed"><strong>Common mistake to avoid:</strong> pressing so hard, or so close to the bone, that you feel a sharp, electric jolt. The target sensation is a deep, dull, spreading ache — ease off and reposition if it feels sharp or shoots into the fingers. If your thumb tires quickly, the blunt end of a pencil eraser works well as a pressure tool.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Science &amp; Research</h2>
-    <p class="mb-3">LI4 is one of the most extensively studied acupoints. A 2017 meta-analysis in <em>BMJ Open</em> found that LI4 stimulation significantly reduced pain intensity across multiple conditions.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/28249892/" target="_blank" rel="noopener">1</a></sup> Research in <em>Evidence-Based Complementary and Alternative Medicine</em> showed that LI4 acupressure increased pain threshold and activated brain regions associated with pain modulation.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/25254057/" target="_blank" rel="noopener">2</a></sup></p>
-    <p class="mb-3">A 2020 study in <em>Frontiers in Neuroscience</em> used fMRI to demonstrate that LI4 stimulation activates the anterior cingulate cortex and insula ?key areas in the descending pain inhibitory pathway.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/33192289/" target="_blank" rel="noopener">3</a></sup></p>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Combine LI4 with These Points</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">A head-and-face routine is more effective than pressing one point. Pick the row closest to your situation and work the points in the order shown, 30–60 seconds each.</p>
+    <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+      <table class="w-full text-sm">
+        <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+          <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-44">Goal / symptom</th><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400">Routine (in order)</th></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Headache / tension</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">LI4 → <a href="/points/gb20-fengchi-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">GB20</a> → <a href="/points/lv3-taichong-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LV3</a>, holding each 60s, repeated until the headache eases</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Toothache / facial pain</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">LI4 → GB20 → <a href="/points/li11-quchi-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LI11</a>, 60s each; see a dentist if pain persists</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Nasal congestion / sinus</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">LI4 → <a href="/points/li20-yingxiang-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LI20</a> → GB20, 30–60s each, 1–2 times daily</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Immune support / cold season</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">LI4 → LI11 → <a href="/points/st36-zusanli-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">ST36</a>, once daily as a maintenance routine</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-sm text-stone-500 dark:text-stone-400">For a complete headache plan, see our <a href="/conditions/acupressure-for-headache" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for headache</a> page and the <a href="/body/hand-acupressure-chart" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">hand acupressure chart</a> for the full hand map.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Precautions</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">What to Expect</h2>
+    <div class="space-y-3">
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">First session (today)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">Most people feel relief from a headache or tension within 15–30 minutes of sustained LI4 pressure — it tends to produce the fastest results of any point on the body. If the point feels very tender, ease off a notch; tenderness is common in the fleshy web of the hand.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Days 3–7 (consistent daily practice)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">With 1–3 short sessions per day, tension headaches and sinus stuffiness often become less frequent. This matches the pattern in studies of acupressure for headache and facial pain, where benefits appear after several days of regular use.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Weeks 2–4</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">For chronic headaches, combine LI4 with GB20 and LV3 and address triggers such as posture and stress. Acupressure is a complement, not a replacement — a sudden "worst headache of your life," headache with fever or a stiff neck, or a headache after a head injury requires immediate medical attention.</p>
+      </div>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Science &amp; Research</h2>
+    <p class="mb-3">Evidence on acupressure for pain has grown in recent years, and LI4 is one of the most-studied points on the body. Systematic reviews and randomized controlled trials have examined acupressure as an adjunct for headache, facial pain, and other pain conditions, with results that are generally promising but limited in quality. Hand points such as LI4 appear frequently in these protocols, and its role as a master point for the head and face is one of the most consistently reported in the clinical literature.</p>
+    <p class="mb-3">Researchers consistently note that acupressure trials are hard to blind, because the treatment is physical and participants can usually tell whether they are being treated. This makes it difficult to separate the specific effects of a particular point from the general benefits of touch, pressure, and relaxation. The overall picture — which we discuss in detail on our <a href="/research/does-acupressure-work">does acupressure work?</a> review — is one of encouraging signals alongside a clear need for larger, higher-quality studies before firm conclusions can be drawn. For headache-specific evidence, see our <a href="/conditions/acupressure-for-headache" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for headache</a> guide.</p>
+
+    <EvidenceBox refs={["hsieh-2010", "chen-wang-2014"]} note="The trial and review above evaluated acupressure for headache and for pain, the conditions LI4 is most used for. LI4 appears frequently in the protocols they describe, but no study isolates it as a single point." />
+
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Precautions</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
-      <li><strong>Avoid during pregnancy:</strong> LI4 stimulation is contraindicated in pregnancy, especially the third trimester, as it may induce uterine contractions.</li>
-      <li>Do not apply pressure over broken skin, scars, or infections on the hand.</li>
+      <li><strong>Avoid during pregnancy:</strong> LI4 is the first point to avoid during pregnancy, in any trimester, as it may induce uterine contractions — do not press it while pregnant.</li>
+      <li>Do not apply pressure over broken skin, cuts, scars, or infections on the hand.</li>
       <li>Use gentle pressure on children, the elderly, or those with fragile bones.</li>
       <li>If you experience sharp pain, numbness, or tingling, stop immediately.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">Related Points</h2>
-    <p class="mb-3">LI4 works well with <a href="/points/li11-quchi-acupressure-point">LI11 (Quchi)</a> for immunity and allergies. For headaches, combine with <a href="/points/gb20-fengchi-acupressure-point">GB20 (Fengchi)</a> and <a href="/points/lv3-taichong-acupressure-point">LV3 (Taichong)</a>.</p>
-  </section></article>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Red Flags — See a Professional</h2>
+    <div class="rounded-xl border border-red-200 bg-red-50 dark:border-red-900/40 dark:bg-red-900/20 p-4 text-sm">
+      <p class="text-stone-700 dark:text-stone-300 mb-2">Stop self-treatment and see a doctor or dentist if you notice any of the following:</p>
+      <ul class="list-disc pl-6 space-y-1 text-stone-700 dark:text-stone-300">
+        <li>A sudden, severe "worst headache of your life," or a headache with fever, stiff neck, confusion, or after a head injury</li>
+        <li>Facial numbness, weakness, or drooping on one side</li>
+        <li>Tooth pain with swelling, fever, or a visibly infected tooth</li>
+        <li>Headaches that keep getting worse or interfere with daily life</li>
+        <li>Pain that has not improved after 2–3 weeks of regular acupressure</li>
+      </ul>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Frequently Asked Questions</h2>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How do I find LI4 on myself?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">LI4 lives in the webbing between thumb and index finger, at the highest point of the muscle when you press your thumb toward your index finger. The spot that produces a deep, dull, spreading ache — rather than a sharp nerve jolt — is the reliable landmark. Ease in gradually; the goal is a heavy, releasing sensation, never pain.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How quickly does LI4 work for headaches?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Most people feel relief within 15–30 minutes, and LI4 tends to produce the fastest results. Hold firm pressure for about 60 seconds per hand, and re-press every few minutes until the ache eases.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How long and how often should I press LI4?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Plan thirty seconds to two minutes per hand, 1–3 times daily, or as needed for acute discomfort. For an acute headache, thirty to sixty seconds on LI4 is usually enough — repeat after a few minutes if needed.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Is it safe to press LI4 during pregnancy?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">No — LI4 is the first point to avoid during pregnancy. It is traditionally regarded as one of the most likely points to trigger uterine contractions, so do not press it in any trimester, and ask your provider before using other hand points. PC6 on the inner wrist is a better choice for pregnancy-related nausea, but confirm with your midwife or doctor first.</div>
+    </details>
+    <details class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">When should I see a doctor instead of using LI4?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">See a doctor immediately for a sudden, severe headache, a headache with fever or a stiff neck, or a headache after a head injury. See a dentist for tooth pain with swelling or fever. LI4 is a supportive practice for everyday pain — not a substitute for emergency care.</div>
+    </details>
+    </section>
+
+    <div class="mt-10 text-center">
+      <a href="/points" class="inline-flex items-center gap-1 text-sm text-stone-500 hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Back to All Points</a>
+    </div>
+  </article>
 </BaseLayout>

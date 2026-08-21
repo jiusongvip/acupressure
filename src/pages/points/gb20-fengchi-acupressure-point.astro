@@ -1,16 +1,66 @@
-﻿---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="GB20 (Fengchi) — Wind Pool Point" description="Learn how to locate and stimulate GB20 (Fengchi) — the Wind Pool point. Benefits include headache relief, neck tension relief, and sinus support." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "GB20 (Fengchi)", href: "/points/gb20-fengchi-acupressure-point" }]} datePublished="2025-02-25" dateModified="2026-05-15" articleSchema={true}>
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
+---
+<BaseLayout title="GB20 (Fengchi) — Wind Pool Point" description="Everything you need to self-treat GB20 (Fengchi) — exact location, when to use it, a step-by-step routine, symptom-based point combinations, and expected results." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "GB20 (Fengchi)", href: "/points/gb20-fengchi-acupressure-point" }]} datePublished="2025-02-25" dateModified="2026-08-19" articleSchema={true}>
   <article class="max-w-3xl mx-auto px-4 py-12 lg:px-6">
     <h1 class="mb-4">GB20 (Fengchi) — Wind Pool</h1>
-    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">GB20, known as Fengchi or Wind Pool, is located at the base of the skull and is a primary point for headaches, neck tension, sinus congestion, and common cold symptoms.</p>
+    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">GB20, known as Fengchi or Wind Pool, is a Gallbladder meridian point at the base of the skull. It is a primary point for headaches, neck pain, eye strain, nasal congestion, and tension.</p>
 
-    <section class="mb-8"><h2 class="mb-4">Location</h2>
-    <img src="/images/gb20-location.webp" alt="GB20 acupressure point location at the base of the skull" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" />
-    <p class="mb-3">GB20 is in the hollows at the base of the skull, between the two large neck muscles (sternocleidomastoid and trapezius), approximately 2 cun apart from each other. They lie on the Gallbladder meridian.</p>
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">At a Glance</h2>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+        <table class="w-full text-sm">
+          <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Meridian</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Gallbladder (GB)</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Body region</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Base of the skull, in the hollows behind the neck muscles</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Best for</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Headaches, neck pain, eye strain, nasal congestion, tension</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Difficulty</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Easy to reach yourself with both thumbs</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Hold time</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">30–60 seconds per side</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Frequency</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">1–3 times daily</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Pairs well with</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300"><a href="/points/li4-hegu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LI4 (Hegu)</a>, <a href="/points/gb21-jianjing-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">GB21 (Jianjing)</a>, <a href="/points/bl10-tianzhu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">BL10 (Tianzhu)</a></td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Skip if</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Recent injury to the back of the head or neck, or recent head/brain issues (see Precautions)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Benefits &amp; Uses</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Why GB20 Matters</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed">GB20 sits where the base of the skull meets the muscles of the upper neck, one of the most tension-prone junctions in the body. Desk work and everyday stress accumulate here, which is why headaches and neck stiffness often trace back to this spot. Its position on the Gallbladder meridian, which travels up the side of the head, also connects it directly to head symptoms — making it one of the first points reached for when a headache is coming on.</p>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed">The name Fengchi, meaning Wind Pool, hints at its classical role: in traditional Chinese medicine, GB20 expels "wind," the term behind common colds, headaches, and stiff necks. That is why the same point also appears in routines for sinus congestion, early cold symptoms, and eye strain — it is a genuinely multi-purpose point for the head and upper neck.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Location</h2>
+    <img src="/images/gb20-location.webp" alt="GB20 acupressure point location at the base of the skull" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" width="1500" height="1000" loading="lazy">
+    <p class="mb-3">GB20 is in the hollows at the base of the skull, in the depressions just above the posterior hairline (roughly one finger width above it), between the two large neck muscles — the sternocleidomastoid and the trapezius. To find them, slide your fingers up the back of the neck to the skull, then walk them outward into the natural hollows on either side of the spine. Dropping the chin slightly makes them easier to feel.</p>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3"><strong>Three quick confirmations you have the right spot:</strong> (1) your thumbs sink into a soft hollow at the base of the skull, not onto bone; (2) pressing upward toward the skull produces a deep, achy sensation that may spread into the head or eye; (3) the hollows sit roughly one thumb-width out from the midline, one on each side.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">When to Use GB20 (and When Not)</h2>
+    <div class="grid sm:grid-cols-2 gap-4 mb-3">
+      <div class="rounded-xl border border-emerald-200 bg-emerald-50 dark:border-emerald-900/40 dark:bg-emerald-900/20 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Use it when</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• A headache is building or you feel tightness at the base of the skull</li>
+          <li>• Your neck feels stiff after desk work, driving, or screen time</li>
+          <li>• Your eyes feel tired, strained, or achy after long focus</li>
+          <li>• You feel congested, stuffy, or like a cold is coming on</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-stone-50 dark:border-stone-700 dark:bg-stone-800/50 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Hold off if</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• You recently injured the back of the head or neck, or had a head impact</li>
+          <li>• You have had a recent brain-related issue, concussion, or cervical spine problem</li>
+          <li>• There is bruising, swelling, or broken skin over the point</li>
+          <li>• Pressing causes dizziness, nausea, or sharp pain</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-sm text-stone-500 dark:text-stone-400">Use the <em>Hold off</em> column as a safety filter: GB20 is a comfort practice for tension and congestion, not first aid after a head or neck injury.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Benefits &amp; Uses</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
       <li><strong>Headaches and migraines:</strong> GB20 is highly effective for tension headaches, migraines, and occipital headaches.</li>
       <li><strong>Neck tension and stiffness:</strong> It releases tightness in the neck and upper shoulders, improving range of motion.</li>
@@ -19,28 +69,103 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       <li><strong>Common cold:</strong> It is a key point for expelling "wind" in traditional Chinese medicine and easing early cold symptoms.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">How to Massage GB20</h2>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">How to Massage GB20</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">Press upward and slightly inward toward the skull with both thumbs, working in small circles. The area sits close to the brainstem, so pressure should be firm but never forceful — the target is a deep, spreading ache, not pain.</p>
     <ol class="list-decimal pl-6 space-y-2 text-stone-700 dark:text-stone-300">
-      <li>Place your thumbs on the hollows at the base of your skull.</li>
+      <li>Sit upright and drop your chin slightly toward your chest.</li>
+      <li>Place your thumbs in the hollows at the base of your skull, fingers resting on the top of your head.</li>
       <li>Apply firm upward pressure with your thumbs in small circular motions.</li>
-      <li>Keep your head slightly dropped forward to access the point more easily.</li>
-      <li>Hold for 1— minutes while breathing deeply.</li>
-      <li>Repeat as needed throughout the day.</li>
+      <li>Hold for 30–60 seconds while breathing deeply, then release gradually.</li>
+      <li>Repeat 1–3 times daily, or at the first sign of a headache.</li>
     </ol>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed"><strong>Common mistake to avoid:</strong> pressing hard against the bone or on both sides at full force, which can trigger dizziness or nausea. Keep the pressure in the fleshy hollow, work up slowly, and stop immediately if you feel lightheaded or queasy.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Science &amp; Research</h2>
-    <p class="mb-3">A 2019 systematic review in <em>BMJ Open</em> found that GB20 acupuncture (and acupressure) was effective for migraine prophylaxis and reducing headache frequency.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/31467087/" target="_blank" rel="noopener">1</a></sup> Research in <em>Cephalalgia</em> demonstrated that GB20 stimulation reduced blood flow velocity in the posterior cerebral artery, correlating with headache relief.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/26024974/" target="_blank" rel="noopener">2</a></sup></p>
-    <p class="mb-3">A 2022 study in <em>Frontiers in Neurology</em> showed that GB20 massage combined with standard care significantly reduced neck pain and disability in chronic neck pain patients.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/36388202/" target="_blank" rel="noopener">3</a></sup></p>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Combine GB20 with These Points</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">GB20 rarely works alone — pairing it with hand and shoulder points covers the whole head-to-shoulder chain. Pick the row closest to your situation and work the points in the order shown, 30–60 seconds each.</p>
+    <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+      <table class="w-full text-sm">
+        <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+          <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-44">Goal / symptom</th><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400">Routine (in order)</th></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Tension headache</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">GB20 → <a href="/points/gb21-jianjing-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">GB21</a> → <a href="/points/li4-hegu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LI4</a>, 30–60s each, repeat every few hours</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Neck pain and stiffness</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">GB20 → <a href="/points/bl10-tianzhu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">BL10</a> → GB21, holding each 60s, then slow neck rolls</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Eye strain from screens</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">GB20 → LI4, holding each 60s, then look away from the screen for 20 seconds</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Sinus congestion / early cold</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">GB20 → LI4 → <a href="/points/li11-quchi-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LI11</a>, 30–60s each, 2–3 times daily</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-sm text-stone-500 dark:text-stone-400">For a fuller program, see the <a href="/body/head-acupressure-points" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">head acupressure points</a> body guide and our <a href="/conditions/acupressure-for-headache" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for headache</a> page.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Precautions</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">What to Expect</h2>
+    <div class="space-y-3">
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">First session (today)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">The hollows are usually tender and pressing them often produces a welcome, "melting" release at the base of the skull within a few minutes. A headache that is already building may ease noticeably, though tension can return later in the day.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Days 3–7 (consistent daily practice)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">With 1–2 sessions per day, the tenderness at GB20 usually settles and headaches that used to build up during the day may stay away longer. This matches the pattern in studies of acupressure for headache and neck pain, where benefits appear after several days of regular use.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Weeks 2–4</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">For recurring tension headaches, treat GB20 as part of a broader routine — posture, hydration, sleep, and screen breaks. Acupressure is a complement, not a replacement: if headaches increase in frequency or severity, or are joined by new symptoms, see a clinician.</p>
+      </div>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Science &amp; Research</h2>
+    <p class="mb-3">Evidence on acupressure for headache and neck pain has grown in recent years. Systematic reviews and randomized controlled trials have examined acupressure as an adjunct for pain conditions, with results that are generally promising but limited in quality. Meta-analyses of acupressure for pain tend to show a positive direction of effect, though many of the included studies are small and their methodological quality varies considerably.</p>
+    <p class="mb-3">Researchers consistently note that acupressure trials are hard to blind, because the treatment is physical and participants can usually tell whether they are being treated. This makes it difficult to separate the specific effects of a particular point from the general benefits of touch, pressure, and relaxation. The overall picture — which we discuss in detail on our <a href="/research/does-acupressure-work">does acupressure work?</a> review — is one of encouraging signals alongside a clear need for larger, higher-quality studies before firm conclusions can be drawn. For headaches and neck tension specifically, our <a href="/conditions/acupressure-for-headache" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for headache</a> and <a href="/conditions/acupressure-for-neck-pain" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for neck pain</a> pages summarize the strongest available evidence.</p>
+
+    <EvidenceBox refs={["hsieh-2010"]} note="The randomized trial above is the closest direct evidence we cite: it tested acupressure for headache, the condition GB20 is most used for. It did not study GB20 as a single point." />
+
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Precautions</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
-      <li>Use gentle pressure ?the base of the skull is sensitive and pressing too hard can cause dizziness.</li>
-      <li>Avoid if you have a recent neck injury, cervical spine instability, or concussion.</li>
+      <li>Use gentle pressure — the base of the skull is sensitive and pressing too hard can cause dizziness.</li>
+      <li>Avoid if you have a recent injury to the back of the head or neck, cervical spine instability, or a recent head/brain issue such as a concussion.</li>
       <li>Do not press on both GB20 points simultaneously with extreme force.</li>
-      <li>Stop if you feel lightheaded or nauseous.</li>
+      <li>Stop if you feel lightheaded, nauseous, or if pressing triggers sharp pain.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">Related Points</h2>
-    <p class="mb-3">GB20 pairs well with <a href="/points/li4-hegu-acupressure-point">LI4 (Hegu)</a> for headache relief and with <a href="/points/gb21-jianjing-acupressure-point">GB21 (Jianjing)</a> for neck and shoulder tension. For sinus issues, combine with <a href="/points/li11-quchi-acupressure-point">LI11 (Quchi)</a>.</p>
-  </section></article>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Red Flags — See a Professional</h2>
+    <div class="rounded-xl border border-red-200 bg-red-50 dark:border-red-900/40 dark:bg-red-900/20 p-4 text-sm">
+      <p class="text-stone-700 dark:text-stone-300 mb-2">Stop self-treatment and see a doctor if you notice any of the following:</p>
+      <ul class="list-disc pl-6 space-y-1 text-stone-700 dark:text-stone-300">
+        <li>A sudden, severe "worst headache of your life," or a headache after a head injury</li>
+        <li>Neck stiffness with fever, which needs urgent evaluation</li>
+        <li>Headache with vision changes, confusion, weakness, or trouble speaking</li>
+        <li>Dizziness, unsteadiness, or fainting that comes with neck pressure or movement</li>
+        <li>Headaches that are becoming more frequent or more severe despite regular acupressure</li>
+      </ul>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Frequently Asked Questions</h2>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Where exactly is GB20 and how do I find it?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">GB20 lies in the two shallow depressions at the base of the skull, just above the posterior hairline, roughly one thumb-width out from the midline on each side. Slide your fingers up the back of the neck into the natural hollows between the neck muscles — a deep, dull ache means you found the point.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Why does pressing GB20 help headaches?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">GB20 releases neck tension that often refers pain upward into the head, making it essential for tension and cervicogenic headaches that start at the back of the head. Press it early — at the first hint of tightness — and pair it with LI4 if the headache is already underway.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How long and how often should I press GB20?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Hold GB20 for 30–60 seconds on both sides, releasing slowly, and repeat 1–3 times daily or at the first sign of a headache. Stop immediately if you feel sharp pain, tingling, or dizziness — the base of the skull is a sensitive area.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Can I press GB20 while sitting at my desk?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Yes — GB20 is one of the easiest points to use at a desk. Both hands are free, and a 30–60 second press at midday is enough to break a headache pattern that builds over a long screen session. Follow it with a look-away eye break and a quick neck stretch.</div>
+    </details>
+    <details class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">When should I see a doctor instead of pressing GB20?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">See a doctor immediately for a sudden, severe headache, a headache after a head injury, or headache with fever, neck stiffness, vision changes, or confusion. Also get checked if headaches are becoming more frequent or more severe despite regular acupressure, or if pressure ever triggers dizziness or fainting.</div>
+    </details>
+    </section>
+
+    <div class="mt-10 text-center">
+      <a href="/points" class="inline-flex items-center gap-1 text-sm text-stone-500 hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Back to All Points</a>
+    </div>
+  </article>
 </BaseLayout>

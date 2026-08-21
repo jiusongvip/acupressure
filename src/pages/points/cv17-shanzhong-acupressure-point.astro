@@ -1,46 +1,172 @@
-﻿---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="CV17 (Shanzhong) — Chest Center Point" description="Learn how to locate and stimulate CV17 (Shanzhong) — the Chest Center point on the sternum. Benefits include breathing support, asthma relief, and emotional release." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "CV17 (Shanzhong)", href: "/points/cv17-shanzhong-acupressure-point" }]} datePublished="2025-03-05" dateModified="2026-05-15" articleSchema={true}>
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
+---
+<BaseLayout title="CV17 (Shanzhong) — Chest Center Point" description="Everything you need to self-treat CV17 (Shanzhong) — exact location, when to use it, a step-by-step routine, symptom-based point combinations, and expected results." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "CV17 (Shanzhong)", href: "/points/cv17-shanzhong-acupressure-point" }]} datePublished="2025-03-05" dateModified="2026-08-19" articleSchema={true}>
   <article class="max-w-3xl mx-auto px-4 py-12 lg:px-6">
     <h1 class="mb-4">CV17 (Shanzhong) — Chest Center</h1>
-    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">CV17, known as Shanzhong or Chest Center, is the front Mu point of the Pericardium. It is used for breathing difficulties, chest tightness, and emotional release.</p>
+    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">CV17, known as Shanzhong or Chest Center, is the front Mu point of the Pericardium. It is used for breathing difficulties, chest tightness, anxiety and emotional release — and for the palpitations and restless feeling that often go with a tense chest.</p>
 
-    <section class="mb-8"><h2 class="mb-4">Location</h2>
-    <img src="/images/cv17-location.webp" alt="CV17 acupressure point location on the center of the chest" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" />
-    <p class="mb-3">CV17 is located on the midline of the sternum (breastbone), at the level of the fourth intercostal space, approximately at nipple height in most people.</p>
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">At a Glance</h2>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+        <table class="w-full text-sm">
+          <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Meridian</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Conception Vessel (CV / Ren)</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Body region</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Center of the chest, on the sternum at the level of the nipples (4th intercostal space)</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Best for</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Chest tightness and shallow breathing, anxiety and emotional release, palpitations</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Difficulty</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Very easy to reach; gentle pressure on the sternum with fingertips or a palm</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Hold time</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">30–60 seconds, or 1–2 minutes for a deeper feel</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Frequency</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">1–3 times daily</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Pairs well with</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300"><a href="/points/ht7-shenmen-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">HT7 (Shenmen)</a>, <a href="/points/cv22-tiantu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">CV22 (Tiantu)</a>, <a href="/points/pc6-neiguan-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">PC6 (Neiguan)</a></td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Skip if</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Recent sternum or chest injury, or broken skin over the point (see Precautions)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Benefits &amp; Uses</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Why CV17 Matters</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed">CV17 sits on the midline of the sternum at about nipple height, and that central position gives it an outsized role in acupressure practice. Because it lies on the Conception Vessel, it is classically described as the point where the chest qi gathers — a natural focus whenever the goal is respiratory comfort, emotional release, or calming restless breathing. Its landmark is simple: the midpoint of a line between the two nipples, at the level of the fourth rib space on the breastbone.</p>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed">Anxiety often shows up as shallow, tense breathing, a tight chest, and a racing or fluttering heartbeat — which is exactly the territory CV17 is used for. Gentle pressure here, combined with slow, even breathing, can encourage the body to ease and is a common self-care step used alongside professional care. In traditional formulas it is paired with HT7 for calm and PC6 for chest and heart discomfort, and because it sits directly on the sternum it responds to the flat of the fingertips or the warmth of a palm rub rather than a hard knuckle.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Location</h2>
+    <img src="/images/cv17-location.webp" alt="CV17 acupressure point location on the center of the chest" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" width="400" height="295" loading="lazy">
+    <p class="mb-3">CV17 is located on the midline of the sternum (breastbone), at the level of the fourth intercostal space, approximately at nipple height in most people. The simplest landmark is the midpoint of the imaginary line between the two nipples. Because the point sits directly on bone, it responds best to the flat of one or two fingertips or the heel of the palm rather than a hard knuckle.</p>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3"><strong>Three quick confirmations you have the right spot:</strong> (1) it is exactly on the center line of the breastbone, halfway between the nipples; (2) pressing produces a deep, slightly tender sensation on the bone — never a sharp pinch; (3) it is on the sternum itself, not over the ribs or breast tissue to either side.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">When to Use CV17 (and When Not)</h2>
+    <div class="grid sm:grid-cols-2 gap-4 mb-3">
+      <div class="rounded-xl border border-emerald-200 bg-emerald-50 dark:border-emerald-900/40 dark:bg-emerald-900/20 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Use it when</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• Your chest feels tight, heavy, or hard to breathe into fully</li>
+          <li>• You feel anxious, stressed, or emotionally shut down</li>
+          <li>• You notice a fluttering or racing heartbeat that comes with tension</li>
+          <li>• You want a calming point before sleep, a meeting, or a stressful event</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-stone-50 dark:border-stone-700 dark:bg-stone-800/50 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Hold off if</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• You recently injured the sternum, ribs, or chest, or had chest surgery</li>
+          <li>• There is broken skin, a rash, or tenderness over the point itself</li>
+          <li>• Chest pain is new, severe, or different from what you usually feel</li>
+          <li>• You have a known heart condition — check with your clinician first</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-sm text-stone-500 dark:text-stone-400">Use the <em>Hold off</em> column as a safety filter: CV17 is a comfort practice for tension and mild breathing tightness, not a response to chest pain or breathing emergencies — those need medical attention, not pressure.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Benefits &amp; Uses</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
       <li><strong>Breathing support:</strong> CV17 relieves chest tightness, shortness of breath, and asthma symptoms.</li>
       <li><strong>Emotional release:</strong> It is the point for releasing grief, sadness, and suppressed emotions stored in the chest.</li>
       <li><strong>Anxiety and stress:</strong> CV17 calms the heart and mind, reducing anxiety and panic sensations.</li>
-      <li><strong>Heart health:</strong> It helps with palpitations, chest pain, and general heart Qi discomfort.</li>
+      <li><strong>Palpitations:</strong> It helps settle a fluttering or racing heartbeat that comes with tension.</li>
       <li><strong>Hiccups and cough:</strong> CV17 can help stop persistent hiccups and soothe dry or spasmodic coughs.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">How to Massage CV17</h2>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">How to Massage CV17</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">Keep the pressure gentle, work at roughly 90 degrees to the skin, and press around breast tissue rather than directly over it. The sternum is bone, so the flat of the fingertips or the palm works better than a pointy knuckle.</p>
     <ol class="list-decimal pl-6 space-y-2 text-stone-700 dark:text-stone-300">
       <li>Lie down or sit comfortably with your chest exposed.</li>
       <li>Place two or three fingertips of one hand on the CV17 point.</li>
       <li>Apply gentle to moderate pressure in a small circular motion.</li>
-      <li>Breathe deeply for 1— minutes while maintaining contact.</li>
+      <li>Breathe deeply for 1–2 minutes while maintaining contact.</li>
       <li>Use a palm rub in a clockwise motion over the sternum to finish.</li>
     </ol>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed"><strong>Common mistake to avoid:</strong> pressing hard enough to bruise or to feel the sternum "digging back." The target sensation is a deep, dull, full ache on the bone — if it feels sharp or tender the next day, use noticeably less force and let the breathing do the work.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Science &amp; Research</h2>
-    <p class="mb-3">A 2021 study in <em>Medicine</em> found that CV17 acupressure improved pulmonary function and reduced dyspnea in patients with COPD.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/34596136/" target="_blank" rel="noopener">1</a></sup> Research in <em>Journal of Alternative and Complementary Medicine</em> showed that CV17 stimulation reduced anxiety and improved heart rate variability, indicating better autonomic balance.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/31343261/" target="_blank" rel="noopener">2</a></sup></p>
-    <p class="mb-3">A 2020 review in <em>Evidence-Based Complementary and Alternative Medicine</em> highlighted CV17 as the most commonly used acupoint for treating emotional disorders, particularly grief and depression.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/32655759/" target="_blank" rel="noopener">3</a></sup></p>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Combine CV17 with These Points</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">A full chest-and-calm routine is more effective than pressing one point. Pick the row closest to your situation and work the points in the order shown, 30–60 seconds each.</p>
+    <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+      <table class="w-full text-sm">
+        <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+          <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-44">Goal / symptom</th><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400">Routine (in order)</th></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Chest tightness or shallow breathing</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">CV17 → <a href="/points/cv22-tiantu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">CV22</a> → <a href="/points/pc6-neiguan-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">PC6</a>, then a few slow, full breaths with hands on the chest</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Anxiety or a racing, fluttering heartbeat</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">CV17 → <a href="/points/ht7-shenmen-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">HT7</a> → PC6, holding each 60s, then slow exhales</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Emotional heaviness or grief</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">CV17 → HT7 → <a href="/points/cv6-qihai-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">CV6</a>, combined with calm breathing for up to 3 minutes</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Difficulty falling asleep from a tense chest</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">CV17 → HT7 → <a href="/points/yintang-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">Yintang</a> before bed, each 30–60s lying down</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-sm text-stone-500 dark:text-stone-400">For a fuller program, see the <a href="/body/chest-acupressure-points" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">chest acupressure points</a> body guide and our <a href="/conditions/acupressure-for-anxiety" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for anxiety</a> page.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Precautions</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">What to Expect</h2>
+    <div class="space-y-3">
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">First session (today)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">The point may feel tender on the sternum. Most people notice their breathing slowing and the chest feeling looser within a few minutes, especially when pressure is combined with slow exhales. Do not expect a cure after one press.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Days 3–7 (consistent daily practice)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">With 1–2 sessions per day, the chest usually feels less reactive to stress and it becomes easier to take a full breath during tense moments. This matches the pattern in studies of acupressure for anxiety and respiratory comfort, where benefits build over several days of regular use.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Weeks 2–4</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">For ongoing anxiety or stress-related chest tightness, keep CV17 as one tool alongside exercise, sleep, and professional care. If chest pain, palpitations, or shortness of breath appear or worsen at any point, stop self-treatment and see a clinician — acupressure never replaces medical care for heart or lung symptoms.</p>
+      </div>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Science &amp; Research</h2>
+    <p class="mb-3">Evidence on acupressure for anxiety, respiratory comfort, and musculoskeletal tension has grown in recent years. Systematic reviews and randomized controlled trials have examined acupressure as an adjunct for these conditions, with results that are generally promising but limited in quality. Meta-analyses of acupressure for pain and stress tend to show a positive direction of effect, though many of the included studies are small and their methodological quality varies considerably.</p>
+    <p class="mb-3">Researchers consistently note that acupressure trials are hard to blind, because the treatment is physical and participants can usually tell whether they are being treated. This makes it difficult to separate the specific effects of a particular point from the general benefits of touch, pressure, and relaxation. The overall picture — which we discuss in detail on our <a href="/research/does-acupressure-work">does acupressure work?</a> review — is one of encouraging signals alongside a clear need for larger, higher-quality studies before firm conclusions can be drawn. For chest and anxiety-related symptoms, acupressure is best understood as a low-risk comfort measure that supports, but never replaces, professional care.</p>
+
+    <EvidenceBox refs={["song-2015", "chen-2022-anxiety"]} note="The reviews above evaluated self-acupressure for respiratory complaints and for anxiety, the two uses of CV17. Neither is a study of CV17 in isolation." />
+
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Precautions</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
-      <li>Use gentle pressure on the sternum ?the bone is sensitive and excessive force can cause bruising.</li>
-      <li>Avoid if you have a recent chest injury, rib fracture, or chest surgery.</li>
+      <li>Use gentle pressure on the sternum — the bone is sensitive and excessive force can cause bruising.</li>
+      <li>Avoid if you have a recent chest injury, rib fracture, sternum injury, or chest surgery.</li>
       <li>Do not apply pressure if you have skin conditions, rashes, or burns on the chest.</li>
       <li>Consult a healthcare provider if you have a known heart condition before using this point.</li>
+      <li>Seek medical attention if you ever feel chest pain or new shortness of breath instead of pressing.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">Related Points</h2>
-    <p class="mb-3">CV17 pairs well with <a href="/points/pc6-neiguan-acupressure-point">PC6 (Neiguan)</a> for chest tightness and anxiety. For emotional release, combine with <a href="/points/lv3-taichong-acupressure-point">LV3 (Taichong)</a> and <a href="/points/cv6-qihai-acupressure-point">CV6 (Qihai)</a>.</p>
-  </section></article>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Red Flags — See a Professional</h2>
+    <div class="rounded-xl border border-red-200 bg-red-50 dark:border-red-900/40 dark:bg-red-900/20 p-4 text-sm">
+      <p class="text-stone-700 dark:text-stone-300 mb-2">Stop self-treatment and see a doctor if you notice any of the following:</p>
+      <ul class="list-disc pl-6 space-y-1 text-stone-700 dark:text-stone-300">
+        <li>Sudden, severe, crushing, or spreading chest pain or pressure</li>
+        <li>Shortness of breath that comes on suddenly or gets worse</li>
+        <li>Palpitations that feel fast, irregular, or last longer than a few seconds</li>
+        <li>Pain, tightness, or pressure that spreads to the arm, jaw, neck, or back</li>
+        <li>Fainting, dizziness, cold sweats, or a feeling of doom with chest symptoms</li>
+      </ul>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Frequently Asked Questions</h2>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How do I find CV17?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Find the midpoint of the imaginary line between your two nipples — that is the level of the point. CV17 sits exactly on the center of the breastbone at that height, roughly the fourth intercostal space. It is on the bone itself, not over the ribs or breast tissue to either side.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Can pressing CV17 help with anxiety?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">People with anxiety often hold tension in the chest and breathe more shallowly. Gentle pressure on CV17, combined with slow, even breathing, can encourage the body to ease. It is not a treatment for anxiety disorders — see our <a href="/conditions/acupressure-for-anxiety" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for anxiety</a> page for a fuller routine.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How long and how often should I press CV17?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Thirty to sixty seconds per point is a sensible start, and one to two minutes works for a deeper feel. Aim for a comfortable, full ache on the bone — never sharp — and repeat 1–3 times a day, or whenever you notice the chest tightening.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Is CV17 safe during pregnancy?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">CV17 is among the points widely considered safe during pregnancy, supporting breathing and chest relaxation especially in later pregnancy. Always ask a qualified practitioner, midwife, or doctor before starting, and keep the pressure gentle.</div>
+    </details>
+    <details class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">When should I see a doctor instead of pressing CV17?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">See a doctor for sudden or severe chest pain, new shortness of breath, irregular or prolonged palpitations, or any chest symptom that spreads to the arm, jaw, or back. CV17 is a comfort measure, not a response to heart or lung emergencies.</div>
+    </details>
+    </section>
+
+    <div class="mt-10 text-center">
+      <a href="/points" class="inline-flex items-center gap-1 text-sm text-stone-500 hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Back to All Points</a>
+    </div>
+  </article>
 </BaseLayout>

@@ -1,46 +1,171 @@
-﻿---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="SP6 (Sanyinjiao) — Three Yin Point" description="Learn how to locate and stimulate SP6 (Sanyinjiao) — the Three Yin Intersection point. Benefits include women's health, sleep support, and circulation improvement." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "SP6 (Sanyinjiao)", href: "/points/sp6-sanyinjiao-acupressure-point" }]} datePublished="2025-02-20" dateModified="2026-05-15" articleSchema={true}>
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
+---
+<BaseLayout title="SP6 (Sanyinjiao) — Three Yin Point" description="Everything you need to self-treat SP6 (Sanyinjiao) — exact location, when to use it, a step-by-step routine, symptom-based point combinations, and expected results." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "SP6 (Sanyinjiao)", href: "/points/sp6-sanyinjiao-acupressure-point" }]} datePublished="2025-02-20" dateModified="2026-08-19" articleSchema={true}>
   <article class="max-w-3xl mx-auto px-4 py-12 lg:px-6">
     <h1 class="mb-4">SP6 (Sanyinjiao) — Three Yin Intersection</h1>
-    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">SP6, known as Sanyinjiao or Three Yin Intersection, is the meeting point of three Yin meridians: Spleen, Liver, and Kidney. It is widely used for women's health, sleep, and circulation.</p>
+    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">SP6, known as Sanyinjiao or Three Yin Intersection, is the meeting point of three Yin meridians: Spleen, Liver, and Kidney. It is widely used for menstrual health, insomnia, digestion, and fluid retention.</p>
 
-    <section class="mb-8"><h2 class="mb-4">Location</h2>
-    <img src="/images/sp6-location.webp" alt="SP6 acupressure point location on the inner lower leg" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" />
-    <p class="mb-3">SP6 is located on the inner lower leg, approximately 4 cun (four finger-widths) above the tip of the inner ankle, on the posterior border of the tibia (shinbone).</p>
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">At a Glance</h2>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+        <table class="w-full text-sm">
+          <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Meridian</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Spleen (SP) — junction of Spleen, Liver, and Kidney</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Body region</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Inner lower leg, above the inner ankle</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Best for</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Menstrual cramps and cycle regularity, insomnia, digestion, fluid retention</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Difficulty</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Easy to reach yourself while seated</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Hold time</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">30–60 seconds per leg</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Frequency</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">1–2 times daily</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Pairs well with</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300"><a href="/points/st36-zusanli-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">ST36 (Zusanli)</a>, CV4, <a href="/points/ht7-shenmen-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">HT7 (Shenmen)</a></td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Skip if</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Pregnant (traditional contraindication), or recent injury to the inner ankle (see Precautions)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Benefits &amp; Uses</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Why SP6 Matters</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed">SP6 is where three Yin meridians — Spleen, Liver, and Kidney — meet on the inner lower leg, making it one of the most versatile points in TCM. It is widely described as the most important point for women's health, yet it appears just as often in sleep, digestion, and fluid-retention routines. Because it influences three channels at once, pressing one point can touch on several systems.</p>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed">In TCM, SP6 nourishes Yin energy and cools heat in the blood — qualities that make it particularly useful when insomnia is linked to hormonal imbalance or emotional stress, and when the menstrual cycle is painful or irregular. Its connection to the Spleen channel also makes it a point for the digestion of fluids, which is why it appears in routines for bloating, swelling, and water retention.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Location</h2>
+    <img src="/images/sp6-location.webp" alt="SP6 acupressure point location on the inner lower leg" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" width="750" height="500" loading="lazy">
+    <p class="mb-3">SP6 is located on the inner lower leg, 3 cun (about four finger-widths) above the tip of the inner ankle, on the posterior border of the tibia (shinbone). To find it, measure four finger-widths up from the high point of the inner ankle bone and press just behind the shinbone — the point often feels tender.</p>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3"><strong>Three quick confirmations you have the right spot:</strong> (1) it sits just behind the sharp edge of the shinbone, in the flesh toward the back of the leg; (2) pressing it produces a deep, dull ache that may travel down toward the ankle or up the calf; (3) the point is tender right where your inner calf starts to thicken above the ankle.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">When to Use SP6 (and When Not)</h2>
+    <div class="grid sm:grid-cols-2 gap-4 mb-3">
+      <div class="rounded-xl border border-emerald-200 bg-emerald-50 dark:border-emerald-900/40 dark:bg-emerald-900/20 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Use it when</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• You have menstrual cramps or an irregular cycle</li>
+          <li>• You struggle to fall asleep or wake during the night</li>
+          <li>• You feel bloated, heavy, or puffy — especially in the evening</li>
+          <li>• Digestion feels sluggish or your appetite is off</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-stone-50 dark:border-stone-700 dark:bg-stone-800/50 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Hold off if</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• You are pregnant — SP6 is a traditional contraindicated point</li>
+          <li>• You recently injured the inner ankle, shin, or lower leg</li>
+          <li>• There is bruising, swelling, or broken skin over the point</li>
+          <li>• You have significant varicose veins right over the point</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-sm text-stone-500 dark:text-stone-400">Use the <em>Hold off</em> column as a safety filter: SP6 is a comfort practice for cramps, sleep, and digestion, not a substitute for gynecological or medical care.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Benefits &amp; Uses</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
       <li><strong>Women's health:</strong> SP6 regulates the menstrual cycle, eases menstrual cramps, and supports reproductive health.</li>
       <li><strong>Insomnia:</strong> It promotes deep, restful sleep and is especially helpful for those who wake frequently during the night.</li>
-      <li><strong>Circulation:</strong> SP6 improves circulation in the lower body and may ease cold feet and leg swelling.</li>
+      <li><strong>Fluid retention:</strong> SP6 helps with bloating, puffiness, and water retention, and may ease cold feet and leg swelling.</li>
       <li><strong>Digestive health:</strong> It helps with bloating, gas, and poor appetite related to Spleen Qi deficiency.</li>
       <li><strong>Stress and mood:</strong> SP6 calms the mind and helps regulate mood swings associated with PMS.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">How to Massage SP6</h2>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">How to Massage SP6</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">Use moderate pressure with your thumb, pressing just behind the shinbone. Favor lighter pressure with a longer duration if the point feels tender, and work in slowly so the ache stays deep and spreading rather than sharp.</p>
     <ol class="list-decimal pl-6 space-y-2 text-stone-700 dark:text-stone-300">
       <li>Sit with your leg resting comfortably on a chair or sofa.</li>
-      <li>Place your thumb on the SP6 point on one leg.</li>
+      <li>Place your thumb on the SP6 point on one leg, just behind the shinbone.</li>
       <li>Apply firm, steady pressure using small circular motions.</li>
-      <li>Hold for 1— minutes before switching to the other leg.</li>
-      <li>Repeat once or twice daily as needed.</li>
+      <li>Hold for 30–60 seconds (up to 90 seconds before bed) while breathing deeply.</li>
+      <li>Release slowly, switch legs, and repeat once or twice daily as needed.</li>
     </ol>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed"><strong>Common mistake to avoid:</strong> pressing on the sharp edge of the shinbone instead of the flesh behind it, which is painful and misses the point. Slide your thumb to the back of the bone into the calf muscle — the target sensation is a deep, dull, spreading ache, never a bone-edge pinch.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Science &amp; Research</h2>
-    <p class="mb-3">A 2018 randomized controlled trial in <em>Journal of Integrative Medicine</em> found that SP6 acupressure significantly reduced primary dysmenorrhea pain compared to ibuprofen.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/30236584/" target="_blank" rel="noopener">1</a></sup> Research in <em>BMC Complementary Medicine and Therapies</em> showed that SP6 stimulation improved sleep quality in postmenopausal women.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/32513465/" target="_blank" rel="noopener">2</a></sup></p>
-    <p class="mb-3">A 2021 study in <em>Medicine</em> demonstrated that SP6 acupressure reduced anxiety and cortisol levels in women undergoing gynecological surgery.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/34114994/" target="_blank" rel="noopener">3</a></sup></p>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Combine SP6 with These Points</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">SP6 is at its most powerful in combination. Pick the row closest to your situation and work the points in the order shown, 30–60 seconds each.</p>
+    <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+      <table class="w-full text-sm">
+        <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+          <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-44">Goal / symptom</th><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400">Routine (in order)</th></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Menstrual cramps</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">SP6 → <a href="/points/st36-zusanli-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">ST36</a> → CV4, 30–60s each, daily from a few days before the period</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Insomnia</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">SP6 → <a href="/points/ht7-shenmen-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">HT7</a> → ST36, holding each 60s before bed</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Digestion and bloating</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">SP6 → ST36 → <a href="/points/li4-hegu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LI4</a>, 30–60s each, after meals</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Swelling / fluid retention</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">SP6 → ST36 → <a href="/points/ki1-yongquan-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">KI1</a>, then elevate the legs</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-sm text-stone-500 dark:text-stone-400">For a fuller program, see our <a href="/conditions/acupressure-for-sleep" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for sleep</a> page and the <a href="/body/leg-acupressure-points" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">leg acupressure points</a> body guide.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Precautions</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">What to Expect</h2>
+    <div class="space-y-3">
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">First session (today)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">SP6 is often tender, and pressing it usually brings a deep, releasing ache within a minute. For cramps, relief may come fairly quickly; for sleep and cycle regularity, single sessions do little — that takes consistency.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Days 3–7 (consistent daily practice)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">With 1–2 sessions per day, falling asleep often feels easier and menstrual symptoms in the next cycle may be milder. This matches the pattern in studies of acupressure for dysmenorrhea and sleep, where benefits appear after several days of regular use.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Weeks 2–4</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">For cycle regularity, work SP6 across a full cycle rather than only during symptoms — and note that acupressure is a complement, not a replacement. If periods stay severely painful, irregular, or come with heavy bleeding, see a gynecologist.</p>
+      </div>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Science &amp; Research</h2>
+    <p class="mb-3">Evidence on acupressure for menstrual pain, sleep, and digestive complaints has grown in recent years. Systematic reviews and randomized controlled trials have examined acupressure as an adjunct for these conditions, with results that are generally promising but limited in quality. Meta-analyses of acupressure for dysmenorrhea tend to show a positive direction of effect, though many of the included studies are small and their methodological quality varies considerably.</p>
+    <p class="mb-3">Researchers consistently note that acupressure trials are hard to blind, because the treatment is physical and participants can usually tell whether they are being treated. This makes it difficult to separate the specific effects of a particular point from the general benefits of touch, pressure, and relaxation. The overall picture — which we discuss in detail on our <a href="/research/does-acupressure-work">does acupressure work?</a> review — is one of encouraging signals alongside a clear need for larger, higher-quality studies before firm conclusions can be drawn. For sleep and stress, our <a href="/conditions/acupressure-for-sleep" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for sleep</a> page summarizes the strongest available evidence.</p>
+
+    <EvidenceBox refs={["chen-wang-2014", "liao-2020-sleep"]} note="The reviews above evaluated acupressure for pain (including menstrual pain) and for sleep, the two uses of SP6. Neither is a study of SP6 in isolation." />
+
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Precautions</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
-      <li><strong>Avoid during pregnancy:</strong> SP6 can stimulate uterine contractions and should be avoided during pregnancy.</li>
-      <li>Do not massage over varicose veins, wounds, or rashes on the lower leg.</li>
+      <li><strong>Avoid during pregnancy:</strong> SP6 is a traditional contraindicated point — stimulation may trigger uterine contractions.</li>
+      <li>Avoid if you have a recent injury to the inner ankle, shin, or lower leg.</li>
+      <li>Do not massage over varicose veins, wounds, rashes, or swelling on the lower leg.</li>
       <li>Use gentle pressure if you have diabetes or poor circulation in the legs.</li>
-      <li>Stop if you experience sharp or shooting pain.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">Related Points</h2>
-    <p class="mb-3">SP6 pairs well with <a href="/points/cv6-qihai-acupressure-point">CV6 (Qihai)</a> for women's health and with <a href="/points/ht7-shenmen-acupressure-point">HT7 (Shenmen)</a> for insomnia. For digestive issues, combine with <a href="/points/st36-zusanli-acupressure-point">ST36 (Zusanli)</a>.</p>
-  </section></article>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Red Flags — See a Professional</h2>
+    <div class="rounded-xl border border-red-200 bg-red-50 dark:border-red-900/40 dark:bg-red-900/20 p-4 text-sm">
+      <p class="text-stone-700 dark:text-stone-300 mb-2">Stop self-treatment and see a doctor or gynecologist if you notice any of the following:</p>
+      <ul class="list-disc pl-6 space-y-1 text-stone-700 dark:text-stone-300">
+        <li>Period pain that is severe, worsening, or not relieved by usual measures</li>
+        <li>Missed periods, or cycle changes that are new and unexplained</li>
+        <li>Heavy bleeding, bleeding between periods, or bleeding after menopause</li>
+        <li>A painful, swollen, red, or warm calf, which can signal a blood clot and needs urgent evaluation</li>
+        <li>Sleep problems that persist beyond a few weeks or come with low mood, fatigue, or other symptoms</li>
+      </ul>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Frequently Asked Questions</h2>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Where is SP6 and how do I find it?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">SP6 sits on the inner calf, four finger-widths above the high point of the inner ankle bone, just behind the shinbone. It is often tender, so press into the flesh behind the bone rather than on the bone itself.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Can SP6 help with period pain?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Yes. SP6 is a first-choice point for menstrual cramps — press it with moderate pressure for 60–90 seconds per leg, and start a few days before the period for the best effect. In TCM it regulates the cycle and eases cramps by supporting the Spleen, Liver, and Kidney channels. Severe, worsening, or unusual pain should be checked by a gynecologist.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Can SP6 improve my sleep?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Yes. SP6 nourishes Yin energy, cools heat in the blood, and promotes deep, uninterrupted sleep, especially when insomnia is tied to hormonal changes or emotional stress. Apply moderate pressure for 60–90 seconds on each leg before bed, ideally paired with HT7 (Shenmen).</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Is SP6 safe during pregnancy?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">No. SP6 is a traditional contraindicated point during pregnancy because it can stimulate uterine contractions, so it is left out of pregnancy routines. Always consult your healthcare provider before using any acupressure during pregnancy.</div>
+    </details>
+    <details class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Can I press SP6 while sitting at my desk?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Yes. SP6 is easy to reach while seated — rest one ankle on the other knee or cross your legs, then press the spot behind the shinbone with a thumb. A 60-second press at midday is a good break for bloating or heavy legs, and it pairs well with standing up and moving.</div>
+    </details>
+    </section>
+
+    <div class="mt-10 text-center">
+      <a href="/points" class="inline-flex items-center gap-1 text-sm text-stone-500 hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Back to All Points</a>
+    </div>
+  </article>
 </BaseLayout>

@@ -1,46 +1,176 @@
-﻿---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="LV3 (Taichong) — Great Surge Point" description="Learn how to locate and stimulate LV3 (Taichong) — the Great Surge point. Benefits include stress relief, headache relief, and Liver Qi stagnation support." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "LV3 (Taichong)", href: "/points/lv3-taichong-acupressure-point" }]} datePublished="2025-03-01" dateModified="2026-05-15" articleSchema={true}>
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
+---
+<BaseLayout title="LV3 (Taichong) — Great Surge Point" description="Everything you need to self-treat LV3 (Taichong) — exact location, when to use it, a step-by-step routine, symptom-based point combinations, and expected results." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "LV3 (Taichong)", href: "/points/lv3-taichong-acupressure-point" }]} datePublished="2025-03-01" dateModified="2026-08-19" articleSchema={true}>
   <article class="max-w-3xl mx-auto px-4 py-12 lg:px-6">
     <h1 class="mb-4">LV3 (Taichong) — Great Surge</h1>
-    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">LV3, known as Taichong or Great Surge, is the source point of the Liver meridian. It is a powerful point for relieving stress, anger, headaches, and Liver Qi stagnation.</p>
+    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">LV3, known as Taichong or Great Surge, is the source point of the Liver meridian, sitting in the hollow on the top of the foot between the first and second toe bones. It is the point to reach for when stress, irritability, and tension headaches are building up and you need to let off steam.</p>
 
-    <section class="mb-8"><h2 class="mb-4">Location</h2>
-    <img src="/images/lv3-location.webp" alt="LV3 acupressure point location on the top of the foot" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" />
-    <p class="mb-3">LV3 is on the top of the foot, in the depression between the first and second metatarsal bones, about 1 cun (one thumb-width) from the web of the toes. It lies on the Liver meridian.</p>
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">At a Glance</h2>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+        <table class="w-full text-sm">
+          <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Meridian</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Liver (LV)</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Body region</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Top of the foot, in the hollow before the junction of the 1st and 2nd metatarsals</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Best for</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Stress, headaches, premenstrual discomfort, irritability, blood-pressure support</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Difficulty</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Easy to reach barefoot with your thumb</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Hold time</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">45–60 seconds per foot</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Frequency</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Daily, or 1–2 times during stressful periods</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Pairs well with</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300"><a href="/points/li4-hegu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LI4 (Hegu)</a> as the "Four Gates", <a href="/points/gb20-fengchi-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">GB20 (Fengchi)</a>, <a href="/points/sp6-sanyinjiao-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">SP6 (Sanyinjiao)</a></td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Skip if</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Recent injury to the top of the foot or broken skin over the point (see Precautions)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Benefits &amp; Uses</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Why LV3 Matters</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed">LV3 is the go-to point for stress-related irritability, frustration, and that pent-up feeling of being "stuck." In traditional Chinese medicine, the Liver governs the smooth flow of Qi, and when stress disrupts that flow, LV3 helps restore it. It sits on top of the foot between the first and second toe bones, where it is easy to find and easy to press — which is exactly why it shows up in our routines for stress, headaches, and premenstrual tension again and again.</p>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed">Traditional practice uses LV3 to redirect energy downward and calm the nervous system, especially for headaches linked to stress, anger, or Liver Qi stagnation. Paired with LI4 on the hand it forms the classic "Four Gates," a combination traditionally used to move stuck Qi through the whole body. Many people find LV3 grounding and feel noticeably more centered — and less ready to snap — after pressing it.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Location</h2>
+    <img src="/images/lv3-location.webp" alt="LV3 acupressure point location on the top of the foot" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" width="1500" height="1000" loading="lazy">
+    <p class="mb-3">LV3 is on the top of the foot, in the depression between the first and second metatarsal bones, about 1 cun (one thumb width) from the web of the toes, at the front of the junction where the two bones meet. To find it, run a finger up from the web between the big and second toes until the bones come together — the point sits in the natural hollow just before that junction.</p>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3"><strong>Three quick confirmations you have the right spot:</strong> (1) it is the soft depression on the top of the foot, roughly one thumb width from the web of the toes; (2) pressing it produces a distinctly tender, sometimes achy sensation that is stronger than the surrounding skin; (3) the tenderness often feels like it mirrors your level of stress — the point tends to be more sensitive on tense days.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">When to Use LV3 (and When Not)</h2>
+    <div class="grid sm:grid-cols-2 gap-4 mb-3">
+      <div class="rounded-xl border border-emerald-200 bg-emerald-50 dark:border-emerald-900/40 dark:bg-emerald-900/20 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Use it when</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• Stress has you feeling irritable, frustrated, or wound up</li>
+          <li>• You have a tension headache, especially one that builds with stress</li>
+          <li>• Premenstrual discomfort, cramps, or mood swings are building</li>
+          <li>• You want a relaxing support alongside blood-pressure or migraine care</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-stone-50 dark:border-stone-700 dark:bg-stone-800/50 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Hold off if</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• You recently injured the top of the foot or ankle</li>
+          <li>• The skin over the point is broken, cut, or has a rash</li>
+          <li>• The foot is swollen, warm, or acutely painful</li>
+          <li>• Pressure causes a shooting pain or numbness into the toes</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-sm text-stone-500 dark:text-stone-400">Use the <em>Hold off</em> column as a safety filter: LV3 is a comfort practice for stress and tension, not first aid for an acute foot injury. During pregnancy, foot pressure on LV3 should stay light.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Benefits &amp; Uses</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
       <li><strong>Stress and irritability:</strong> LV3 is the go-to point for releasing pent-up frustration, anger, and emotional tension.</li>
-      <li><strong>Headaches:</strong> It is especially effective for headaches originating from stress or high blood pressure.</li>
-      <li><strong>Menstrual discomfort:</strong> LV3 helps regulate menstrual flow and eases cramps by moving Liver Qi.</li>
-      <li><strong>High blood pressure:</strong> Regular stimulation may help lower elevated blood pressure related to stress.</li>
-      <li><strong>Digestive issues:</strong> It relieves nausea, acid reflux, and abdominal bloating linked to emotional stress.</li>
+      <li><strong>Headaches:</strong> It is especially helpful for headaches that build with stress or blood-pressure changes.</li>
+      <li><strong>Premenstrual discomfort:</strong> LV3 helps ease cramps and mood swings by moving Liver Qi.</li>
+      <li><strong>Blood-pressure support:</strong> Regular, gentle stimulation promotes relaxation, which supports blood-pressure management as part of a doctor-led plan.</li>
+      <li><strong>Restoring smooth flow:</strong> As a source point, LV3 helps unblock the stuck, "wound-up" feeling that comes with chronic stress.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">How to Massage LV3</h2>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">How to Massage LV3</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">Press into the hollow on the top of the foot with your thumb in small, steady circular motions. The top of the foot is more delicate than the sole, so build pressure slowly and favor a deep, dull ache over force.</p>
     <ol class="list-decimal pl-6 space-y-2 text-stone-700 dark:text-stone-300">
       <li>Sit comfortably and place your foot on your opposite knee.</li>
-      <li>Locate LV3 between the first and second toes on the top of the foot.</li>
-      <li>Use your thumb to apply firm, deep pressure in a circular motion.</li>
-      <li>Hold for 1— minutes, then switch to the other foot.</li>
-      <li>Repeat daily, especially during stressful periods.</li>
+      <li>Slide your finger up from between the big and second toes to find the hollow before the bones meet.</li>
+      <li>Use your thumb to apply firm, steady pressure in a slow circular motion.</li>
+      <li>Hold for 45–60 seconds, breathing deeply, then switch to the other foot.</li>
+      <li>Repeat daily, or two or three times during stressful periods.</li>
     </ol>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed"><strong>Common mistake to avoid:</strong> pressing into the web of the toes or directly onto the bony ridge instead of the hollow before the bone junction. The target sensation is a deep, dull, spreading ache in the soft depression — if you feel a sharp pinch against bone, ease off.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Science &amp; Research</h2>
-    <p class="mb-3">A 2019 study in <em>Journal of Integrative Medicine</em> found that LV3 acupressure significantly reduced blood pressure and heart rate in hypertensive patients.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/31606327/" target="_blank" rel="noopener">1</a></sup> Research in <em>Evidence-Based Complementary and Alternative Medicine</em> showed that LV3 stimulation reduced cortisol levels and perceived stress in college students.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/32180847/" target="_blank" rel="noopener">2</a></sup></p>
-    <p class="mb-3">A 2021 fMRI study in <em>Brain Imaging and Behavior</em> demonstrated that LV3 acupressure modulates the amygdala and prefrontal cortex, key brain areas for emotional regulation.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/32989665/" target="_blank" rel="noopener">3</a></sup></p>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Combine LV3 with These Points</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">LV3 releases stuck energy best as part of a routine. Pick the row closest to your situation and work the points in the order shown, 45–60 seconds each.</p>
+    <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+      <table class="w-full text-sm">
+        <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+          <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-44">Goal / symptom</th><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400">Routine (in order)</th></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Stress, frustration, feeling stuck</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">LV3 → <a href="/points/li4-hegu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">LI4 (Hegu)</a> — the "Four Gates" — then <a href="/points/sp6-sanyinjiao-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">SP6</a>, 60s each</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Stress-related tension headache</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300"><a href="/points/gb20-fengchi-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">GB20</a> → LI4 → LV3, holding each 60s for up to 3 minutes total</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Premenstrual tension and cramps</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">LV3 → SP6, 60s each, daily in the days before your period, with warmth on the lower belly</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Evening wind-down after a stressful day</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">LV3 → <a href="/points/ki1-yongquan-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">KI1</a> → <a href="/points/ht7-shenmen-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">HT7</a>, 60s each, before bed</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-sm text-stone-500 dark:text-stone-400">For a fuller program, see the <a href="/conditions/acupressure-for-headache" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for headache</a> page and the <a href="/body/foot-acupressure-points" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">foot acupressure points</a> body guide.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Precautions</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">What to Expect</h2>
+    <div class="space-y-3">
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">First session (today)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">LV3 is usually markedly tender, especially on stressful days. Most people notice a quick sense of release and grounding within a few minutes, though the effect can wear off as the day's stressors return. Treat the first session as a taste, not a cure.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Days 3–7 (consistent daily practice)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">With daily use, the tenderness at the point usually eases and the "wound-up" feeling often becomes less intense. This matches the pattern in studies of acupressure for stress and tension, where benefits tend to appear after several days of regular practice rather than a single session.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Weeks 2–4</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">For chronic stress or recurring tension headaches, LV3 works best as part of a broader routine that includes sleep, movement, and stress management. If headaches are frequent, severe, or worsening, or if stress is interfering with daily life, see a clinician — pressure on a foot point is not a substitute for proper care.</p>
+      </div>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Science &amp; Research</h2>
+    <p class="mb-3">Evidence on acupressure for stress, headache, and pain has grown in recent years. Systematic reviews and randomized controlled trials have examined acupressure as an adjunct for these conditions, with results that are generally promising but limited in quality. Meta-analyses of acupressure for headache and stress tend to show a positive direction of effect, though many of the included studies are small and their methodological quality varies considerably.</p>
+    <p class="mb-3">Researchers consistently note that acupressure trials are hard to blind, because the treatment is physical and participants can usually tell whether they are being treated. This makes it difficult to separate the specific effects of a particular point such as LV3 from the general benefits of touch, pressure, and relaxation. The overall picture — which we discuss in detail on our <a href="/research/does-acupressure-work" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">does acupressure work?</a> review — is one of encouraging signals alongside a clear need for larger, higher-quality studies before firm conclusions can be drawn. For headaches specifically, our <a href="/conditions/acupressure-for-headache" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for headache</a> page summarizes the strongest available evidence.</p>
+
+    <EvidenceBox refs={["hsieh-2010", "chen-wang-2014"]} note="The trial and review above evaluated acupressure for headache and for pain, the conditions LV3 is most used for. Neither is a study of LV3 in isolation." />
+
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Precautions</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
-      <li>Avoid pressing too hard on the top of the foot ?the bones are delicate and the area is sensitive.</li>
-      <li>Do not use if you have a foot injury, gout, or fracture in the area.</li>
-      <li>Avoid during pregnancy as LV3 is considered a contraindicated point.</li>
-      <li>Stop if you experience sharp pain or numbness.</li>
+      <li>Avoid if you recently injured the top of the foot or ankle, or if the area is swollen and painful.</li>
+      <li>Do not press over broken skin, cuts, rashes, or blisters on the top of the foot.</li>
+      <li>Avoid pressing too hard — the bones on top of the foot are delicate and the area is sensitive.</li>
+      <li>During pregnancy, keep foot pressure light; LV3 is not a forbidden point in pregnancy, but foot work should stay gentle.</li>
+      <li>Stop if you feel sharp pain or numbness in the toes.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">Related Points</h2>
-    <p class="mb-3">LV3 pairs well with <a href="/points/li4-hegu-acupressure-point">LI4 (Hegu)</a> ?together they are known as the "Four Gates" for moving Qi throughout the body. For stress-related headaches, combine with <a href="/points/gb20-fengchi-acupressure-point">GB20 (Fengchi)</a>.</p>
-  </section></article>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Red Flags — See a Professional</h2>
+    <div class="rounded-xl border border-red-200 bg-red-50 dark:border-red-900/40 dark:bg-red-900/20 p-4 text-sm">
+      <p class="text-stone-700 dark:text-stone-300 mb-2">Stop self-treatment and see a doctor if you notice any of the following:</p>
+      <ul class="list-disc pl-6 space-y-1 text-stone-700 dark:text-stone-300">
+        <li>A headache that is sudden, severe, or the worst you have ever had</li>
+        <li>Headaches accompanied by vision changes, confusion, or weakness on one side</li>
+        <li>Irritability, mood swings, or anger that is harming relationships or daily function</li>
+        <li>Foot pain, swelling, or an injury that appeared suddenly</li>
+        <li>No improvement after 2–3 weeks of regular acupressure and stress management</li>
+      </ul>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Frequently Asked Questions</h2>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How do I find LV3 on myself?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">LV3 sits on the top of the foot in the depression between the first and second metatarsal bones, about one thumb width from the web of the toes. Slide your finger up from between the big and second toes and press into the first hollow you meet before the bones join — that is the point.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How long and how often should I press LV3?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Hold firm, steady pressure with small circular motions for 45–60 seconds on each foot, breathing deeply. Once a day keeps stress in check; two or three short sessions work well during high-pressure periods. Consistency matters more than a single long press.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Can LV3 help with migraines?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">LV3 is traditionally used for headaches linked to stress and Liver Qi stagnation, and it appears in many migraine self-care protocols alongside LI4 (Hegu) and GB20. For a full picture, see our <a href="/conditions/acupressure-for-migraine" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for migraine</a> page. A sudden, severe, or "worst ever" headache needs emergency care, not pressure.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Is LV3 safe during pregnancy?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">LV3 is not a forbidden point during pregnancy, but any foot pressure while pregnant should stay light and gentle. If you are pregnant, keep stimulation soft and comfortable, and check with your healthcare provider before starting any acupressure routine.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Can I press LV3 at work?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Yes. While seated, cross one foot over the opposite knee and press the point with your thumb — no shoes required for a few moments. A short 60-second press per foot makes a discreet midday stress reset that also pairs well with LI4 on the hand for the "Four Gates" effect.</div>
+    </details>
+    <details class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">When should I see a doctor instead of using LV3?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">See a doctor for a sudden or severe headache, headaches with vision changes or weakness, or irritability and mood swings that are affecting your life. If nothing has improved after 2–3 weeks of consistent practice, a professional assessment is the next step — not more pressure.</div>
+    </details>
+    </section>
+
+    <div class="mt-10 text-center">
+      <a href="/points" class="inline-flex items-center gap-1 text-sm text-stone-500 hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Back to All Points</a>
+    </div>
+  </article>
 </BaseLayout>

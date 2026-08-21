@@ -4,3 +4,5 @@ dist/
 .DS_Store
 *.local
 acupressureguide-com-audit/
+dev-server.log
+scripts/link-check.txt

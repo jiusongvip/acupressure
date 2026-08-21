@@ -1,46 +1,175 @@
-﻿---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="KD3 (Taixi) — Great Stream Point" description="Learn how to locate and stimulate KD3 (Taixi) — the Great Stream point. Benefits include kidney energy support, fatigue relief, and anxiety reduction." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "KD3 (Taixi)", href: "/points/kd3-taixi-acupressure-point" }]} datePublished="2025-03-15" dateModified="2026-05-15" articleSchema={true}>
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
+---
+<BaseLayout title="KD3 (Taixi) — Great Stream Point" description="Everything you need to self-treat KD3 (Taixi) — exact location, when to use it, a step-by-step routine, symptom-based point combinations, and expected results." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "KD3 (Taixi)", href: "/points/kd3-taixi-acupressure-point" }]} datePublished="2025-03-15" dateModified="2026-08-19" articleSchema={true}>
   <article class="max-w-3xl mx-auto px-4 py-12 lg:px-6">
     <h1 class="mb-4">KD3 (Taixi) — Great Stream</h1>
-    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">KD3, known as Taixi or Great Stream, is the source point of the Kidney meridian. It is used for Kidney energy deficiency, chronic fatigue, anxiety, and lower back pain.</p>
+    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">KD3, known as Taixi or Great Stream, is the source point of the Kidney meridian, sitting in the hollow between the inner ankle bone and the Achilles tendon. It is the point to reach for when you feel run down, chronically tired, or battling a dry, sore throat that never quite clears.</p>
 
-    <section class="mb-8"><h2 class="mb-4">Location</h2>
-    <img src="/images/kd3-location.webp" alt="KD3 acupressure point location on the inner ankle" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" />
-    <p class="mb-3">KD3 is on the inner ankle, in the depression between the medial malleolus (inner ankle bone) and the Achilles tendon, level with the top of the ankle bone.</p>
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">At a Glance</h2>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+        <table class="w-full text-sm">
+          <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Meridian</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Kidney (KI/KD)</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Body region</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Inner ankle, midway between the ankle bone and the Achilles tendon</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Best for</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Fatigue, sore throat, weak lower back and knees, insomnia, kidney-deficiency tiredness</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Difficulty</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Easy to reach barefoot with your thumb</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Hold time</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">1–2 minutes per ankle</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Frequency</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">1–2 times daily</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Pairs well with</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300"><a href="/points/ki1-yongquan-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">KI1 (Yongquan)</a>, <a href="/points/bl23-shenshu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">BL23 (Shenshu)</a>, <a href="/points/sp6-sanyinjiao-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">SP6 (Sanyinjiao)</a></td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Skip if</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Recent ankle injury or broken skin over the inner ankle (see Precautions)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Benefits &amp; Uses</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Why KD3 Matters</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed">KD3 is the source point of the Kidney meridian, which traditional Chinese medicine links to the deep reserves of energy behind vitality, and to the Yin fluids that moisten the throat. It sits just behind the inner ankle, between the ankle bone and the Achilles tendon, and it shows up in our foot routines whenever the theme is Kidney energy, fatigue, or that bone-tired feeling that rest does not fix. Because the Kidneys are classically said to govern the bones and marrow, KD3 is also a traditional stop for weak knees and a tired, aching lower back.</p>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed">KD3 is easy to reach barefoot and pairs naturally with the rest of the foot region's grounding work. It combines with KI1 for deep fatigue, with BL23 on the lower back for lumbar tiredness, and with SP6 and HT7 for sleep and stress. If you have been running on empty for weeks and your body feels like it is asking for a recharge, KD3 is usually the first point practitioners reach for.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Location</h2>
+    <img src="/images/kd3-location.webp" alt="KD3 acupressure point location on the inner ankle" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" width="500" height="333" loading="lazy">
+    <p class="mb-3">KD3 is on the inner ankle, in the depression between the medial malleolus (inner ankle bone) and the Achilles tendon, level with the top of the ankle bone. The hollow sits roughly midway between the bone and the tendon — not pressed into either ridge. Because the point sits close to bone and tendon, ease off rather than digging into the edge.</p>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3"><strong>Three quick confirmations you have the right spot:</strong> (1) it is the soft depression centered between the inner ankle bone and the Achilles tendon, level with the top of the bone; (2) it is distinctly tender compared with the skin around it; (3) pressing toward the bone with a slow, steady thumb produces a deep, achy sensation that may feel like it spreads up the leg.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">When to Use KD3 (and When Not)</h2>
+    <div class="grid sm:grid-cols-2 gap-4 mb-3">
+      <div class="rounded-xl border border-emerald-200 bg-emerald-50 dark:border-emerald-900/40 dark:bg-emerald-900/20 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Use it when</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• You feel deeply fatigued and running on empty for weeks</li>
+          <li>• Your throat is dry, sore, or scratchy and nothing seems to help</li>
+          <li>• Your lower back and knees feel weak, tired, or achy</li>
+          <li>• You want a grounding Kidney point in a bedtime or fatigue routine</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-stone-50 dark:border-stone-700 dark:bg-stone-800/50 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Hold off if</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• You recently sprained or injured the inner ankle</li>
+          <li>• The skin over the point is broken, cut, or has a rash</li>
+          <li>• The ankle is swollen, warm, or acutely painful</li>
+          <li>• Pressure causes a shooting pain or numbness down the foot</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-sm text-stone-500 dark:text-stone-400">Use the <em>Hold off</em> column as a safety filter: KD3 is a restorative practice for chronic tiredness and dryness, not first aid for an acute ankle injury.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Benefits &amp; Uses</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
-      <li><strong>Kidney energy:</strong> KD3 nourishes Kidney yin and yang, supporting adrenal function and vitality.</li>
+      <li><strong>Kidney energy:</strong> KD3 nourishes Kidney yin and yang, supporting vitality and adrenal reserve.</li>
       <li><strong>Chronic fatigue:</strong> It helps restore energy levels in those experiencing burnout or exhaustion.</li>
-      <li><strong>Anxiety and fear:</strong> KD3 calms the mind and is used for anxiety rooted in fear or insecurity.</li>
-      <li><strong>Lower back pain:</strong> It strengthens the lower back and is used for chronic lumbar weakness.</li>
-      <li><strong>Bone and joint health:</strong> In traditional Chinese medicine, the Kidneys govern the bones ?KD3 supports bone density and joint health.</li>
+      <li><strong>Sore throat:</strong> KD3 moistens the throat and is a traditional point for dry, scratchy throats that linger.</li>
+      <li><strong>Lower back and knees:</strong> It strengthens a tired, weak lower back and supports wobbly knees.</li>
+      <li><strong>Insomnia:</strong> As a Kidney Yin point, KD3 helps quiet a restless mind and supports sleep.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">How to Massage KD3</h2>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">How to Massage KD3</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">Press with your thumb at roughly 90 degrees to the skin, deepen slowly until you feel the deep, dull ache practitioners call deqi, then hold with even breathing. The ankle area is more delicate than the sole, so steady and slow beats hard.</p>
     <ol class="list-decimal pl-6 space-y-2 text-stone-700 dark:text-stone-300">
-      <li>Sit with your leg comfortably positioned to access the inner ankle.</li>
-      <li>Place your thumb on the KD3 point between the ankle bone and Achilles tendon.</li>
+      <li>Sit with your leg comfortably positioned to reach the inner ankle.</li>
+      <li>Place your thumb on the KD3 point between the ankle bone and the Achilles tendon.</li>
       <li>Apply firm, steady pressure with a gentle circular motion.</li>
-      <li>Hold for 1— minutes, then switch to the other ankle.</li>
-      <li>Repeat once or twice daily for best results.</li>
+      <li>Hold for 1–2 minutes, breathing slowly, then switch to the other ankle.</li>
+      <li>Repeat once or twice daily as part of a fatigue, throat, or bedtime routine.</li>
     </ol>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed"><strong>Common mistake to avoid:</strong> pressing directly into the bone or the tendon edge instead of the hollow between them. The target sensation is a deep, dull, spreading ache in the soft depression — if you feel a sharp pinch against bone or a shooting pain, ease off.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Science &amp; Research</h2>
-    <p class="mb-3">A 2018 study in <em>Journal of Traditional Chinese Medicine</em> found that KD3 acupuncture improved kidney function markers in patients with chronic kidney disease.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/30048947/" target="_blank" rel="noopener">1</a></sup> Research in <em>Medicine</em> showed that KD3 stimulation reduced anxiety and improved sleep quality in peri-menopausal women.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/32957376/" target="_blank" rel="noopener">2</a></sup></p>
-    <p class="mb-3">A 2020 fMRI study in <em>Brain Research</em> demonstrated that KD3 acupressure activates the insula and prefrontal cortex, areas associated with interoception and emotional regulation.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/32335647/" target="_blank" rel="noopener">3</a></sup></p>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Combine KD3 with These Points</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">KD3 restores best as part of a routine. Pick the row closest to your situation and work the points in the order shown, 1–2 minutes each.</p>
+    <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+      <table class="w-full text-sm">
+        <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+          <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-44">Goal / symptom</th><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400">Routine (in order)</th></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Deep fatigue and burnout</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">KD3 → <a href="/points/ki1-yongquan-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">KI1</a> → <a href="/points/bl23-shenshu-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">BL23 (Shenshu)</a>, 1–2min each, morning and evening</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Poor sleep and a restless mind</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">KD3 → <a href="/points/ht7-shenmen-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">HT7</a> → <a href="/points/sp6-sanyinjiao-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">SP6</a>, as a nightly bedtime sequence</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Weak, tired lower back</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">BL23 → KD3 → <a href="/points/bl40-weizhong-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">BL40</a>, 60s each, alongside gentle movement</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Dry, scratchy throat</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">KD3 → SP6, 2min each, 2–3 times daily, with warm fluids and rest</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-sm text-stone-500 dark:text-stone-400">For a fuller program, see the <a href="/body/foot-acupressure-points" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">foot acupressure points</a> body guide and our <a href="/conditions/acupressure-for-sleep" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for sleep</a> page.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Precautions</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">What to Expect</h2>
+    <div class="space-y-3">
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">First session (today)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">The point is usually noticeably tender, and the deep, achy sensation can be surprising at first. Many people feel a general sense of release or warmth in the ankle area within a few minutes. Do not expect your energy to return after a single press — the first session is mostly about learning the spot.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Days 3–7 (consistent daily practice)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">With 1–2 sessions per day, the tenderness at the point usually eases, and people often report feeling a bit less drained and sleeping more soundly. This matches the pattern in studies of acupressure for fatigue and sleep, where benefits tend to appear after several days of regular use.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Weeks 2–4</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">For chronic fatigue, KD3 works best as one piece of a broader plan that includes sleep, food, and movement. If you are still exhausted after 2–3 weeks, or if fatigue is accompanied by weight loss, fever, or shortness of breath, see a clinician — persistent tiredness deserves a proper workup rather than more pressure.</p>
+      </div>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Science &amp; Research</h2>
+    <p class="mb-3">Evidence on acupressure for fatigue, sleep, and pain has grown in recent years. Systematic reviews and randomized controlled trials have examined acupressure as an adjunct for these conditions, with results that are generally promising but limited in quality. Meta-analyses of acupressure for fatigue and sleep tend to show a positive direction of effect, though many of the included studies are small and their methodological quality varies considerably.</p>
+    <p class="mb-3">Researchers consistently note that acupressure trials are hard to blind, because the treatment is physical and participants can usually tell whether they are being treated. This makes it difficult to separate the specific effects of a particular point such as KD3 from the general benefits of touch, pressure, and relaxation. The overall picture — which we discuss in detail on our <a href="/research/does-acupressure-work" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">does acupressure work?</a> review — is one of encouraging signals alongside a clear need for larger, higher-quality studies before firm conclusions can be drawn. For sleep and anxiety specifically, our <a href="/conditions/acupressure-for-anxiety" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for anxiety</a> page and <a href="/conditions/acupressure-for-sleep" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for sleep</a> page summarize the strongest available evidence.</p>
+
+    <EvidenceBox refs={["chen-2022-anxiety"]} note="The meta-analysis above evaluated acupressure for anxiety, which is the context where KD3 is often used. It is not a study of KD3 in isolation." />
+
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Precautions</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
-      <li>Avoid if you have an ankle fracture, severe sprain, or infection in the area.</li>
-      <li>Use gentle pressure ?the area between the ankle bone and tendon contains sensitive nerves.</li>
-      <li>Do not massage over deep vein thrombosis or severe varicose veins.</li>
-      <li>Stop if you experience sharp or shooting pain.</li>
+      <li>Avoid if you recently sprained or injured the inner ankle, or if the joint is swollen and painful.</li>
+      <li>Do not press over broken skin, cuts, rashes, or blisters on the inner ankle.</li>
+      <li>Use gentle pressure — the area between the ankle bone and tendon contains sensitive nerves and blood vessels.</li>
+      <li>Stop if you feel a sharp or shooting pain, or numbness spreading into the foot.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">Related Points</h2>
-    <p class="mb-3">KD3 pairs well with <a href="/points/cv6-qihai-acupressure-point">CV6 (Qihai)</a> for overall Qi and Jing (essence) nourishment. For anxiety and insomnia, combine with <a href="/points/ht7-shenmen-acupressure-point">HT7 (Shenmen)</a> and <a href="/points/sp6-sanyinjiao-acupressure-point">SP6 (Sanyinjiao)</a>.</p>
-  </section></article>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Red Flags — See a Professional</h2>
+    <div class="rounded-xl border border-red-200 bg-red-50 dark:border-red-900/40 dark:bg-red-900/20 p-4 text-sm">
+      <p class="text-stone-700 dark:text-stone-300 mb-2">Stop self-treatment and see a doctor if you notice any of the following:</p>
+      <ul class="list-disc pl-6 space-y-1 text-stone-700 dark:text-stone-300">
+        <li>Fatigue so profound that it interferes with daily life, or fatigue that follows an illness</li>
+        <li>Fatigue together with unexplained weight loss, fever, or night sweats</li>
+        <li>A sore throat that is severe, lasts more than a couple of weeks, or makes swallowing difficult</li>
+        <li>Ankle swelling, warmth, or pain that appears suddenly after an injury</li>
+        <li>No improvement after 2–3 weeks of consistent acupressure and rest</li>
+      </ul>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Frequently Asked Questions</h2>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How do I find KD3 on myself?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">KD3 sits on the inner ankle, in the soft depression centered between the inner ankle bone and the Achilles tendon, level with the top of the ankle bone. Slide your thumb into that groove — the tender hollow in the middle, not on either ridge, is the point.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How long and how often should I press KD3?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Hold KD3 for 1–2 minutes per ankle at the deepest comfortable pressure, and repeat once or twice daily. For fatigue, a morning and evening session works well; for sleep, use it as part of your bedtime routine. Consistency over weeks matters more than pressing harder.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Can KD3 help with a dry, sore throat?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Yes. KD3 is a traditional point for moistening a dry, scratchy throat that lingers, especially when it is accompanied by fatigue. Press it for 2 minutes per ankle with SP6, and keep up fluids and rest. A severe, long-lasting, or hard-to-swallow throat needs a doctor.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Is KD3 safe to use for tired lower back and knees?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">KD3 is a traditional point for weak, tired lower back and knees because the Kidney meridian is classically said to govern the bones. Combine it with BL23 on the lower back and gentle movement, and avoid it if the pain follows a sudden injury or comes with numbness or weakness.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Can I press KD3 at work or on the go?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Yes. While seated, cross the ankle over the opposite knee and press the point with your thumb — no tools or lying down required. A short 60-second press per ankle makes a good mid-afternoon energy reset without anyone noticing.</div>
+    </details>
+    <details class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">When should I see a doctor instead of using KD3?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">See a doctor if fatigue interferes with your daily life, comes with weight loss, fever, or night sweats, or has not improved after 2–3 weeks of consistent practice. A severe or persistent sore throat, and any ankle pain after a sudden injury, also deserve medical attention.</div>
+    </details>
+    </section>
+
+    <div class="mt-10 text-center">
+      <a href="/points" class="inline-flex items-center gap-1 text-sm text-stone-500 hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Back to All Points</a>
+    </div>
+  </article>
 </BaseLayout>

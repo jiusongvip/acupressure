@@ -1,46 +1,175 @@
-﻿---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="KI1 (Yongquan) — Gushing Spring Point" description="Learn how to locate and stimulate KI1 (Yongquan) — the Gushing Spring point on the sole of the foot. Benefits include calming the mind, grounding energy, and insomnia relief." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "KI1 (Yongquan)", href: "/points/ki1-yongquan-acupressure-point" }]} datePublished="2025-03-15" dateModified="2026-05-15" articleSchema={true}>
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
+---
+<BaseLayout title="KI1 (Yongquan) — Gushing Spring Point" description="Everything you need to self-treat KI1 (Yongquan) — exact location, when to use it, a step-by-step routine, symptom-based point combinations, and expected results." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points" }, { label: "KI1 (Yongquan)", href: "/points/ki1-yongquan-acupressure-point" }]} datePublished="2025-03-15" dateModified="2026-08-19" articleSchema={true}>
   <article class="max-w-3xl mx-auto px-4 py-12 lg:px-6">
     <h1 class="mb-4">KI1 (Yongquan) — Gushing Spring</h1>
-    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">KI1, known as Yongquan or Gushing Spring, is the first point of the Kidney meridian. Located on the sole of the foot, it is powerfully grounding, calming, and used for insomnia and anxiety.</p>
+    <p class="text-stone-500 dark:text-stone-400 text-lg mb-8">KI1, known as Yongquan or Gushing Spring, is the first point of the Kidney meridian, sitting in the deepest hollow of the sole of the foot. It is the classic go-to point when you need to calm anxiety, quiet a racing mind before bed, or feel grounded again after a stressful day.</p>
 
-    <section class="mb-8"><h2 class="mb-4">Location</h2>
-    <img src="/images/ki1-location.webp" alt="KI1 acupressure point location on the sole of the foot" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" />
-    <p class="mb-3">KI1 is on the sole of the foot, in the depression that forms when the foot is pointed, approximately one-third of the distance from the base of the toes toward the heel, between the second and third metatarsal bones.</p>
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">At a Glance</h2>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+        <table class="w-full text-sm">
+          <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Meridian</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Kidney (KI)</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Body region</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Sole of the foot, in the deepest hollow of the ball of the foot</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Best for</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Anxiety, insomnia, calming and grounding, hot flashes, blood-pressure support</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Difficulty</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Easy — reachable barefoot, or with a golf or massage ball</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Hold time</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">60–90 seconds per foot</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Frequency</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">1–3 times daily</td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Pairs well with</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300"><a href="/points/ht7-shenmen-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">HT7 (Shenmen)</a>, <a href="/points/sp6-sanyinjiao-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">SP6 (Sanyinjiao)</a>, <a href="/points/cv4-guanyuan-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">CV4 (Guanyuan)</a></td></tr>
+            <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-40">Skip if</th><td class="px-4 py-2.5 text-stone-700 dark:text-stone-300">Open wound, broken skin, or athlete's foot on the sole; history of deep vein thrombosis (see Precautions)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Benefits &amp; Uses</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Why KI1 Matters</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed">KI1 is often described as the most grounding point in the body, and it is the point most requested in routines for anxiety, insomnia, and stress. Because it sits on the sole, it is easy to reach barefoot — no tools, no special posture required — which makes it a realistic daily habit rather than a "someday" remedy. In traditional Chinese medicine, KI1 draws excess Yang energy downward and away from the head, cooling the mind and calming racing thoughts.</p>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed">The Kidney meridian is linked to the calm Yin energy that supports restful sleep, so slow, gentle pressure on KI1 with even breathing can feel genuinely settling. That same downward, cooling action is why the point is also a traditional stop for hot flashes and night sweats, and why it appears in self-care protocols as a relaxation aid alongside professional care for blood pressure. It is a comfort practice, not a cure — but as a way to press the reset button on a wired nervous system, it is hard to beat.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Location</h2>
+    <img src="/images/ki1-location.webp" alt="KI1 acupressure point location on the sole of the foot" class="w-full max-w-sm mx-auto rounded-xl shadow-sm" width="392" height="374" loading="lazy">
+    <p class="mb-3">KI1 is on the sole of the foot, roughly one-third of the way from the base of the toes toward the heel, in the hollow that forms between the second and third metatarsal bones when you point the foot. The most reliable landmark: curl your toes under — KI1 sits in the deepest dimple that appears on the ball of the foot at the front of the arch.</p>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3"><strong>Three quick confirmations you have the right spot:</strong> (1) it is the deepest, softest hollow on the sole, right where the ball of the foot meets the arch; (2) pressing it produces a distinctly tender, sometimes achy sensation, more so than the surrounding sole; (3) after holding pressure, you often feel a spreading sense of warmth or calm that is hard to confuse with pressing anywhere else on the foot.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">When to Use KI1 (and When Not)</h2>
+    <div class="grid sm:grid-cols-2 gap-4 mb-3">
+      <div class="rounded-xl border border-emerald-200 bg-emerald-50 dark:border-emerald-900/40 dark:bg-emerald-900/20 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Use it when</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• Your mind is racing and you cannot settle, especially at bedtime</li>
+          <li>• You feel anxious, restless, or ungrounded during the day</li>
+          <li>• You want a calming support alongside blood-pressure or hot-flash care</li>
+          <li>• You need a quick reset at your desk or after a stressful event</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-stone-50 dark:border-stone-700 dark:bg-stone-800/50 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-2 text-sm">Hold off if</h3>
+        <ul class="space-y-1.5 text-sm text-stone-700 dark:text-stone-300">
+          <li>• There is a wound, cut, blister, or athlete's foot with broken skin on the sole</li>
+          <li>• You have a history of deep vein thrombosis in the leg</li>
+          <li>• You have reduced sensation in the foot (for example, diabetic neuropathy)</li>
+          <li>• Pressure causes sharp pain rather than a deep, achy sensation</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-sm text-stone-500 dark:text-stone-400">Use the <em>Hold off</em> column as a safety filter: KI1 is a relaxation practice for chronic stress and sleep trouble, not a treatment for acute foot problems or a substitute for blood-pressure medication.</p>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Benefits &amp; Uses</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
       <li><strong>Calming and grounding:</strong> KI1 draws energy downward, making it excellent for anxiety, restlessness, and feeling ungrounded.</li>
-      <li><strong>Insomnia:</strong> It promotes deep sleep by calming the mind and settling the spirit (Shen).</li>
-      <li><strong>High blood pressure:</strong> Regular stimulation may help lower blood pressure by promoting relaxation.</li>
-      <li><strong>Hot flashes:</strong> KI1 helps cool the body and is used for night sweats and menopausal hot flashes.</li>
-      <li><strong>Headaches:</strong> It can relieve headaches, especially those with a sensation of Qi or blood rushing upward.</li>
+      <li><strong>Insomnia:</strong> It promotes deep sleep by calming the mind and settling the spirit.</li>
+      <li><strong>Blood-pressure support:</strong> Regular, gentle stimulation promotes whole-body relaxation, which supports blood-pressure management as part of a doctor-led plan.</li>
+      <li><strong>Hot flashes:</strong> KI1 helps cool the body and is a traditional point for night sweats and menopausal hot flashes.</li>
+      <li><strong>Headaches:</strong> It can relieve headaches that come with a sensation of pressure or heat rushing upward.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">How to Massage KI1</h2>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">How to Massage KI1</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">The sole can take firmer pressure than the ankle or wrist, so you can press with confidence — just build pressure slowly and keep your breathing even. If bending to reach your own foot is awkward, sit with your ankle crossed over the opposite knee, or roll a golf ball under the ball of the foot for a few slow passes.</p>
     <ol class="list-decimal pl-6 space-y-2 text-stone-700 dark:text-stone-300">
-      <li>Sit comfortably and place one foot on your opposite thigh.</li>
-      <li>Locate the KI1 point on the ball of the foot.</li>
-      <li>Use your thumb to apply firm, steady pressure in a circular motion.</li>
-      <li>Hold for 1— minutes per foot, breathing deeply.</li>
-      <li>Best performed before bed or during stressful moments.</li>
+      <li>Sit comfortably and place one foot on your opposite thigh, or cross the ankle over the knee.</li>
+      <li>Curl the toes under and find the deepest dimple on the ball of the foot — that is KI1.</li>
+      <li>Use your thumb to apply firm, steady pressure in a slow circular motion.</li>
+      <li>Hold for 60–90 seconds per foot while breathing slowly and evenly.</li>
+      <li>Release gradually, then repeat on the other foot — ideal before bed or during a stressful moment.</li>
     </ol>
+    <p class="mt-3 text-stone-600 dark:text-stone-300 leading-relaxed"><strong>Common mistake to avoid:</strong> pressing too hard, too fast. The goal is a deep, dull, spreading ache — not sharp pain or bruising. If you use a golf ball, keep it to gentle rolls and stop if the sole feels bruised the next day.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Science &amp; Research</h2>
-    <p class="mb-3">A 2019 randomized controlled trial in <em>Journal of Cardiovascular Nursing</em> found that KI1 acupressure significantly reduced blood pressure and anxiety in hypertensive patients.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/30702572/" target="_blank" rel="noopener">1</a></sup> Research in <em>Evidence-Based Complementary and Alternative Medicine</em> showed that KI1 stimulation improved sleep quality and reduced cortisol levels in insomniacs.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/29743877/" target="_blank" rel="noopener">2</a></sup></p>
-    <p class="mb-3">A 2020 study in <em>Complementary Therapies in Medicine</em> demonstrated that KI1 foot massage reduced hot flash frequency and severity in menopausal women.<sup><a href="https://pubmed.ncbi.nlm.nih.gov/32711733/" target="_blank" rel="noopener">3</a></sup></p>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Combine KI1 with These Points</h2>
+    <p class="text-stone-600 dark:text-stone-300 leading-relaxed mb-3">A full calming routine works better than pressing one point. Pick the row closest to your situation and work the points in the order shown, 60–90 seconds each.</p>
+    <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 overflow-hidden">
+      <table class="w-full text-sm">
+        <tbody class="divide-y divide-stone-100 dark:divide-stone-800">
+          <tr><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400 w-44">Goal / symptom</th><th class="text-left px-4 py-2.5 font-semibold text-stone-500 dark:text-stone-400">Routine (in order)</th></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Trouble falling asleep</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">KI1 → <a href="/points/ht7-shenmen-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">HT7</a> → <a href="/points/sp6-sanyinjiao-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">SP6</a>, 60–90s each, as a nightly bedtime wind-down</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Daytime anxiety and restlessness</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">KI1 → SP6 → <a href="/points/yintang-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">Yintang</a>, 60s each, 1–2 times daily</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Hot flashes and night sweats</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">KI1 → SP6 → <a href="/points/cv4-guanyuan-acupressure-point" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">CV4 (Guanyuan)</a>, 90s each, morning and evening</td></tr>
+          <tr><td class="px-4 py-3 align-top text-stone-700 dark:text-stone-300">Stress reset at the desk</td><td class="px-4 py-3 text-stone-700 dark:text-stone-300">KI1 (rolled with a golf ball under the desk) + HT7, 60s per foot, once at midday</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-sm text-stone-500 dark:text-stone-400">For a fuller program, see the <a href="/body/foot-acupressure-points" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">foot acupressure points</a> body guide and our <a href="/conditions/acupressure-for-anxiety" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for anxiety</a> page.</p>
+    </section>
 
-    </section><section class="mb-8"><h2 class="mb-4">Precautions</h2>
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">What to Expect</h2>
+    <div class="space-y-3">
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">First session (today)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">KI1 is usually noticeably tender on first press. Most people feel a quick sense of calm or "groundedness" within a few minutes — the shoulders drop, breathing slows. The effect can fade as the day goes on, so treat the first session as a taste, not a cure.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Days 3–7 (consistent daily practice)</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">With 1–2 sessions per day, the tenderness at the point usually eases and falling asleep often feels easier. This matches the pattern in studies of acupressure for insomnia and anxiety, where benefits appear after several days of regular use rather than a single session.</p>
+      </div>
+      <div class="rounded-xl border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 mb-1 text-sm">Weeks 2–4</h3>
+        <p class="text-sm text-stone-600 dark:text-stone-300">For chronic anxiety or long-standing sleep trouble, KI1 works best as part of a consistent bedtime and stress routine alongside your broader plan. If there is no change after 2–3 weeks, or if sleep and anxiety are disrupting your day, that is a signal to see a clinician rather than press harder.</p>
+      </div>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Science &amp; Research</h2>
+    <p class="mb-3">Evidence on acupressure for anxiety, sleep, and stress has grown in recent years. Systematic reviews and randomized controlled trials have examined acupressure as an adjunct for these conditions, with results that are generally promising but limited in quality. Meta-analyses of acupressure for sleep and anxiety tend to show a positive direction of effect, though many of the included studies are small and their methodological quality varies considerably.</p>
+    <p class="mb-3">Researchers consistently note that acupressure trials are hard to blind, because the treatment is physical and participants can usually tell whether they are being treated. This makes it difficult to separate the specific effects of a particular point such as KI1 from the general benefits of touch, pressure, and relaxation. The overall picture — which we discuss in detail on our <a href="/research/does-acupressure-work" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">does acupressure work?</a> review — is one of encouraging signals alongside a clear need for larger, higher-quality studies before firm conclusions can be drawn. For sleep specifically, our <a href="/conditions/acupressure-for-sleep" class="text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">acupressure for sleep</a> page summarizes the strongest available evidence.</p>
+
+    <EvidenceBox refs={["liao-2020-sleep", "chen-2022-anxiety"]} note="The trials and reviews above evaluated acupressure for sleep and anxiety, the two uses of KI1. Neither is a study of KI1 in isolation." />
+
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Precautions</h2>
     <ul class="list-disc pl-6 mb-3 space-y-1 text-stone-700 dark:text-stone-300">
-      <li>Do not apply pressure if you have a foot injury, fracture, or infection on the sole of the foot.</li>
-      <li>Avoid if you have diabetic neuropathy or loss of sensation in the feet.</li>
-      <li>Use gentle pressure on those with delicate or thin skin on the feet.</li>
-      <li>Stop if you feel sharp pain or discomfort.</li>
+      <li>Do not press on the sole if there is a wound, cut, blister, or athlete's foot with broken skin.</li>
+      <li>Avoid if you have a history of deep vein thrombosis in the leg — foot massage can be risky in this situation.</li>
+      <li>Use extra caution (or skip the point) if you have reduced sensation in the feet, such as diabetic neuropathy.</li>
+      <li>Stop if you feel sharp pain, or if the sole stays sore or bruised after the session.</li>
     </ul>
 
-    </section><section class="mb-8"><h2 class="mb-4">Related Points</h2>
-    <p class="mb-3">KI1 pairs well with <a href="/points/ht7-shenmen-acupressure-point">HT7 (Shenmen)</a> for insomnia and with <a href="/points/kd3-taixi-acupressure-point">KD3 (Taixi)</a> for grounding. For anxiety, combine with <a href="/points/yintang-acupressure-point">Yintang</a> and <a href="/points/pc6-neiguan-acupressure-point">PC6 (Neiguan)</a>.</p>
-  </section></article>
+    </section><section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Red Flags — See a Professional</h2>
+    <div class="rounded-xl border border-red-200 bg-red-50 dark:border-red-900/40 dark:bg-red-900/20 p-4 text-sm">
+      <p class="text-stone-700 dark:text-stone-300 mb-2">Stop self-treatment and see a doctor if you notice any of the following:</p>
+      <ul class="list-disc pl-6 space-y-1 text-stone-700 dark:text-stone-300">
+        <li>Swelling, warmth, or pain in one calf or leg that could suggest a blood clot</li>
+        <li>Severe headache, chest pain, or dizziness accompanying high blood pressure — treat as an emergency</li>
+        <li>A foot wound that is not healing, or redness and warmth spreading from the sole</li>
+        <li>Insomnia that persists after 2–3 weeks of regular practice, especially with loud snoring or breathing pauses at night</li>
+        <li>Anxiety or panic that is interfering with work, sleep, or daily life</li>
+      </ul>
+    </div>
+    </section>
+
+    <section class="mb-8"><h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">Frequently Asked Questions</h2>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How do I find KI1 on myself?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Sit and cross one ankle over the opposite knee, then curl your toes under. KI1 sits in the deepest dimple that appears on the ball of the foot, roughly one-third of the way from the base of the toes toward the heel. It is usually noticeably tender, so ease in gradually.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">How long and how often should I press KI1?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Hold 60–90 seconds per foot at a firm, comfortable depth, and repeat 1–3 times daily. For sleep, favor a longer, slower hold right before bed; for daytime anxiety, shorter sessions two or three times a day work well. Consistency matters more than a single long press.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Can I press KI1 at work without bending over?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Yes. Rest the foot on the floor or on a low step and slide a golf ball (or massage ball) under the ball of the foot, then roll it slowly for 30–60 seconds while seated at your desk. A few slow passes over the KI1 area mimics thumb pressure and needs no bending at all.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Is KI1 safe to use for blood pressure?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">KI1 is used as a relaxation aid in blood-pressure self-care because slow, calming pressure helps the whole body unwind — but it is not a treatment and never replaces prescribed medication. Keep taking your medication, monitor as your doctor advises, and see a doctor immediately for severe headache, chest pain, or dizziness.</div>
+    </details>
+    <details class="mb-3 rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">Why does pressing KI1 help with sleep?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">KI1 is the first point of the Kidney meridian, which traditional medicine links to the calm Yin energy that supports restful sleep. It draws excess Yang energy away from the head, cooling the mind and slowing racing thoughts. Pair it with HT7 and SP6 for a fuller bedtime routine.</div>
+    </details>
+    <details class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <summary class="cursor-pointer font-semibold text-stone-900 dark:text-stone-100">When should I see a doctor instead of using KI1?</summary>
+      <div class="mt-2 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">See a doctor if you have leg swelling or pain that could be a clot, a foot wound that will not heal, or insomnia and anxiety that persist after 2–3 weeks of consistent practice. Severe headache, chest pain, or dizziness with high blood pressure is an emergency — call for help immediately.</div>
+    </details>
+    </section>
+
+    <div class="mt-10 text-center">
+      <a href="/points" class="inline-flex items-center gap-1 text-sm text-stone-500 hover:text-emerald-600 dark:text-stone-400 dark:hover:text-emerald-400">Back to All Points</a>
+    </div>
+  </article>
 </BaseLayout>
