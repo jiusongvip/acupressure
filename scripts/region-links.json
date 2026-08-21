@@ -1,0 +1,102 @@
+{
+  "abdomen-acupressure-points": {
+    "points": [
+      "/points/cv6-qihai-acupressure-point",
+      "/points/cv4-guanyuan-acupressure-point",
+      "/points/cv12-zhongwan-acupressure-point",
+      "/points/st25-tianshu-acupressure-point"
+    ],
+    "conditions": []
+  },
+  "arm-wrist-acupressure-points": {
+    "points": [
+      "/points/li4-hegu-acupressure-point",
+      "/points/pc6-neiguan-acupressure-point",
+      "/points/lu7-lieque-acupressure-point"
+    ],
+    "conditions": []
+  },
+  "back-acupressure-points": {
+    "points": [
+      "/points/gv14-dazhui-acupressure-point",
+      "/points/bl13-feishu-acupressure-point",
+      "/points/bl23-shenshu-acupressure-point",
+      "/points/bl40-weizhong-acupressure-point"
+    ],
+    "conditions": []
+  },
+  "chest-acupressure-points": {
+    "points": [
+      "/points/cv17-shanzhong-acupressure-point",
+      "/points/cv22-tiantu-acupressure-point",
+      "/points/lu1-zhongfu-acupressure-point"
+    ],
+    "conditions": []
+  },
+  "ear-acupressure-points": {
+    "points": [],
+    "conditions": []
+  },
+  "face-acupressure-points": {
+    "points": [
+      "/points/yintang-acupressure-point",
+      "/points/taiyang-acupressure-point",
+      "/points/li20-yingxiang-acupressure-point"
+    ],
+    "conditions": []
+  },
+  "foot-acupressure-points": {
+    "points": [
+      "/points/ki1-yongquan-acupressure-point",
+      "/points/lv3-taichong-acupressure-point",
+      "/points/bl60-kunlun-acupressure-point",
+      "/points/kd3-taixi-acupressure-point"
+    ],
+    "conditions": []
+  },
+  "hand-acupressure-chart": {
+    "points": [
+      "/points/li4-hegu-acupressure-point",
+      "/points/ht7-shenmen-acupressure-point"
+    ],
+    "conditions": []
+  },
+  "head-acupressure-points": {
+    "points": [
+      "/points/gv20-baihui-acupressure-point",
+      "/points/gb20-fengchi-acupressure-point",
+      "/points/yintang-acupressure-point",
+      "/points/taiyang-acupressure-point"
+    ],
+    "conditions": []
+  },
+  "index": {
+    "points": [],
+    "conditions": []
+  },
+  "leg-acupressure-points": {
+    "points": [
+      "/points/st36-zusanli-acupressure-point",
+      "/points/sp6-sanyinjiao-acupressure-point",
+      "/points/gb34-yanglingquan-acupressure-point",
+      "/points/lv3-taichong-acupressure-point"
+    ],
+    "conditions": []
+  },
+  "neck-acupressure-points": {
+    "points": [
+      "/points/gb20-fengchi-acupressure-point",
+      "/points/gb21-jianjing-acupressure-point",
+      "/points/bl10-tianzhu-acupressure-point"
+    ],
+    "conditions": []
+  },
+  "shoulder-acupressure-points": {
+    "points": [
+      "/points/gb21-jianjing-acupressure-point",
+      "/points/li15-jianyu-acupressure-point",
+      "/points/si9-jianzhen-acupressure-point"
+    ],
+    "conditions": []
+  }
+}
