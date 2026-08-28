@@ -1,4 +1,4 @@
-﻿---
+---
 import "../styles/global.css";
 
 export interface Props {
@@ -15,8 +15,8 @@ export interface Props {
 }
 
 const { title, description, breadcrumbs, noindex, schema, articleSchema, websiteSchema, datePublished, dateModified, ogImage } = Astro.props;
-const canonicalUrl = `https://www.acupressureguide.com${Astro.url.pathname}`;
-const ogImageUrl = ogImage || "https://www.acupressureguide.com/og-default.svg";
+const canonicalUrl = `https://www.acupressured.com${Astro.url.pathname}`;
+const ogImageUrl = ogImage || "https://www.acupressured.com/og-default.svg";
 const year = new Date().getFullYear();
 
 const breadcrumbSchema = breadcrumbs?.length ? {
@@ -26,7 +26,7 @@ const breadcrumbSchema = breadcrumbs?.length ? {
     "@type": "ListItem",
     "position": i + 1,
     "name": bc.label,
-    "item": `https://www.acupressureguide.com${bc.href}`
+    "item": `https://www.acupressured.com${bc.href}`
   }))
 } : null;
 
@@ -34,7 +34,7 @@ const websiteSchemaObj = websiteSchema ? {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Acupressure Guide",
-  "url": "https://www.acupressureguide.com",
+  "url": "https://www.acupressured.com",
   "description": "Evidence-based guide to acupressure points, techniques, and health benefits.",
 } : null;
 
@@ -49,16 +49,16 @@ const articleSchemaObj = articleSchema ? {
   "author": {
     "@type": "Organization",
     "name": "Acupressure Guide Editorial Team",
-    "url": "https://www.acupressureguide.com/about/",
+    "url": "https://www.acupressured.com/about/",
     "knowsAbout": "Traditional Chinese Medicine, Acupressure, Evidence-based Medicine"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Acupressure Guide",
-    "url": "https://www.acupressureguide.com",
+    "url": "https://www.acupressured.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.acupressureguide.com/logo.png"
+      "url": "https://www.acupressured.com/logo.png"
     }
   },
   "image": {
@@ -94,8 +94,8 @@ const articleSchemaObj = articleSchema ? {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Acupressure Guide",
-        "url": "https://www.acupressureguide.com",
-        "logo": "https://www.acupressureguide.com/logo.png"
+        "url": "https://www.acupressured.com",
+        "logo": "https://www.acupressured.com/logo.png"
       }
     </script>
     {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>}

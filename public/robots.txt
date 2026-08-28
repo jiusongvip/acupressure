@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.acupressureguide.com/sitemap-index.xml
+Sitemap: https://www.acupressured.com/sitemap-index.xml
 
 # AI crawler rules
 User-agent: GPTBot

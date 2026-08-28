@@ -3,14 +3,14 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://www.acupressureguide.com',
+  site: 'https://www.acupressured.com',
   trailingSlash: 'never',
   integrations: [sitemap({
     lastmod: new Date(),
     changefreq: 'weekly',
     priority: 0.7,
     serialize: (item) => {
-      if (item.url === 'https://www.acupressureguide.com') {
+      if (item.url === 'https://www.acupressured.com') {
         item.priority = 1.0;
         item.changefreq = 'daily';
       }
