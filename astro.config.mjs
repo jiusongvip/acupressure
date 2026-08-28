@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://www.acupressured.com',
-  trailingSlash: 'never',
+  trailingSlash: 'always',
   integrations: [sitemap({
     lastmod: new Date(),
     changefreq: 'weekly',
