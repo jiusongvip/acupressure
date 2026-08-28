@@ -15,7 +15,9 @@ export interface Props {
 }
 
 const { title, description, breadcrumbs, noindex, schema, articleSchema, websiteSchema, datePublished, dateModified, ogImage } = Astro.props;
-const canonicalUrl = `https://www.acupressured.com${Astro.url.pathname}`;
+const canonicalUrl = Astro.url.pathname === "/"
+  ? "https://www.acupressured.com"
+  : `https://www.acupressured.com${Astro.url.pathname}`;
 const ogImageUrl = ogImage || "https://www.acupressured.com/og-default.svg";
 const year = new Date().getFullYear();
 
