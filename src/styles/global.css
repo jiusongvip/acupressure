@@ -1,3 +1,4 @@
+@import "@fontsource/cinzel/700.css";
 @import "@fontsource/geist-sans/400.css";
 @import "@fontsource/geist-sans/500.css";
 @import "@fontsource/geist-sans/600.css";
@@ -6,7 +7,15 @@
 
 @theme {
   --font-sans: "Geist Sans", "sans-serif";
+  --font-display: "Cinzel", "Georgia", "Times New Roman", serif;
   --color-copper: #b87333;
+  --color-parchment: #fffbe7;
+  --color-forest-400: #5a8261;
+  --color-forest-500: #456a4b;
+  --color-forest-600: #3a5940;
+  --color-forest-700: #2f4a35;
+  --color-line: #e6dec6;
+  --color-ink: #1f2b22;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -55,6 +64,16 @@ strong {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
   }
 }
 
