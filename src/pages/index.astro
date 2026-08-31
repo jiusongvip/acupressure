@@ -1,5 +1,7 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import heroBody from "../assets/hero-body.webp";
 
 const points = [
   { code: "LI4", name: "Hegu", region: "Hand", img: "/images/li4-location.webp", alt: "LI4 Hegu acupressure point on the hand", url: "/points/li4-hegu-acupressure-point/", location: "Web between thumb and index finger", tags: ["Pain relief", "Headache", "Sinus"] },
@@ -81,7 +83,7 @@ const research = [
           </div>
         </div>
         <div class="rounded-2xl border border-line bg-white p-2 shadow-[0_12px_40px_rgba(28,66,48,0.10)] dark:border-stone-800 dark:bg-stone-900" style="animation: rise 0.7s cubic-bezier(0.16,1,0.3,1) 180ms both, floatY 6s ease-in-out 1.2s infinite">
-          <img src="/images/hero-body.webp" alt="Acupressure point locations across the body, from head to feet" width="1672" height="941" fetchpriority="high" class="w-full h-64 sm:h-80 lg:h-[420px] object-cover object-center rounded-xl" />
+          <Image src={heroBody} alt="Acupressure point locations across the body, from head to feet" width={1672} height={941} fetchpriority="high" loading="eager" sizes="(min-width: 1024px) 548px, 100vw" widths={[400, 640, 960, 1280]} quality={80} class="w-full h-64 sm:h-80 lg:h-[420px] object-cover object-center rounded-xl" />
         </div>
       </div>
     </div>
@@ -216,7 +218,7 @@ const research = [
           </div>
         </div>
         <div class="rounded-xl border border-stone-200 overflow-hidden dark:border-stone-800">
-          <img src="/images/hero-body.webp" alt="Acupressure body atlas regions from head to feet" width="1672" height="941" loading="lazy" class="w-full h-56 object-cover object-center" />
+          <Image src={heroBody} alt="Acupressure body atlas regions from head to feet" width={1672} height={941} loading="lazy" sizes="(min-width: 1024px) 548px, 100vw" widths={[400, 640, 960]} quality={80} class="w-full h-56 object-cover object-center" />
           <div class="p-5">
             <h3 class="font-semibold text-stone-900 dark:text-stone-100">From head to feet</h3>
             <p class="mt-1 text-sm text-stone-500 dark:text-stone-400 leading-relaxed">The ears have a full reflex map. The feet hold KI1, the sole point used for grounding and sleep. The back carries the Bladder meridian, the longest channel in the body. Every region links to the points that live there.</p>
