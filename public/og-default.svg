@@ -1,17 +1,50 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="630" fill="#fafaf9"/>
-  <circle cx="600" cy="280" r="140" fill="rgba(5,150,105,0.06)" stroke="#059669" stroke-width="2"/>
-  <circle cx="600" cy="280" r="50" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="2.5"/>
-  <circle cx="600" cy="280" r="10" fill="#059669"/>
-  <circle cx="580" cy="200" r="18" fill="rgba(5,150,105,0.08)" stroke="#059669" stroke-width="1.5"/>
-  <circle cx="700" cy="320" r="18" fill="rgba(5,150,105,0.08)" stroke="#059669" stroke-width="1.5"/>
-  <circle cx="500" cy="350" r="14" fill="rgba(5,150,105,0.08)" stroke="#059669" stroke-width="1.5"/>
-  <circle cx="680" cy="180" r="14" fill="rgba(5,150,105,0.08)" stroke="#059669" stroke-width="1.5"/>
-  <circle cx="520" cy="220" r="12" fill="rgba(5,150,105,0.08)" stroke="#059669" stroke-width="1.5"/>
-  <circle cx="650" cy="400" r="12" fill="rgba(5,150,105,0.08)" stroke="#059669" stroke-width="1.5"/>
-  <text x="600" y="460" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="56" font-weight="700" fill="#1c1917">Acupressure Guide</text>
-  <text x="600" y="510" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="24" fill="#78716c">Evidence-based acupressure resources</text>
-  <text x="600" y="545" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="16" fill="#a8a29e">Dr. Chen Wei, TCM Practitioner</text>
-  <line x1="400" y1="555" x2="800" y2="555" stroke="#d6d3d1" stroke-width="1"/>
-  <text x="600" y="580" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#d6d3d1">www.acupressureguide.com</text>
+  <defs>
+    <radialGradient id="glowGreen" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#456a4b" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#456a4b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowGold" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d6c79e" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#d6c79e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#fffbe7"/>
+  <ellipse cx="1010" cy="40" rx="420" ry="240" fill="url(#glowGreen)"/>
+  <ellipse cx="70" cy="560" rx="420" ry="260" fill="url(#glowGold)"/>
+  <g fill="#1f2b22" opacity="0.16">
+    <circle cx="130" cy="90" r="1.5"/>
+    <circle cx="260" cy="160" r="1"/>
+    <circle cx="340" cy="70" r="1.5"/>
+    <circle cx="420" cy="210" r="1"/>
+    <circle cx="150" cy="300" r="1"/>
+    <circle cx="240" cy="420" r="1.5"/>
+    <circle cx="330" cy="520" r="1"/>
+    <circle cx="940" cy="180" r="1"/>
+    <circle cx="1060" cy="300" r="1.5"/>
+    <circle cx="980" cy="470" r="1"/>
+    <circle cx="1130" cy="520" r="1.5"/>
+    <circle cx="500" cy="560" r="1"/>
+  </g>
+  <g stroke="#456a4b" fill="none" stroke-width="2">
+    <line x1="130" y1="315" x2="700" y2="315" stroke-opacity="0.35" stroke-dasharray="4,6"/>
+    <line x1="130" y1="330" x2="700" y2="330" stroke-opacity="0.2" stroke-dasharray="4,6"/>
+  </g>
+  <circle cx="420" cy="322" r="118" fill="rgba(69,106,75,0.06)" stroke="#456a4b" stroke-width="2.5"/>
+  <circle cx="420" cy="322" r="78" stroke="#456a4b" stroke-width="1.5" stroke-dasharray="5,5" fill="none"/>
+  <circle cx="420" cy="322" r="26" fill="rgba(69,106,75,0.14)" stroke="#456a4b" stroke-width="2.5"/>
+  <circle cx="420" cy="322" r="6" fill="#456a4b"/>
+  <g fill="rgba(69,106,75,0.35)">
+    <circle cx="318" cy="252" r="4"/>
+    <circle cx="500" cy="254" r="4"/>
+    <circle cx="306" cy="360" r="4"/>
+    <circle cx="512" cy="396" r="4"/>
+    <circle cx="372" cy="432" r="3.5"/>
+  </g>
+  <text x="715" y="292" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="700" fill="#1f2b22">Acupressure Guide</text>
+  <text x="718" y="342" font-family="Georgia, 'Times New Roman', serif" font-size="27" font-style="italic" fill="#456a4b">Ancient Healing, Modern Evidence</text>
+  <line x1="718" y1="372" x2="1060" y2="372" stroke="#e6dec6" stroke-width="2"/>
+  <text x="718" y="408" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" fill="#6f7c71">16 essential pressure points &#183; condition protocols &#183; clinical research</text>
+  <text x="718" y="448" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" fill="#6f7c71">Step-by-step techniques with safety guidance</text>
+  <text x="1200" y="600" text-anchor="end" font-family="'Segoe UI', system-ui, sans-serif" font-size="14" fill="#a8a29e">www.acupressured.com</text>
 </svg>

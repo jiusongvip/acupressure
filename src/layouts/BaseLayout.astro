@@ -18,7 +18,7 @@ const { title, description, breadcrumbs, noindex, schema, articleSchema, website
 const canonicalUrl = Astro.url.pathname === "/"
   ? "https://www.acupressured.com"
   : `https://www.acupressured.com${Astro.url.pathname}`;
-const ogImageUrl = ogImage || "https://www.acupressured.com/og-default.svg";
+const ogImageUrl = ogImage || "https://www.acupressured.com/og-default.png";
 const year = new Date().getFullYear();
 
 const breadcrumbSchema = breadcrumbs?.length ? {
@@ -95,10 +95,12 @@ const articleSchemaObj = articleSchema ? {
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Acupressure Guide" />
     <meta property="og:image" content={ogImageUrl} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={`${title} | Acupressure Guide`} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
     {noindex && <meta name="robots" content="noindex" />}
     <script type="application/ld+json">
       {

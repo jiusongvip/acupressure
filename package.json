@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "npx astro build && node scripts/fix-sitemap-home.mjs",
+    "build": "npx astro build && node scripts/fix-sitemap-home.mjs && node scripts/fix-sitemap-lastmod.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
