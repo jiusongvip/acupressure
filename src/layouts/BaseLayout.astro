@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import geistVariable from "../assets/fonts/geist-variable.woff2";
 
 export interface Props {
   title: string;
@@ -79,6 +80,7 @@ const articleSchemaObj = articleSchema ? {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href={geistVariable} as="font" type="font/woff2" crossorigin />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJS2LSBXFS"></script>
     <script is:inline>
