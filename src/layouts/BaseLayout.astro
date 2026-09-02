@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import geistVariable from "../assets/fonts/geist-variable.woff2";
+import cinzelLatin700 from "@fontsource/cinzel/files/cinzel-latin-700-normal.woff2";
 
 export interface Props {
   title: string;
@@ -81,14 +82,22 @@ const articleSchemaObj = articleSchema ? {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preload" href={geistVariable} as="font" type="font/woff2" crossorigin />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJS2LSBXFS"></script>
+    <link rel="preload" href={cinzelLatin700} as="font" type="font/woff2" crossorigin />
+    <!-- Google tag (gtag.js) — deferred off the critical path to protect mobile LCP -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', 'G-FJS2LSBXFS');
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-FJS2LSBXFS';
+          document.head.appendChild(s);
+        }, 1500);
+      });
     </script>
     <title>{title} | Acupressure Guide</title>
     <meta name="description" content={description} />
