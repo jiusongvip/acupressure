@@ -123,6 +123,13 @@ strong {
   transform: translateY(0);
 }
 
+article a:not([class*="rounded-"]):not([class*="inline-flex"]):not([class*="flex "]),
+section a:not([class*="rounded-"]):not([class*="inline-flex"]):not([class*="flex "]) {
+  text-decoration-line: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

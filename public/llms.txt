@@ -2,80 +2,81 @@
 > Evidence-based acupressure guides for natural health and wellness.
 
 ## Basics
-- What Is Acupressure: https://www.acupressured.com/basics/what-is-acupressure/
-- How Does Acupressure Work: https://www.acupressured.com/basics/how-does-acupressure-work/
-- Benefits of Acupressure: https://www.acupressured.com/basics/benefits-of-acupressure/
-- Acupressure vs Acupuncture: https://www.acupressured.com/basics/acupressure-vs-acupuncture/
-- Acupressure vs Massage: https://www.acupressured.com/basics/acupressure-vs-massage/
-- All Basics: https://www.acupressured.com/basics/
+- [What Is Acupressure](https://www.acupressured.com/basics/what-is-acupressure/)
+- [How Does Acupressure Work](https://www.acupressured.com/basics/how-does-acupressure-work/)
+- [Benefits of Acupressure](https://www.acupressured.com/basics/benefits-of-acupressure/)
+- [Acupressure vs Acupuncture](https://www.acupressured.com/basics/acupressure-vs-acupuncture/)
+- [Acupressure vs Massage](https://www.acupressured.com/basics/acupressure-vs-massage/)
+- [All Basics](https://www.acupressured.com/basics/)
 
 ## Points
-- Complete Acupressure Points Guide: https://www.acupressured.com/points/acupressure-points/
-- LI4 (Hegu) — Union Valley: https://www.acupressured.com/points/li4-hegu-acupressure-point/
-- PC6 (Neiguan) — Inner Gate: https://www.acupressured.com/points/pc6-neiguan-acupressure-point/
-- ST36 (Zusanli) — Leg Three Miles: https://www.acupressured.com/points/st36-zusanli-acupressure-point/
-- SP6 (Sanyinjiao) — Three Yin Intersection: https://www.acupressured.com/points/sp6-sanyinjiao-acupressure-point/
-- LV3 (Taichong) — Great Surge: https://www.acupressured.com/points/lv3-taichong-acupressure-point/
-- GB20 (Fengchi) — Wind Pool: https://www.acupressured.com/points/gb20-fengchi-acupressure-point/
-- GB21 (Jianjing) — Shoulder Well: https://www.acupressured.com/points/gb21-jianjing-acupressure-point/
-- LI11 (Quchi) — Pool at the Crook: https://www.acupressured.com/points/li11-quchi-acupressure-point/
-- HT7 (Shenmen) — Spirit Gate: https://www.acupressured.com/points/ht7-shenmen-acupressure-point/
-- KD3 (Taixi) — Great Stream: https://www.acupressured.com/points/kd3-taixi-acupressure-point/
-- KI1 (Yongquan) — Gushing Spring: https://www.acupressured.com/points/ki1-yongquan-acupressure-point/
-- CV6 (Qihai) — Sea of Qi: https://www.acupressured.com/points/cv6-qihai-acupressure-point/
-- CV17 (Shanzhong) — Chest Center: https://www.acupressured.com/points/cv17-shanzhong-acupressure-point/
-- BL40 (Weizhong) — Bend Middle: https://www.acupressured.com/points/bl40-weizhong-acupressure-point/
-- BL60 (Kunlun) — Kunlun Mountains: https://www.acupressured.com/points/bl60-kunlun-acupressure-point/
-- Yintang — Hall of Impression: https://www.acupressured.com/points/yintang-acupressure-point/
-- Points Atlas (Interactive Map): https://www.acupressured.com/atlas/
-- All Points: https://www.acupressured.com/points/
+- [Complete Acupressure Points Guide](https://www.acupressured.com/points/acupressure-points/)
+- [LI4 (Hegu) — Union Valley](https://www.acupressured.com/points/li4-hegu-acupressure-point/)
+- [PC6 (Neiguan) — Inner Gate](https://www.acupressured.com/points/pc6-neiguan-acupressure-point/)
+- [ST36 (Zusanli) — Leg Three Miles](https://www.acupressured.com/points/st36-zusanli-acupressure-point/)
+- [SP6 (Sanyinjiao) — Three Yin Intersection](https://www.acupressured.com/points/sp6-sanyinjiao-acupressure-point/)
+- [LV3 (Taichong) — Great Surge](https://www.acupressured.com/points/lv3-taichong-acupressure-point/)
+- [GB20 (Fengchi) — Wind Pool](https://www.acupressured.com/points/gb20-fengchi-acupressure-point/)
+- [GB21 (Jianjing) — Shoulder Well](https://www.acupressured.com/points/gb21-jianjing-acupressure-point/)
+- [LI11 (Quchi) — Pool at the Crook](https://www.acupressured.com/points/li11-quchi-acupressure-point/)
+- [HT7 (Shenmen) — Spirit Gate](https://www.acupressured.com/points/ht7-shenmen-acupressure-point/)
+- [KD3 (Taixi) — Great Stream](https://www.acupressured.com/points/kd3-taixi-acupressure-point/)
+- [KI1 (Yongquan) — Gushing Spring](https://www.acupressured.com/points/ki1-yongquan-acupressure-point/)
+- [CV6 (Qihai) — Sea of Qi](https://www.acupressured.com/points/cv6-qihai-acupressure-point/)
+- [CV17 (Shanzhong) — Chest Center](https://www.acupressured.com/points/cv17-shanzhong-acupressure-point/)
+- [BL40 (Weizhong) — Bend Middle](https://www.acupressured.com/points/bl40-weizhong-acupressure-point/)
+- [BL60 (Kunlun) — Kunlun Mountains](https://www.acupressured.com/points/bl60-kunlun-acupressure-point/)
+- [Yintang — Hall of Impression](https://www.acupressured.com/points/yintang-acupressure-point/)
+- [Points Atlas (Interactive Map)](https://www.acupressured.com/atlas/)
+- [All Points](https://www.acupressured.com/points/)
 
 ## Conditions
-- Acupressure for Nausea: https://www.acupressured.com/conditions/acupressure-for-nausea/
-- Acupressure for Anxiety: https://www.acupressured.com/conditions/acupressure-for-anxiety/
-- Acupressure for Headache: https://www.acupressured.com/conditions/acupressure-for-headache/
-- Acupressure for Migraine: https://www.acupressured.com/conditions/acupressure-for-migraine/
-- Acupressure for Back Pain: https://www.acupressured.com/conditions/acupressure-for-back-pain/
-- Acupressure for Neck Pain: https://www.acupressured.com/conditions/acupressure-for-neck-pain/
-- Acupressure for Constipation: https://www.acupressured.com/conditions/acupressure-for-constipation/
-- Acupressure for Sleep: https://www.acupressured.com/conditions/acupressure-for-sleep/
-- All Conditions: https://www.acupressured.com/conditions/
+- [Acupressure for Nausea](https://www.acupressured.com/conditions/acupressure-for-nausea/)
+- [Acupressure for Anxiety](https://www.acupressured.com/conditions/acupressure-for-anxiety/)
+- [Acupressure for Headache](https://www.acupressured.com/conditions/acupressure-for-headache/)
+- [Acupressure for Migraine](https://www.acupressured.com/conditions/acupressure-for-migraine/)
+- [Acupressure for Back Pain](https://www.acupressured.com/conditions/acupressure-for-back-pain/)
+- [Acupressure for Neck Pain](https://www.acupressured.com/conditions/acupressure-for-neck-pain/)
+- [Acupressure for Constipation](https://www.acupressured.com/conditions/acupressure-for-constipation/)
+- [Acupressure for Sleep](https://www.acupressured.com/conditions/acupressure-for-sleep/)
+- [All Conditions](https://www.acupressured.com/conditions/)
 
 ## Body Regions
-- Head Acupressure Points: https://www.acupressured.com/body/head-acupressure-points/
-- Face Acupressure Points: https://www.acupressured.com/body/face-acupressure-points/
-- Neck Acupressure Points: https://www.acupressured.com/body/neck-acupressure-points/
-- Shoulder Acupressure Points: https://www.acupressured.com/body/shoulder-acupressure-points/
-- Chest Acupressure Points: https://www.acupressured.com/body/chest-acupressure-points/
-- Back Acupressure Points: https://www.acupressured.com/body/back-acupressure-points/
-- Abdomen Acupressure Points: https://www.acupressured.com/body/abdomen-acupressure-points/
-- Arm and Wrist Acupressure Points: https://www.acupressured.com/body/arm-wrist-acupressure-points/
-- Hand Acupressure Chart: https://www.acupressured.com/body/hand-acupressure-chart/
-- Leg Acupressure Points: https://www.acupressured.com/body/leg-acupressure-points/
-- Foot Acupressure Points: https://www.acupressured.com/body/foot-acupressure-points/
-- Ear Acupressure Points: https://www.acupressured.com/body/ear-acupressure-points/
-- All Body Regions: https://www.acupressured.com/body/
+- [Head Acupressure Points](https://www.acupressured.com/body/head-acupressure-points/)
+- [Face Acupressure Points](https://www.acupressured.com/body/face-acupressure-points/)
+- [Neck Acupressure Points](https://www.acupressured.com/body/neck-acupressure-points/)
+- [Shoulder Acupressure Points](https://www.acupressured.com/body/shoulder-acupressure-points/)
+- [Chest Acupressure Points](https://www.acupressured.com/body/chest-acupressure-points/)
+- [Back Acupressure Points](https://www.acupressured.com/body/back-acupressure-points/)
+- [Abdomen Acupressure Points](https://www.acupressured.com/body/abdomen-acupressure-points/)
+- [Arm and Wrist Acupressure Points](https://www.acupressured.com/body/arm-wrist-acupressure-points/)
+- [Hand Acupressure Chart](https://www.acupressured.com/body/hand-acupressure-chart/)
+- [Leg Acupressure Points](https://www.acupressured.com/body/leg-acupressure-points/)
+- [Foot Acupressure Points](https://www.acupressured.com/body/foot-acupressure-points/)
+- [Ear Acupressure Points](https://www.acupressured.com/body/ear-acupressure-points/)
+- [All Body Regions](https://www.acupressured.com/body/)
 
 ## Techniques
-- How to Do Acupressure: https://www.acupressured.com/techniques/how-to-do-acupressure/
-- All Techniques: https://www.acupressured.com/techniques/
+- [How to Do Acupressure](https://www.acupressured.com/techniques/how-to-do-acupressure/)
+- [All Techniques](https://www.acupressured.com/techniques/)
 
 ## Safety
-- Who Should Avoid Acupressure: https://www.acupressured.com/safety/who-should-avoid-acupressure/
-- Acupressure During Pregnancy: https://www.acupressured.com/safety/acupressure-pregnancy/
-- All Safety Guides: https://www.acupressured.com/safety/
+- [Who Should Avoid Acupressure](https://www.acupressured.com/safety/who-should-avoid-acupressure/)
+- [Acupressure During Pregnancy](https://www.acupressured.com/safety/acupressure-pregnancy/)
+- [All Safety Guides](https://www.acupressured.com/safety/)
 
 ## Research
-- Does Acupressure Work? Evidence Review: https://www.acupressured.com/research/does-acupressure-work/
-- All Research: https://www.acupressured.com/research/
+- [Does Acupressure Work? Evidence Review](https://www.acupressured.com/research/does-acupressure-work/)
+- [All Research](https://www.acupressured.com/research/)
 
 ## Products
-- Best Acupressure Mat Reviews 2026: https://www.acupressured.com/products/best-acupressure-mat/
-- All Product Reviews: https://www.acupressured.com/products/
+- [Best Acupressure Mat Reviews 2026](https://www.acupressured.com/products/best-acupressure-mat/)
+- [All Product Reviews](https://www.acupressured.com/products/)
 
 ## About
-- About Acupressure Guide: https://www.acupressured.com/about/
-- History of Acupressure: https://www.acupressured.com/history/
-- Learning Center: https://www.acupressured.com/learn/
-- Contact: https://www.acupressured.com/contact/
-- Privacy Policy: https://www.acupressured.com/privacy-policy/
+- [About Acupressure Guide](https://www.acupressured.com/about/)
+- [History of Acupressure](https://www.acupressured.com/history/)
+- [Learning Center](https://www.acupressured.com/learn/)
+- [Contact](https://www.acupressured.com/contact/)
+- [Privacy Policy](https://www.acupressured.com/privacy-policy/)
+- [Terms of Use](https://www.acupressured.com/terms/)

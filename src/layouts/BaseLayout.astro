@@ -110,7 +110,10 @@ const articleSchemaObj = articleSchema ? {
         "@type": "Organization",
         "name": "Acupressure Guide",
         "url": "https://www.acupressured.com",
-        "logo": "https://www.acupressured.com/logo.png"
+        "logo": "https://www.acupressured.com/logo.png",
+        "sameAs": [
+          "https://github.com/jiusongvip/acupressure"
+        ]
       }
     </script>
     {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>}
@@ -161,7 +164,7 @@ const articleSchemaObj = articleSchema ? {
       <div id="mobile-nav" class="hidden border-t border-stone-200 px-4 pb-4 dark:border-stone-800" role="navigation" aria-label="Mobile navigation">
         <a href="/" class="block py-2 text-sm text-stone-600 dark:text-stone-400">Home</a>
         <div class="py-2 border-b border-stone-100 dark:border-stone-800">
-          <span class="text-xs font-semibold uppercase tracking-widest text-stone-400">Guides</span>
+          <span class="text-xs font-semibold uppercase tracking-widest text-stone-600 dark:text-stone-400">Guides</span>
           <div class="mt-1 grid grid-cols-2 gap-1">
             <a href="/basics/" class="block py-1.5 text-sm text-stone-600 dark:text-stone-400">Basics</a>
             <a href="/techniques/" class="block py-1.5 text-sm text-stone-600 dark:text-stone-400">Techniques</a>
@@ -193,7 +196,7 @@ const articleSchemaObj = articleSchema ? {
     <main class="flex-1">
       {breadcrumbs && breadcrumbs.length > 0 && (
         <nav aria-label="Breadcrumb" class="mx-auto max-w-[1200px] px-4 pt-4 lg:px-6">
-          <ol class="flex flex-wrap items-center gap-1.5 text-xs text-stone-400 dark:text-stone-500">
+          <ol class="flex flex-wrap items-center gap-1.5 text-xs text-stone-600 dark:text-stone-500">
             {breadcrumbs.map((bc, i) => (
               <li class="flex items-center gap-1.5">
                 {i > 0 && <span aria-hidden="true">/</span>}
@@ -214,7 +217,7 @@ const articleSchemaObj = articleSchema ? {
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 21s-7-4.35-7-11a5 5 0 019-3 5 5 0 019 3c0 6.65-7 11-7 11z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               Edited by Acupressure Guide Editorial Team
               </span>
-              <span class="text-xs text-stone-500 dark:text-stone-400">Content reviewed for accuracy on June 1, 2026</span>
+              <span class="text-xs text-stone-600 dark:text-stone-400">Content reviewed for accuracy on June 1, 2026</span>
           </div>
         </div>
       )}
@@ -226,10 +229,10 @@ const articleSchemaObj = articleSchema ? {
         <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div class="col-span-2 md:col-span-1">
             <a href="/" class="font-display text-lg font-semibold tracking-wide text-stone-900 dark:text-stone-100">Acupressure<span class="text-forest-600 dark:text-forest-300">Guide</span></a>
-            <p class="mt-2 text-sm text-stone-500 dark:text-stone-400 max-w-[30ch]">Traditional healing explained through modern knowledge and scientific evidence.</p>
+            <p class="mt-2 text-sm text-stone-600 dark:text-stone-400 max-w-[30ch]">Traditional healing explained through modern knowledge and scientific evidence.</p>
           </div>
           <div>
-            <h4 class="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-500 dark:text-stone-400">Explore</h4>
+            <h2 class="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-600 dark:text-stone-400">Explore</h2>
             <ul class="space-y-2">
               <li><a href="/" class="text-sm text-stone-600 transition-colors hover:text-forest-600 dark:text-stone-400 dark:hover:text-forest-300">Home</a></li>
               <li><a href="/basics/" class="text-sm text-stone-600 transition-colors hover:text-forest-600 dark:text-stone-400 dark:hover:text-forest-300">Basics</a></li>
@@ -242,7 +245,7 @@ const articleSchemaObj = articleSchema ? {
             </ul>
           </div>
           <div>
-            <h4 class="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-500 dark:text-stone-400">Learn</h4>
+            <h2 class="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-600 dark:text-stone-400">Learn</h2>
             <ul class="space-y-2">
               <li><a href="/atlas/" class="text-sm text-stone-600 transition-colors hover:text-forest-600 dark:text-stone-400 dark:hover:text-forest-300">Points Atlas</a></li>
               <li><a href="/history/" class="text-sm text-stone-600 transition-colors hover:text-forest-600 dark:text-stone-400 dark:hover:text-forest-300">History</a></li>
@@ -251,17 +254,18 @@ const articleSchemaObj = articleSchema ? {
             </ul>
           </div>
           <div>
-            <h4 class="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-500 dark:text-stone-400">Support</h4>
+            <h2 class="mb-3 text-xs font-semibold uppercase tracking-widest text-stone-600 dark:text-stone-400">Support</h2>
             <ul class="space-y-2">
               <li><a href="/contact/" class="text-sm text-stone-600 transition-colors hover:text-forest-600 dark:text-stone-400 dark:hover:text-forest-300">Contact</a></li>
-              <li><a href="/privacy-policy/" class="text-sm text-stone-600 transition-colors hover:text-forest-600 dark:text-stone-400 dark:hover:text-forest-300">Privacy</a></li>
+              <li><a href="/privacy-policy/" class="text-sm text-stone-600 transition-colors hover:text-forest-600 dark:text-stone-400 dark:hover:text-forest-300">Privacy Policy</a></li>
+              <li><a href="/terms/" class="text-sm text-stone-600 transition-colors hover:text-forest-600 dark:text-stone-400 dark:hover:text-forest-300">Terms of Use</a></li>
               <li><a href="/about/#disclaimer" class="text-sm text-stone-600 transition-colors hover:text-forest-600 dark:text-stone-400 dark:hover:text-forest-300">Disclaimer</a></li>
             </ul>
           </div>
         </div>
         <div class="mt-10 border-t border-stone-200 pt-6 dark:border-stone-800">
-          <p class="text-xs text-stone-500 dark:text-stone-500">&copy; {year} Acupressure Guide. Content is for informational purposes only and does not constitute medical advice.</p>
-          <p class="mt-2 text-xs text-stone-400 dark:text-stone-500">Historical acupuncture charts sourced from <a href="https://wellcomecollection.org/" class="underline hover:text-forest-600 dark:hover:text-forest-300" target="_blank" rel="noopener">Wellcome Collection</a>, CC-BY 4.0.</p>
+          <p class="text-xs text-stone-600 dark:text-stone-500">&copy; {year} Acupressure Guide. Content is for informational purposes only and does not constitute medical advice.</p>
+          <p class="mt-2 text-xs text-stone-600 dark:text-stone-500">Historical acupuncture charts sourced from <a href="https://wellcomecollection.org/" class="underline hover:text-forest-600 dark:hover:text-forest-300" target="_blank" rel="noopener">Wellcome Collection</a>, CC-BY 4.0.</p>
         </div>
       </div>
     </footer>
