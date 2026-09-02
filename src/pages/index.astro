@@ -109,7 +109,7 @@ const research = [
             <a href="/basics/what-is-acupressure/" class="inline-flex items-center rounded-lg border border-line px-6 py-3 text-sm font-medium text-ink transition-all hover:border-forest-400 hover:text-forest-600 active:scale-[0.98] dark:border-stone-700 dark:text-stone-300 dark:hover:border-forest-600 dark:hover:text-forest-300">What Is Acupressure?</a>
           </div>
         </div>
-        <div class="rounded-2xl border border-line bg-white p-2 shadow-[0_12px_40px_rgba(28,66,48,0.10)] dark:border-stone-800 dark:bg-stone-900" style="animation: rise 0.7s cubic-bezier(0.16,1,0.3,1) 180ms both, floatY 6s ease-in-out 1.2s infinite">
+        <div class="rounded-2xl border border-line bg-white p-2 shadow-[0_12px_40px_rgba(28,66,48,0.10)] dark:border-stone-800 dark:bg-stone-900" style="animation: rise 0.5s cubic-bezier(0.16,1,0.3,1) 180ms both">
           <Image src={heroBody} alt="Acupressure point locations across the body, from head to feet" width={1672} height={941} fetchpriority="high" loading="eager" sizes="(min-width: 1024px) 548px, 100vw" widths={[400, 640, 960, 1280]} quality={80} class="w-full h-64 sm:h-80 lg:h-[420px] object-cover object-center rounded-xl" />
         </div>
       </div>
@@ -120,19 +120,19 @@ const research = [
   <section class="border-y border-stone-200 bg-white dark:border-stone-800 dark:bg-stone-950">
     <div class="max-w-[1200px] mx-auto px-4 lg:px-6 py-10 grid grid-cols-2 lg:grid-cols-4 gap-6 reveal">
       <div>
-        <div class="text-3xl font-bold text-forest-700 dark:text-forest-300" data-count="16">16</div>
+        <div class="text-3xl font-bold text-forest-700 dark:text-forest-300">16</div>
         <div class="mt-1 text-sm text-stone-500 dark:text-stone-400">Essential point guides, each with location photos and technique</div>
       </div>
       <div>
-        <div class="text-3xl font-bold text-forest-700 dark:text-forest-300" data-count="12">12</div>
+        <div class="text-3xl font-bold text-forest-700 dark:text-forest-300">12</div>
         <div class="mt-1 text-sm text-stone-500 dark:text-stone-400">Body regions from head to feet, browsable in the interactive atlas</div>
       </div>
       <div>
-        <div class="text-3xl font-bold text-forest-700 dark:text-forest-300" data-count="8">8</div>
+        <div class="text-3xl font-bold text-forest-700 dark:text-forest-300">8</div>
         <div class="mt-1 text-sm text-stone-500 dark:text-stone-400">Condition-specific step-by-step treatment protocols</div>
       </div>
       <div>
-        <div class="text-3xl font-bold text-forest-700 dark:text-forest-300" data-count="200" data-suffix="+">200+</div>
+        <div class="text-3xl font-bold text-forest-700 dark:text-forest-300">200+</div>
         <div class="mt-1 text-sm text-stone-500 dark:text-stone-400">Clinical trials reviewed in our evidence summaries</div>
       </div>
     </div>
@@ -486,29 +486,6 @@ const research = [
           });
         }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
         revealEls.forEach(function (el) { io.observe(el); });
-      }
-
-      var counters = document.querySelectorAll('[data-count]');
-      if (!reduce && 'IntersectionObserver' in window && counters.length) {
-        var co = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (!entry.isIntersecting) return;
-            co.unobserve(entry.target);
-            var el = entry.target;
-            var target = parseInt(el.getAttribute('data-count'), 10);
-            var suffix = el.getAttribute('data-suffix') || '';
-            var duration = 1200;
-            var start = performance.now();
-            function tick(now) {
-              var p = Math.min((now - start) / duration, 1);
-              var eased = 1 - Math.pow(1 - p, 3);
-              el.textContent = Math.round(target * eased) + suffix;
-              if (p < 1) requestAnimationFrame(tick);
-            }
-            requestAnimationFrame(tick);
-          });
-        }, { threshold: 0.4 });
-        counters.forEach(function (el) { co.observe(el); });
       }
     })();
   </script>
