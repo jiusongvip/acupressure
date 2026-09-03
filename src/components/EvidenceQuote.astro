@@ -1,0 +1,24 @@
+---
+interface Props {
+  text?: string;
+  source?: string;
+  url?: string;
+  pmid?: string;
+}
+
+const { text, source, url, pmid } = Astro.props;
+const defaultText = "A systematic review of 43 trials concluded that acupressure shows promise as a symptom-management technique.";
+const defaultSource = "Lee EJ, Frazier SK. Journal of Pain and Symptom Management, 2011";
+const defaultUrl = "https://pubmed.ncbi.nlm.nih.gov/21531533/";
+const displayUrl = pmid ? `PMID ${pmid}` : "PMID 21531533";
+const href = url || defaultUrl;
+const citeSource = source || defaultSource;
+const quoteText = text || defaultText;
+---
+
+<blockquote class="border-l-4 border-forest-500 pl-4 italic text-stone-700 dark:text-stone-300 my-8">
+  <p>{quoteText}</p>
+  <cite class="not-italic text-xs text-stone-500">
+    — {citeSource}. <a href={href} rel="noopener" target="_blank" class="text-forest-600 underline decoration-forest-300 underline-offset-2 hover:text-forest-500 dark:text-forest-300 dark:hover:text-forest-200">{displayUrl}</a>
+  </cite>
+</blockquote>

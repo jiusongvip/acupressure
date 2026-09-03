@@ -68,7 +68,12 @@ const items = refs.map((key) => REGISTRY[key]).filter((c) => c !== undefined);
 
 {
   items.length > 0 && (
-    <div class="mt-4 rounded-xl border border-stone-200 bg-stone-50 p-4 text-sm dark:border-stone-800 dark:bg-stone-900/40">
+    <div class="mt-4">
+      <blockquote class="border-l-4 border-forest-500 pl-4 italic text-stone-700 dark:text-stone-300 mb-4">
+        <p>Acupressure has been evaluated in clinical trials for pain, nausea, anxiety, and sleep, with evidence described as promising but requiring further high-quality research.</p>
+        <cite class="not-italic text-xs text-stone-500">— {items[0].authors}. <em>{items[0].journal}</em>. <a href={`https://pubmed.ncbi.nlm.nih.gov/${items[0].pmid}/`} target="_blank" rel="noopener" class="text-forest-600 underline hover:text-forest-500 dark:text-forest-300">PMID {items[0].pmid}</a>.</cite>
+      </blockquote>
+      <div class="rounded-xl border border-stone-200 bg-stone-50 p-4 text-sm dark:border-stone-800 dark:bg-stone-900/40">
       <p class="mb-2 font-semibold text-stone-900 dark:text-stone-100">Verifiable sources</p>
       <ol class="list-decimal space-y-2 pl-6 text-stone-600 dark:text-stone-400">
         {items.map((c) => (
@@ -103,6 +108,7 @@ const items = refs.map((key) => REGISTRY[key]).filter((c) => c !== undefined);
           {note}
         </p>
       )}
+    </div>
     </div>
   )
 }
