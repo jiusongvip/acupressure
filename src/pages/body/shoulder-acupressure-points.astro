@@ -1,8 +1,9 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
 ---
 
-<BaseLayout title="Shoulder Acupressure Points" description="Discover shoulder acupressure points: GB21, LI15, SI9, and more. Release shoulder tension, improve mobility, and relieve pain with step-by-step guides." breadcrumbs={[{ "label": "Home", "href": "/" }, { "label": "Body Atlas", "href": "/atlas/" }, { "label": "Shoulder", "href": "/body/shoulder-acupressure-points/" }]}>
+<BaseLayout title="Shoulder Acupressure Points" articleSchema={true} datePublished="2026-05-01" dateModified="2026-08-19" description="Discover shoulder acupressure points: GB21, LI15, SI9, and more. Release shoulder tension, improve mobility, and relieve pain with step-by-step guides." breadcrumbs={[{ "label": "Home", "href": "/" }, { "label": "Body Atlas", "href": "/atlas/" }, { "label": "Shoulder", "href": "/body/shoulder-acupressure-points/" }]}>
 <article class="max-w-4xl mx-auto px-4 py-12 lg:px-6">
   <div class="text-center mb-10">
     <span class="text-xs font-semibold uppercase tracking-widest text-forest-600 dark:text-forest-300">Body Region</span>
@@ -89,5 +90,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   <div class="mt-10 text-center">
     <a href="/atlas/" class="inline-flex items-center gap-1 text-sm text-stone-500 hover:text-forest-600 dark:text-stone-400 dark:hover:text-forest-300">Back to Body Atlas</a>
   </div>
+
+  <EvidenceBox refs={["lee-frazier-2011", "song-2015"]} note={"General evidence for acupressure from published systematic reviews. See condition-specific pages for targeted studies."} />
 </article>
 </BaseLayout>

@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
 ---
-<BaseLayout title="Acupressure Safety: Contraindications &amp; Guidelines" description="Essential safety information for acupressure practice. Contraindications, who should avoid it, pregnancy safety, and when to consult a doctor." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Safety", href: "/safety/" }]}>
+<BaseLayout title="Acupressure Safety: Contraindications &amp; Guidelines" articleSchema={true} datePublished="2026-01-15" dateModified="2026-08-19" description="Essential safety information for acupressure practice. Contraindications, who should avoid it, pregnancy safety, and when to consult a doctor." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Safety", href: "/safety/" }]}>
 <div class="max-w-3xl mx-auto px-4 py-12 lg:px-6">
 <h1 class="mb-4">Acupressure Safety & Contraindications</h1>
 <p class="text-stone-500 dark:text-stone-400 text-lg mb-4">Essential safety information to ensure you practice acupressure safely and effectively. While acupressure is generally safe, certain conditions require caution.</p><p class="text-stone-500 dark:text-stone-400 mb-10">Understanding acupressure contraindications is just as important as knowing the points themselves. This section covers who should avoid acupressure, which points are contraindicated during pregnancy, and when to consult a healthcare provider before starting. Always prioritize safety — acupressure is a complementary therapy, not a replacement for medical care.</p>
@@ -54,4 +55,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 </a>
 </div>
 </div>
+
+  <EvidenceBox refs={["lee-frazier-2011", "song-2015"]} note={"Evidence for acupressure from published systematic reviews. See our research page for details."} />
 </BaseLayout>

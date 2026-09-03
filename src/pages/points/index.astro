@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
 ---
-<BaseLayout title="Popular Acupressure Points" description="Browse our complete collection of acupressure points by meridian and body region, with precise locations, benefits, stimulation techniques, and safety tips." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points/" }]}>
+<BaseLayout title="Popular Acupressure Points" articleSchema={true} datePublished="2026-01-15" dateModified="2026-08-19" description="Browse our complete collection of acupressure points by meridian and body region, with precise locations, benefits, stimulation techniques, and safety tips." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points/" }]}>
   <article class="max-w-3xl mx-auto px-4 py-12 lg:px-6"><h1 class="mb-4">Popular Acupressure Points</h1><p class="text-stone-500 dark:text-stone-400 text-lg mb-8">Browse our complete collection of acupressure points. Each point includes detailed location guidance, benefits, how-to instructions, and safety information.</p>
     <div class="mb-8">
       <h2 class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 mb-3">What Are Acupressure Points?</h2>
@@ -65,4 +66,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       </details>
     </div>
   </article>
+
+  <EvidenceBox refs={["lee-frazier-2011", "song-2015"]} note={"Evidence for acupressure from published systematic reviews. See our research page for details."} />
 </BaseLayout>

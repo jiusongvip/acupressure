@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
 ---
 <BaseLayout title="Pregnancy Acupressure: Safety Guide" description="Complete safety guide for acupressure during pregnancy. Learn which points are safe, which to avoid, and how to use acupressure for pregnancy symptoms." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Safety", href: "/safety/" }, { label: "Pregnancy Safety", href: "/safety/acupressure-pregnancy/" }]} datePublished="2025-04-28" dateModified="2026-06-01" articleSchema={true}>
 <article class="max-w-3xl mx-auto px-4 py-12 lg:px-6">
@@ -18,5 +19,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 <div class="bg-stone-100 dark:bg-stone-800 rounded-lg p-6 text-sm text-stone-500 dark:text-stone-400">
 <p><strong>Medical Disclaimer:</strong> This guide is for informational purposes only. Acupressure during pregnancy carries risks if contraindicated points are stimulated. Always consult your OB-GYN, midwife, or qualified healthcare provider before using acupressure during pregnancy. If you experience any unusual symptoms, stop immediately and seek medical attention.</p>
 </div>
+
+  <EvidenceBox refs={["song-2015", "lee-frazier-2011"]} note={"General evidence for acupressure from published reviews."} />
 </article>
 </BaseLayout>

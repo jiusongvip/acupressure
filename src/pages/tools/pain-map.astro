@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
 
 const regions = [
   { key: "head", name: "Head", bodyUrl: "/body/head-acupressure-points/", blurb: "Tension headaches, migraines, pressure, dizziness, mental fatigue", causes: ["Tension or stress headaches", "Migraine (with or without aura)", "Sinus congestion and pressure", "Eye strain and screen fatigue", "Feeling heavy-headed after long days"], redFlags: ["Sudden, severe \"worst-ever\" headache", "Headache with fever and a stiff neck", "Headache after a recent head injury", "Sudden weakness, numbness, or trouble speaking"], points: [{ code: "GV20", name: "Baihui", use: "Headaches, dizziness, mental fatigue", url: "/points/gv20-baihui-acupressure-point/" }, { code: "GB20", name: "Fengchi", use: "Headaches, neck tension, sinus relief", url: "/points/gb20-fengchi-acupressure-point/" }, { code: "Yintang", name: "Third Eye Point", use: "Stress, headaches, mental clarity", url: "/points/yintang-acupressure-point/" }, { code: "Taiyang", name: "Solar Plexus Temples", use: "Headaches, eye strain", url: "/points/taiyang-acupressure-point/" }], conditions: [{ label: "Headache relief guide", url: "/conditions/acupressure-for-headache/" }, { label: "Migraine relief guide", url: "/conditions/acupressure-for-migraine/" }] },
@@ -215,4 +216,5 @@ const panelsHtml = regions.map(panelFor).join("");
   .region:hover, .region:focus-visible { outline: none; }
   .region:hover > ellipse, .region:hover > rect, .region:hover > path, .region:focus-visible > ellipse, .region:focus-visible > rect, .region:focus-visible > path { stroke-width: 2.5; }
 </style>
+  <EvidenceBox refs={["song-2015", "lee-frazier-2011"]} note={"Evidence for acupressure from published systematic reviews."} />
 </BaseLayout>

@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
 ---
-<BaseLayout title="Acupressure Research & Evidence" description="Browse the scientific evidence behind acupressure. Research summaries, clinical studies, and evidence-based reviews of acupressure effectiveness." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Research", href: "/research/" }]}>
+<BaseLayout title="Acupressure Research & Evidence" articleSchema={true} datePublished="2026-01-15" dateModified="2026-08-19" description="Browse the scientific evidence behind acupressure. Research summaries, clinical studies, and evidence-based reviews of acupressure effectiveness." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Research", href: "/research/" }]}>
 <div class="max-w-3xl mx-auto px-4 py-12 lg:px-6">
 <h1 class="mb-4">Acupressure Research & Scientific Evidence</h1>
 <p class="text-stone-500 dark:text-stone-400 text-lg mb-4">What does science say about acupressure? This section summarizes clinical trials, systematic reviews, and meta-analyses on acupressure's effectiveness for various health conditions.</p><p class="text-stone-500 dark:text-stone-400 mb-10">The evidence base for acupressure has grown significantly in recent decades, with hundreds of randomized controlled trials examining its effects on pain, anxiety, nausea, sleep, and more. Explore our evidence reviews to understand how acupressure works from a physiological perspective and which conditions have the strongest research support.</p>
@@ -48,4 +49,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 </a>
 </div>
 </div>
+
+  <EvidenceBox refs={["lee-frazier-2011", "song-2015"]} note={"Evidence for acupressure from published systematic reviews. See our research page for details."} />
 </BaseLayout>

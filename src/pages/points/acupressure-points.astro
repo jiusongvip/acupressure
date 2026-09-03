@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
 ---
 
 <BaseLayout title="Essential Acupressure Points Guide" description="Browse our complete guide to 32 essential acupressure points. Detailed location guides, benefits, how-to instructions, and safety precautions for each point." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Points", href: "/points/" }, { label: "Featured Points", href: "/points/acupressure-points/" }]} datePublished="2025-02-10" dateModified="2026-05-15" articleSchema={true}>
@@ -693,4 +694,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       </ul>
     </section>
   </article>
+
+  <EvidenceBox refs={["lee-frazier-2011", "song-2015"]} note={"Evidence for acupressure from published systematic reviews. See our research page for details."} />
 </BaseLayout>

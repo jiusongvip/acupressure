@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
 ---
-<BaseLayout title="Acupressure Techniques: Learn Proper Methods" description="Learn proper acupressure techniques. Step-by-step guides for self-treatment, pressure methods, and daily routines." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Techniques", href: "/techniques/" }]}>
+<BaseLayout title="Acupressure Techniques: Learn Proper Methods" articleSchema={true} datePublished="2026-01-15" dateModified="2026-08-19" description="Learn proper acupressure techniques. Step-by-step guides for self-treatment, pressure methods, and daily routines." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Techniques", href: "/techniques/" }]}>
 <div class="max-w-3xl mx-auto px-4 py-12 lg:px-6">
 <h1 class="mb-4">Techniques</h1>
 <p class="text-stone-500 dark:text-stone-400 text-lg mb-10">Master the proper techniques for effective acupressure self-treatment. Learn how to locate points, apply pressure, and build a daily practice.</p>
@@ -51,4 +52,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 </a>
 </div>
 </div>
+
+  <EvidenceBox refs={["lee-frazier-2011", "song-2015"]} note={"Evidence for acupressure from published systematic reviews. See our research page for details."} />
 </BaseLayout>

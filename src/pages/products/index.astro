@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
 ---
-<BaseLayout title="Acupressure Products & Reviews" description="Expert reviews of acupressure products including mats, wristbands, foot rollers, and more. Find the best tools for your practice." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Products", href: "/products/" }]}>
+<BaseLayout title="Acupressure Products & Reviews" articleSchema={true} datePublished="2026-01-15" dateModified="2026-08-19" description="Expert reviews of acupressure products including mats, wristbands, foot rollers, and more. Find the best tools for your practice." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Products", href: "/products/" }]}>
 <div class="max-w-3xl mx-auto px-4 py-12 lg:px-6">
 <h1 class="mb-4">Acupressure Products & Reviews</h1>
 <p class="text-stone-500 dark:text-stone-400 text-lg mb-4">Expert reviews and recommendations for acupressure tools and accessories. We test products thoroughly so you can find the right equipment for your practice.</p><p class="text-stone-500 dark:text-stone-400 mb-10">While acupressure primarily uses just your hands, tools like acupressure mats, massage sticks, and foot rollers can enhance your practice and help reach points that are difficult to access. Each review below is based on hands-on testing with clear criteria for comfort, durability, and value.</p>
@@ -51,4 +52,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 </a>
 </div>
 </div>
+
+  <EvidenceBox refs={["lee-frazier-2011", "song-2015"]} note={"Evidence for acupressure from published systematic reviews. See our research page for details."} />
 </BaseLayout>
